@@ -1,4 +1,4 @@
-# EntreFoco — Protótipo V0.12
+# EntreFoco — Protótipo V0.13
 
 Portal estático sobre TDAH ao longo da vida.
 
@@ -7,9 +7,11 @@ Portal estático sobre TDAH ao longo da vida.
 - seção de estudos reais e verificáveis na página inicial;
 - dois estudos detalhados em cada fase da vida;
 - resultado, amostra/escopo, limitação, PubMed, DOI e segundo caminho de conferência;
-- registro editorial em `EVIDENCIAS.md`;
+- página navegável `evidencias.html` com metodologia, estudos e fontes;
+- registro técnico bruto preservado em `EVIDENCIAS.md`;
 - datas de fontes institucionais corrigidas e separadas de datas de anexos/documentos;
-- navegação e padrão visual da V0.11 preservados.
+- acesso “Evidências” adicionado ao menu principal e móvel;
+- padrão visual das páginas internas preservado.
 
 ## Aviso
 

@@ -539,3 +539,15 @@ body.focus-mode .site-header { position: static; }
 .compact-links { margin-top: 14px; }
 @media (max-width: 900px) { .study-grid { grid-template-columns: 1fr; } }
 @media print { .study-links, .evidence-registry-note { display: none !important; } .study-card { break-inside: avoid; box-shadow: none; } }
+
+
+/* V0.13 — página navegável do registro de evidências */
+.evidence-registry-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; margin: 18px 0 28px; padding: 22px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: 0 10px 28px rgba(25, 31, 51, .045); }
+.evidence-registry-card .eyebrow { margin-bottom: 6px; }
+.evidence-registry-card h3 { margin: 0 0 8px; }
+.evidence-registry-card p:last-child { margin-bottom: 0; color: var(--text-soft); }
+.evidence-jump-grid { grid-template-columns: repeat(4, 1fr); }
+.evidence-page .content-section > .text-link { margin-top: 20px; }
+@media (max-width: 1000px) { .evidence-jump-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .evidence-registry-card { grid-template-columns: 1fr; } .evidence-registry-card .button { width: 100%; } .evidence-jump-grid { grid-template-columns: 1fr; } }
+@media print { .evidence-registry-card { box-shadow: none; } }
