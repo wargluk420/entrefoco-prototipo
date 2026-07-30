@@ -6,6 +6,11 @@
   const body = document.body;
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => [...document.querySelectorAll(selector)];
+  const storage = {
+    get(key) { try { return window.localStorage.getItem(key); } catch { return null; } },
+    set(key, value) { try { window.localStorage.setItem(key, value); } catch { /* Preferências continuam apenas nesta sessão. */ } },
+    remove(key) { try { window.localStorage.removeItem(key); } catch { /* Sem armazenamento persistente. */ } }
+  };
 
   const elements = {
     focusToggle: $('#focusToggle'),
@@ -103,7 +108,7 @@
       elements.themeToggle.setAttribute('aria-pressed', String(dark));
       elements.themeToggle.textContent = dark ? 'Tema claro' : 'Tema escuro';
     }
-    if (persist) localStorage.setItem('entrefoco-theme', normalized);
+    if (persist) storage.set('entrefoco-theme', normalized);
   }
 
   function setFontScale(scale, persist = true) {
@@ -112,7 +117,7 @@
     if (elements.fontScaleStatus) elements.fontScaleStatus.textContent = `${Math.round(normalized * 100)}%`;
     if (elements.fontDecrease) elements.fontDecrease.disabled = normalized <= 0.9;
     if (elements.fontIncrease) elements.fontIncrease.disabled = normalized >= 1.25;
-    if (persist) localStorage.setItem('entrefoco-font-scale', String(normalized));
+    if (persist) storage.set('entrefoco-font-scale', String(normalized));
   }
 
   function currentFontScale() {
@@ -270,14 +275,275 @@
   window.addEventListener('scroll', updateReadingProgress, { passive: true });
   window.addEventListener('resize', updateReadingProgress);
 
-  const savedTheme = localStorage.getItem('entrefoco-theme');
+  const savedTheme = storage.get('entrefoco-theme');
   setTheme(savedTheme || 'light', false);
 
-  const savedScale = Number.parseFloat(localStorage.getItem('entrefoco-font-scale'));
+  const savedScale = Number.parseFloat(storage.get('entrefoco-font-scale'));
   setFontScale(Number.isFinite(savedScale) ? savedScale : 1, false);
 
   const isArticlePage = body.classList.contains('article-page');
   if (elements.focusToggle) elements.focusToggle.disabled = !isArticlePage && (!elements.actionPanel || elements.actionPanel.hidden);
   setFocusMode(false);
   updateReadingProgress();
+})();
+
+
+/* EntreFoco V0.14 — leitura em voz alta com Web Speech API */
+(() => {
+  'use strict';
+
+  const $ = (selector) => document.querySelector(selector);
+  const speechStorage = {
+    get(key) { try { return window.localStorage.getItem(key); } catch { return null; } },
+    set(key, value) { try { window.localStorage.setItem(key, value); } catch { /* Recurso permanece funcional sem persistência. */ } },
+    remove(key) { try { window.localStorage.removeItem(key); } catch { /* Sem persistência. */ } }
+  };
+  const synth = window.speechSynthesis;
+  const supported = Boolean(synth && window.SpeechSynthesisUtterance);
+  const controls = {
+    start: $('#speechStart'),
+    pause: $('#speechPause'),
+    stop: $('#speechStop'),
+    rate: $('#speechRate'),
+    status: $('#speechStatus'),
+    voiceStatus: $('#speechVoiceStatus'),
+    reset: $('#resetReading')
+  };
+
+  if (!controls.start) return;
+
+  let queue = [];
+  let queueIndex = 0;
+  let sessionId = 0;
+  let paused = false;
+  let activeElement = null;
+  let selectedVoice = null;
+
+  const setStatus = (message) => {
+    if (controls.status) controls.status.textContent = message;
+  };
+
+  const clearHighlight = () => {
+    if (activeElement) activeElement.removeAttribute('data-speech-active');
+    activeElement = null;
+  };
+
+  const updateControls = (state) => {
+    const active = state === 'speaking' || state === 'paused';
+    controls.start.disabled = !supported;
+    controls.pause.disabled = !supported || !active;
+    controls.stop.disabled = !supported || !active;
+    controls.pause.setAttribute('aria-pressed', String(state === 'paused'));
+    controls.pause.textContent = state === 'paused' ? 'Continuar' : 'Pausar';
+    controls.start.textContent = active ? 'Reiniciar leitura' : 'Ouvir esta página';
+  };
+
+  const choosePortugueseVoice = () => {
+    if (!supported) return null;
+    const voices = synth.getVoices();
+    selectedVoice = voices.find((voice) => /^pt-BR$/i.test(voice.lang))
+      || voices.find((voice) => /^pt([_-]|$)/i.test(voice.lang))
+      || voices.find((voice) => voice.default)
+      || voices[0]
+      || null;
+
+    if (controls.voiceStatus) {
+      controls.voiceStatus.textContent = selectedVoice
+        ? `Voz selecionada: ${selectedVoice.name} (${selectedVoice.lang || 'idioma não informado'}).`
+        : 'O navegador ainda não disponibilizou uma voz. Tente novamente em alguns segundos.';
+    }
+    return selectedVoice;
+  };
+
+  const splitText = (text, maxLength = 220) => {
+    const normalized = text.replace(/\s+/g, ' ').trim();
+    if (!normalized) return [];
+    if (normalized.length <= maxLength) return [normalized];
+
+    const sentences = normalized.match(/[^.!?;:]+[.!?;:]?|[^.!?;:]+$/g) || [normalized];
+    const chunks = [];
+    let current = '';
+
+    const pushWords = (value) => {
+      let part = '';
+      value.split(/\s+/).forEach((word) => {
+        const candidate = part ? `${part} ${word}` : word;
+        if (candidate.length > maxLength && part) {
+          chunks.push(part);
+          part = word;
+        } else {
+          part = candidate;
+        }
+      });
+      if (part) chunks.push(part);
+    };
+
+    sentences.forEach((sentence) => {
+      const clean = sentence.trim();
+      if (!clean) return;
+      if (clean.length > maxLength) {
+        if (current) {
+          chunks.push(current);
+          current = '';
+        }
+        pushWords(clean);
+        return;
+      }
+      const candidate = current ? `${current} ${clean}` : clean;
+      if (candidate.length > maxLength && current) {
+        chunks.push(current);
+        current = clean;
+      } else {
+        current = candidate;
+      }
+    });
+    if (current) chunks.push(current);
+    return chunks;
+  };
+
+  const isVisible = (element) => {
+    if (element.closest('[hidden], [aria-hidden="true"], .sr-only, nav, .article-toc, .article-jump-section, .stage-next, .study-links, .reading-tools, .focus-status, .progress-bar, [data-speech-ignore]')) return false;
+    const style = window.getComputedStyle(element);
+    return style.display !== 'none' && style.visibility !== 'hidden' && element.getClientRects().length > 0;
+  };
+
+  const collectSpeechQueue = () => {
+    const roots = document.body.classList.contains('article-page')
+      ? [...document.querySelectorAll('.article-hero, .article-content')]
+      : [document.querySelector('main#conteudo')];
+    const items = [];
+    let previousText = '';
+
+    roots.filter(Boolean).forEach((root) => {
+      root.querySelectorAll('h1, h2, h3, h4, p, li, dt, dd, summary').forEach((element) => {
+        if (!isVisible(element)) return;
+        const text = element.textContent.replace(/\s+/g, ' ').trim();
+        if (!text || text === previousText) return;
+        previousText = text;
+        splitText(text).forEach((chunk) => items.push({ text: chunk, element }));
+      });
+    });
+    return items;
+  };
+
+  const stopSpeech = (message = 'Leitura parada.') => {
+    sessionId += 1;
+    if (supported) synth.cancel();
+    queue = [];
+    queueIndex = 0;
+    paused = false;
+    clearHighlight();
+    updateControls('idle');
+    setStatus(message);
+  };
+
+  const finishSpeech = () => {
+    queue = [];
+    queueIndex = 0;
+    paused = false;
+    clearHighlight();
+    updateControls('idle');
+    setStatus('Leitura concluída.');
+  };
+
+  const speakNext = (currentSession) => {
+    if (currentSession !== sessionId) return;
+    if (queueIndex >= queue.length) {
+      finishSpeech();
+      return;
+    }
+
+    const item = queue[queueIndex];
+    const utterance = new SpeechSynthesisUtterance(item.text);
+    utterance.lang = selectedVoice?.lang || 'pt-BR';
+    if (selectedVoice) utterance.voice = selectedVoice;
+    utterance.rate = Number.parseFloat(controls.rate?.value) || 1;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+    utterance.onstart = () => {
+      if (currentSession !== sessionId) return;
+      clearHighlight();
+      activeElement = item.element;
+      activeElement.setAttribute('data-speech-active', 'true');
+      setStatus(`Lendo trecho ${queueIndex + 1} de ${queue.length}.`);
+    };
+
+    utterance.onend = () => {
+      if (currentSession !== sessionId) return;
+      clearHighlight();
+      queueIndex += 1;
+      speakNext(currentSession);
+    };
+
+    utterance.onerror = (event) => {
+      if (currentSession !== sessionId || event.error === 'canceled' || event.error === 'interrupted') return;
+      stopSpeech('Não foi possível continuar a leitura. Verifique as vozes disponíveis no navegador.');
+    };
+
+    synth.speak(utterance);
+  };
+
+  const startSpeech = () => {
+    if (!supported) return;
+    stopSpeech('Preparando a leitura…');
+    queue = collectSpeechQueue();
+    if (!queue.length) {
+      setStatus('Nenhum conteúdo legível foi encontrado nesta página.');
+      return;
+    }
+    choosePortugueseVoice();
+    sessionId += 1;
+    const currentSession = sessionId;
+    queueIndex = 0;
+    paused = false;
+    updateControls('speaking');
+    window.setTimeout(() => speakNext(currentSession), 80);
+  };
+
+  const togglePause = () => {
+    if (!supported || (!synth.speaking && !synth.paused)) return;
+    if (paused || synth.paused) {
+      synth.resume();
+      paused = false;
+      updateControls('speaking');
+      setStatus(`Leitura retomada no trecho ${queueIndex + 1} de ${queue.length}.`);
+    } else {
+      synth.pause();
+      paused = true;
+      updateControls('paused');
+      setStatus('Leitura pausada.');
+    }
+  };
+
+  controls.start.addEventListener('click', startSpeech);
+  controls.pause?.addEventListener('click', togglePause);
+  controls.stop?.addEventListener('click', () => stopSpeech());
+  controls.rate?.addEventListener('change', () => {
+    speechStorage.set('entrefoco-speech-rate', controls.rate.value);
+    if (synth.speaking || synth.paused) setStatus('A nova velocidade será aplicada ao próximo trecho.');
+  });
+  controls.reset?.addEventListener('click', () => {
+    if (controls.rate) controls.rate.value = '1';
+    speechStorage.remove('entrefoco-speech-rate');
+    stopSpeech();
+  });
+
+  window.addEventListener('beforeunload', () => {
+    if (supported) synth.cancel();
+  });
+
+  if (!supported) {
+    updateControls('unsupported');
+    controls.rate.disabled = true;
+    if (controls.voiceStatus) controls.voiceStatus.textContent = 'Este navegador não oferece leitura em voz alta pela Web Speech API.';
+    setStatus('Recurso indisponível neste navegador.');
+    return;
+  }
+
+  const savedRate = speechStorage.get('entrefoco-speech-rate');
+  if (savedRate && controls.rate && [...controls.rate.options].some((option) => option.value === savedRate)) controls.rate.value = savedRate;
+  choosePortugueseVoice();
+  if ('onvoiceschanged' in synth) synth.addEventListener('voiceschanged', choosePortugueseVoice);
+  updateControls('idle');
 })();

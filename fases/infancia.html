@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
-<html data-version="0.13" lang="pt-BR">
+<html data-version="0.14" lang="pt-BR">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Como sinais de TDAH são observados, avaliados e diagnosticados na infância, além de estratégias de apoio para família e escola." name="description"/>
 <meta content="#f7f8fc" name="theme-color"/>
 <title>TDAH na infância — EntreFoco</title>
-<link href="../styles.css?v=0.13" rel="stylesheet"/>
+<link href="../styles.css?v=0.14" rel="stylesheet"/>
 </head>
 <body class="article-page">
 <div aria-label="Início da página" id="topo" tabindex="-1"></div>
@@ -49,6 +49,27 @@
 </div>
 <button aria-pressed="false" id="focusToggle" type="button">Modo foco</button>
 <p class="tool-hint" id="focusHint">Destaca o artigo e reduz os elementos ao redor.</p>
+
+<div class="speech-tools" id="speechTools">
+  <strong class="speech-tools-title">Leitura em voz alta</strong>
+  <div class="speech-actions" role="group" aria-label="Controles de leitura em voz alta">
+    <button type="button" id="speechStart">Ouvir esta página</button>
+    <button type="button" id="speechPause" aria-pressed="false" disabled>Pausar</button>
+    <button type="button" id="speechStop" disabled>Parar</button>
+  </div>
+  <div class="speech-rate-row">
+    <label for="speechRate">Velocidade</label>
+    <select id="speechRate" aria-describedby="speechVoiceStatus">
+      <option value="0.75">0,75×</option>
+      <option value="1" selected>1×</option>
+      <option value="1.25">1,25×</option>
+      <option value="1.5">1,5×</option>
+    </select>
+  </div>
+  <p class="tool-hint" id="speechVoiceStatus">A voz em português será selecionada automaticamente.</p>
+  <p class="speech-status" id="speechStatus" role="status" aria-live="polite">Leitura parada.</p>
+  <p class="tool-hint">Este apoio não substitui NVDA, VoiceOver, TalkBack ou outro leitor de tela.</p>
+</div>
 <div aria-label="Tamanho do texto" class="tool-group" role="group">
 <button aria-label="Diminuir tamanho do texto" id="fontDecrease" type="button">A−</button>
 <output aria-live="polite" id="fontScaleStatus">100%</output>
@@ -324,12 +345,12 @@
 <div class="container footer-grid">
 <div>
 <strong>EntreFoco</strong>
-<p>Protótipo V0.13. Conteúdo educativo não substitui avaliação profissional.</p>
+<p>Protótipo V0.14. Conteúdo educativo não substitui avaliação profissional.</p>
 </div>
 <a href="#topo">Voltar ao início ↑</a>
 </div>
 </footer>
 <div aria-hidden="true" class="progress-bar"><span id="readingProgress"></span></div>
-<script src="../app.js?v=0.13"></script>
+<script src="../app.js?v=0.14"></script>
 </body>
 </html>

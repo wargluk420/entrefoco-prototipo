@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-version="0.13">
+<html lang="pt-BR" data-version="0.14">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Metodologia, referências completas, limitações e registro de dupla-checagem dos estudos usados pelo EntreFoco.">
   <meta name="theme-color" content="#f7f8fc">
   <title>Registro de evidências — EntreFoco</title>
-  <link rel="stylesheet" href="styles.css?v=0.13">
+  <link rel="stylesheet" href="styles.css?v=0.14">
 </head>
 <body class="article-page evidence-page">
   <div id="topo" tabindex="-1" aria-label="Início da página"></div>
@@ -35,6 +35,27 @@
       <div class="tools-heading"><strong>Ferramentas de leitura</strong><button class="panel-close" type="button" id="closeReadingTools" aria-label="Fechar ferramentas de leitura">×</button></div>
       <button type="button" id="focusToggle" aria-pressed="false">Modo foco</button>
       <p class="tool-hint" id="focusHint">Destaca o registro e reduz os elementos ao redor.</p>
+
+<div class="speech-tools" id="speechTools">
+  <strong class="speech-tools-title">Leitura em voz alta</strong>
+  <div class="speech-actions" role="group" aria-label="Controles de leitura em voz alta">
+    <button type="button" id="speechStart">Ouvir esta página</button>
+    <button type="button" id="speechPause" aria-pressed="false" disabled>Pausar</button>
+    <button type="button" id="speechStop" disabled>Parar</button>
+  </div>
+  <div class="speech-rate-row">
+    <label for="speechRate">Velocidade</label>
+    <select id="speechRate" aria-describedby="speechVoiceStatus">
+      <option value="0.75">0,75×</option>
+      <option value="1" selected>1×</option>
+      <option value="1.25">1,25×</option>
+      <option value="1.5">1,5×</option>
+    </select>
+  </div>
+  <p class="tool-hint" id="speechVoiceStatus">A voz em português será selecionada automaticamente.</p>
+  <p class="speech-status" id="speechStatus" role="status" aria-live="polite">Leitura parada.</p>
+  <p class="tool-hint">Este apoio não substitui NVDA, VoiceOver, TalkBack ou outro leitor de tela.</p>
+</div>
       <div class="tool-group" role="group" aria-label="Tamanho do texto"><button type="button" id="fontDecrease" aria-label="Diminuir tamanho do texto">A−</button><output id="fontScaleStatus" aria-live="polite">100%</output><button type="button" id="fontIncrease" aria-label="Aumentar tamanho do texto">A+</button></div>
       <button type="button" id="themeToggle" aria-pressed="false">Tema escuro</button>
       <button type="button" id="resetReading">Restaurar padrão</button>
@@ -336,8 +357,8 @@
     <section class="stage-next section-shell section-muted" data-focus-dim aria-labelledby="nextTitle"><div class="container stage-next-grid"><div><p class="eyebrow">Continuar explorando</p><h2 id="nextTitle">Veja como as evidências foram traduzidas para cada fase da vida.</h2></div><div><p>Retorne à página inicial ou abra diretamente a seção de pesquisas.</p><div class="stage-actions"><a class="button button-secondary" href="index.html">← Página inicial</a><a class="button button-primary" href="index.html#pesquisas">Ver pesquisas</a></div></div></div></section>
   </main>
 
-  <footer class="site-footer" data-focus-dim><div class="container footer-grid"><div><strong>EntreFoco</strong><p>Protótipo V0.13. Conteúdo educativo não substitui avaliação profissional.</p></div><a href="#topo">Voltar ao início ↑</a></div></footer>
+  <footer class="site-footer" data-focus-dim><div class="container footer-grid"><div><strong>EntreFoco</strong><p>Protótipo V0.14. Conteúdo educativo não substitui avaliação profissional.</p></div><a href="#topo">Voltar ao início ↑</a></div></footer>
   <div class="progress-bar" aria-hidden="true"><span id="readingProgress"></span></div>
-  <script src="app.js?v=0.13"></script>
+  <script src="app.js?v=0.14"></script>
 </body>
 </html>

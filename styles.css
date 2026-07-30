@@ -551,3 +551,51 @@ body.focus-mode .site-header { position: static; }
 @media (max-width: 1000px) { .evidence-jump-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 620px) { .evidence-registry-card { grid-template-columns: 1fr; } .evidence-registry-card .button { width: 100%; } .evidence-jump-grid { grid-template-columns: 1fr; } }
 @media print { .evidence-registry-card { box-shadow: none; } }
+
+
+/* V0.14 — leitura em voz alta */
+.speech-tools {
+  margin: 14px 0 10px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.speech-tools-title { display: block; margin-bottom: 9px; }
+.speech-actions { display: grid; grid-template-columns: 1.45fr 1fr 1fr; gap: 7px; }
+.speech-actions button {
+  min-height: 42px;
+  padding: 9px 8px;
+  color: var(--text);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  font-weight: 750;
+}
+.speech-actions button:first-child { color: #fff; background: var(--primary); border-color: var(--primary); }
+.speech-actions button:first-child:hover,
+.speech-actions button:first-child:focus-visible { background: var(--primary-strong); }
+.speech-actions button:disabled { cursor: not-allowed; opacity: .5; }
+.speech-rate-row { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; margin-top: 10px; }
+.speech-rate-row label { font-size: .9rem; font-weight: 750; }
+.speech-rate-row select {
+  min-height: 40px;
+  padding: 7px 30px 7px 10px;
+  color: var(--text);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 750;
+}
+.speech-status { min-height: 1.5em; margin: 9px 0 0; color: var(--text); font-size: .84rem; font-weight: 750; }
+[data-speech-active="true"] {
+  border-radius: 5px;
+  outline: 3px solid color-mix(in srgb, var(--primary) 40%, transparent);
+  outline-offset: 4px;
+  background: color-mix(in srgb, var(--surface) 72%, var(--primary) 28%);
+}
+@media (max-width: 380px) {
+  .speech-actions { grid-template-columns: 1fr 1fr; }
+  .speech-actions button:first-child { grid-column: 1 / -1; }
+}
+@media print { .speech-tools { display: none !important; } }
