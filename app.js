@@ -1,4 +1,4 @@
-/* EntreFoco V0.9 — base consolidada e padrão visual da página inicial */
+/* EntreFoco V0.11 — correção do retorno ao início */
 (() => {
   'use strict';
 
@@ -234,6 +234,20 @@
   });
 
   elements.printChecklist?.addEventListener('click', () => window.print());
+
+  // Garante que os links do rodapé alcancem o início real do documento,
+  // mesmo com o cabeçalho em posição sticky.
+  $$('a[href="#topo"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const target = $('#topo');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, left: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      if (target) {
+        window.setTimeout(() => target.focus({ preventScroll: true }), reduceMotion ? 0 : 350);
+      }
+    });
+  });
 
   document.addEventListener('keydown', (event) => {
     if (event.key !== 'Escape') return;
