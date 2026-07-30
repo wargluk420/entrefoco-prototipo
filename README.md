@@ -1,20 +1,15 @@
-# EntreFoco — Protótipo V0.9
+# EntreFoco — Protótipo V0.10
 
 Portal informativo e acolhedor sobre TDAH ao longo da vida.
 
-## O que foi corrigido nesta versão
+## Alteração deste ciclo
 
-- restauração da base visual completa usada pelas páginas internas;
-- restauração do JavaScript defensivo e compatível com a página inicial e os artigos;
-- padronização dos cartões de todas as fases disponíveis;
-- correção das ferramentas de leitura, tema, tamanho do texto e restauração de preferências;
-- Modo foco temporário, reversível pelo botão ou pela tecla `Esc`;
-- correção do retorno de foco após fechar uma estratégia;
-- preenchimento completo dos metadados das estratégias da página inicial;
-- impressão dos checklists nas páginas internas;
-- padronização das faixas editoriais;
-- proteção contra cache antigo por meio do parâmetro `?v=0.8`;
-- estilos adicionados para o quadro de critérios da página Infância.
+- página **Envelhecimento** adicionada seguindo exatamente o padrão visual e estrutural aprovado;
+- cartão Envelhecimento ativado na página inicial;
+- navegação Meia-idade → Envelhecimento adicionada;
+- ciclo das seis fases da vida concluído;
+- nenhum estilo, comportamento ou conteúdo anterior foi redesenhado;
+- CSS e JavaScript permanecem os mesmos da V0.9; apenas o parâmetro de versão foi atualizado para evitar cache antigo.
 
 ## Estrutura
 
@@ -30,22 +25,14 @@ portal-tdah-prototipo/
     ├── adolescencia.html
     ├── jovens-adultos.html
     ├── vida-adulta.html
-    └── meia-idade.html
+    ├── meia-idade.html
+    └── envelhecimento.html
 ```
 
 ## Publicação no GitHub Pages
 
-Publique a raiz do repositório pela branch `main`, pasta `/ (root)`. Ao substituir uma versão anterior, envie **todos** os arquivos do pacote para impedir combinações entre HTML novo e CSS/JavaScript antigos.
+Publique a raiz do repositório pela branch `main`, pasta `/ (root)`. Envie todos os arquivos do pacote para manter HTML, CSS e JavaScript sincronizados.
 
 ## Estado editorial
 
-O conteúdo é educativo e não substitui avaliação profissional. A revisão clínica externa permanece pendente. A página Envelhecimento ainda está em preparação.
-
-
-## Ajuste visual V0.9
-
-- Página inicial mantida como fonte de verdade visual.
-- Páginas internas usam as mesmas cores, cartões, bordas, sombras e tipografia.
-- Fundo padrão permanece azul-acinzentado claro; tema escuro continua opcional.
-- Artigos receberam largura, entrelinha e títulos mais confortáveis para leitura prolongada.
-- Versão de CSS/JS atualizada para `?v=0.9` para evitar cache antigo.
+O conteúdo é educativo e não substitui avaliação profissional. Todas as páginas científicas permanecem com revisão clínica externa pendente.
