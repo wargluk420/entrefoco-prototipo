@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-version="0.5">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Como o TDAH pode aparecer, ser avaliado e acompanhado em jovens adultos, com estratégias para estudos, trabalho, independência, relações e cuidado em saúde.">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>TDAH em jovens adultos — EntreFoco</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="article-page">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo" data-focus-dim>
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="EntreFoco — voltar à página inicial">
+        <span class="brand-mark" aria-hidden="true">◉</span>
+        <span>EntreFoco</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="../index.html#agora">Ajuda agora</a>
+        <a href="../index.html#fases" aria-current="page">Fases da vida</a>
+        <a href="../index.html#pesquisas">Pesquisas</a>
+        <a href="../index.html#acolhimento">Acolhimento</a>
+      </nav>
+
+      <button class="icon-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação móvel" hidden>
+      <a href="../index.html#agora">Ajuda agora</a>
+      <a href="../index.html#fases" aria-current="page">Fases da vida</a>
+      <a href="../index.html#pesquisas">Pesquisas</a>
+      <a href="../index.html#acolhimento">Acolhimento</a>
+    </nav>
+  </header>
+
+  <div class="focus-status" id="focusStatus" role="status" hidden>
+    <span id="focusStatusText">Modo foco ativo: artigo em destaque.</span>
+    <button type="button" id="exitFocus">Sair do foco</button>
+  </div>
+
+  <div class="reading-tools">
+    <button class="reading-tools-toggle" type="button" id="readingToolsToggle" aria-expanded="false" aria-controls="readingToolsPanel">
+      <span aria-hidden="true">⚙</span>
+      <span>Leitura</span>
+    </button>
+
+    <aside class="reading-tools-panel" id="readingToolsPanel" aria-label="Ferramentas de leitura" hidden>
+      <div class="tools-heading">
+        <strong>Ferramentas de leitura</strong>
+        <button class="panel-close" type="button" id="closeReadingTools" aria-label="Fechar ferramentas de leitura">×</button>
+      </div>
+
+      <button type="button" id="focusToggle" aria-pressed="false">Modo foco</button>
+      <p class="tool-hint" id="focusHint">Destaca o artigo e reduz os elementos ao redor.</p>
+
+      <div class="tool-group" role="group" aria-label="Tamanho do texto">
+        <button type="button" id="fontDecrease" aria-label="Diminuir tamanho do texto">A−</button>
+        <output id="fontScaleStatus" aria-live="polite">100%</output>
+        <button type="button" id="fontIncrease" aria-label="Aumentar tamanho do texto">A+</button>
+      </div>
+
+      <button type="button" id="themeToggle" aria-pressed="false">Tema escuro</button>
+      <button type="button" id="resetReading">Restaurar padrão</button>
+    </aside>
+  </div>
+
+  <main id="conteudo">
+    <section class="article-hero section-shell" data-focus-dim aria-labelledby="pageTitle">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Caminho da página">
+          <a href="../index.html">Início</a>
+          <span aria-hidden="true">/</span>
+          <a href="../index.html#fases">Fases da vida</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Jovens adultos</span>
+        </nav>
+
+        <div class="article-hero-grid">
+          <div>
+            <p class="eyebrow">TDAH ao longo da vida · Jovens adultos</p>
+            <h1 id="pageTitle">Mais independência pode revelar dificuldades que antes ficavam escondidas</h1>
+            <p class="hero-summary">Faculdade, trabalho, dinheiro, moradia, relações e cuidados com a própria saúde passam a depender de estruturas que muitas vezes precisam ser construídas pela própria pessoa.</p>
+          </div>
+
+          <aside class="article-summary-card" aria-label="Resumo desta página">
+            <strong>Em poucos segundos</strong>
+            <ul>
+              <li>Os sintomas podem persistir e mudar de impacto quando a estrutura externa diminui.</li>
+              <li>O diagnóstico adulto exige histórico desde a infância, prejuízo e sinais em mais de um contexto.</li>
+              <li>Escalas e testes ajudam, mas não substituem uma avaliação clínica completa.</li>
+              <li>Estratégias e tratamento precisam considerar estudo, trabalho, relações, saúde e objetivos pessoais.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="article-meta" aria-label="Informações editoriais">
+          <span>Leitura estimada: 12 minutos</span>
+          <span>Revisão: 30 de julho de 2026</span>
+          <span>Faixa editorial aproximada: 18 a 29 anos</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-jump-section" data-focus-dim aria-labelledby="jumpTitle">
+      <div class="container">
+        <h2 class="sr-only" id="jumpTitle">Ir diretamente a uma parte da página</h2>
+        <nav class="article-jump-grid" aria-label="Nesta página">
+          <a href="#mudancas"><span>01</span><strong>O que muda</strong><small>Independência e novas demandas</small></a>
+          <a href="#avaliacao"><span>02</span><strong>Como é avaliado</strong><small>Histórico e impacto atual</small></a>
+          <a href="#diagnostico"><span>03</span><strong>Como funciona o diagnóstico</strong><small>Critérios e contexto</small></a>
+          <a href="#estrategias"><span>04</span><strong>Estratégias de apoio</strong><small>Estudo, trabalho e rotina</small></a>
+          <a href="#consulta"><span>05</span><strong>Preparar uma consulta</strong><small>O que registrar</small></a>
+          <a href="#fontes"><span>06</span><strong>Fontes consultadas</strong><small>Evidências e revisão</small></a>
+        </nav>
+      </div>
+    </section>
+
+    <div class="container article-layout">
+      <aside class="article-toc" data-focus-dim aria-label="Sumário do artigo">
+        <strong>Nesta página</strong>
+        <a href="#mudancas">O que muda</a>
+        <a href="#avaliacao">Como é avaliado</a>
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#outras-condicoes">Outras explicações</a>
+        <a href="#estrategias">Estratégias de apoio</a>
+        <a href="#transicao">Cuidado e transição</a>
+        <a href="#consulta">Preparar consulta</a>
+        <a href="#fontes">Fontes</a>
+        <a class="back-link" href="../index.html#fases">← Voltar às fases da vida</a>
+      </aside>
+
+      <article class="article-content" data-focus-content tabindex="-1">
+        <div class="notice article-notice" role="note">
+          <strong>Ponto principal</strong>
+          <span>Ter dificuldade com faculdade, trabalho ou independência não confirma TDAH e não significa falta de esforço. A avaliação procura um padrão persistente, iniciado na infância e com prejuízo real em diferentes áreas da vida.</span>
+        </div>
+
+        <section class="content-section" id="mudancas" aria-labelledby="mudancasTitle">
+          <p class="eyebrow">Estrutura menos visível</p>
+          <h2 id="mudancasTitle">Como o TDAH pode aparecer em jovens adultos?</h2>
+          <p>Quando horários, materiais e decisões deixam de ser organizados por família ou escola, dificuldades de atenção, planejamento, memória, controle de impulsos e administração do tempo podem ficar mais evidentes. A hiperatividade também pode aparecer como inquietação interna, necessidade constante de estímulo ou dificuldade para desacelerar.</p>
+
+          <div class="symptom-grid">
+            <div class="information-card">
+              <h3>Estudos e trabalho</h3>
+              <p>Perder prazos, alternar entre cursos ou empregos, começar projetos tarde, ter dificuldade com tarefas longas, reuniões, leitura extensa ou instruções com muitas etapas.</p>
+            </div>
+            <div class="information-card">
+              <h3>Vida independente</h3>
+              <p>Esquecer contas, compromissos e documentos, acumular tarefas domésticas, subestimar deslocamentos ou depender de urgência para agir.</p>
+            </div>
+            <div class="information-card">
+              <h3>Relações e autorregulação</h3>
+              <p>Interromper, esquecer acordos, reagir rapidamente, buscar recompensas imediatas ou sentir frustração intensa. Esses sinais precisam ser analisados no contexto e não devem ser atribuídos automaticamente ao TDAH.</p>
+            </div>
+          </div>
+
+          <div class="key-point">
+            <strong>O problema pode aparecer quando a compensação deixa de funcionar.</strong>
+            <p>Algumas pessoas conseguem lidar com as exigências até ocorrer uma mudança importante, como morar sozinhas, iniciar uma graduação, assumir um emprego complexo ou perder uma rede de apoio. Isso não prova o diagnóstico, mas pode motivar uma avaliação.</p>
+          </div>
+        </section>
+
+        <section class="content-section" id="avaliacao" aria-labelledby="avaliacaoTitle">
+          <p class="eyebrow">História e funcionamento</p>
+          <h2 id="avaliacaoTitle">Como é realizada a avaliação?</h2>
+          <p>A avaliação de um adulto não depende de um exame único. O profissional reúne informações sobre sintomas atuais, desenvolvimento, saúde, estudos, trabalho, relações e funcionamento diário.</p>
+
+          <ol class="process-list">
+            <li><span>1</span><div><strong>Dificuldades e objetivos atuais</strong><p>São registrados exemplos concretos, frequência, duração e impacto. Também importa saber o que a pessoa deseja melhorar.</p></div></li>
+            <li><span>2</span><div><strong>Histórico antes dos 12 anos</strong><p>O profissional procura sinais presentes na infância, mesmo quando não houve diagnóstico. Boletins, relatórios e lembranças de familiares podem ajudar, mas a ausência desses documentos não encerra automaticamente a avaliação.</p></div></li>
+            <li><span>3</span><div><strong>Mais de um contexto</strong><p>Faculdade, trabalho, casa, relações e administração da própria vida podem revelar padrões diferentes.</p></div></li>
+            <li><span>4</span><div><strong>Saúde e outras condições</strong><p>Sono, humor, ansiedade, uso de substâncias, medicamentos, condições físicas e outras diferenças neurodesenvolvimentais precisam ser considerados.</p></div></li>
+            <li><span>5</span><div><strong>Escalas e testes como apoio</strong><p>Questionários, entrevistas e avaliações cognitivas podem organizar informações e identificar necessidades, mas não devem ser usados isoladamente para confirmar TDAH.</p></div></li>
+          </ol>
+
+          <div class="safety-note">
+            <strong>Questionários de internet não fecham diagnóstico.</strong>
+            <p>Uma triagem pode indicar que vale buscar avaliação, mas não determina sozinha a causa das dificuldades nem o tratamento adequado.</p>
+          </div>
+        </section>
+
+        <section class="content-section" id="diagnostico" aria-labelledby="diagnosticoTitle">
+          <p class="eyebrow">Padrão persistente</p>
+          <h2 id="diagnosticoTitle">Como funciona o diagnóstico em adultos?</h2>
+          <p>O diagnóstico é clínico e considera sintomas, desenvolvimento, contexto e prejuízo. Para pessoas com 17 anos ou mais, os critérios diagnósticos geralmente exigem pelo menos cinco sintomas de desatenção e/ou hiperatividade e impulsividade, além dos demais requisitos.</p>
+
+          <div class="criteria-grid">
+            <div class="criteria-card"><strong>Duração</strong><span>Os sintomas precisam persistir por pelo menos seis meses.</span></div>
+            <div class="criteria-card"><strong>Início</strong><span>Alguns sinais devem ter existido antes dos 12 anos.</span></div>
+            <div class="criteria-card"><strong>Ambientes</strong><span>O padrão precisa aparecer em dois ou mais contextos importantes.</span></div>
+            <div class="criteria-card"><strong>Prejuízo</strong><span>Deve existir interferência no funcionamento social, acadêmico, profissional ou cotidiano.</span></div>
+            <div class="criteria-card"><strong>Compatibilidade</strong><span>Os sintomas precisam ser incompatíveis com o nível de desenvolvimento e não apenas uma reação ocasional às circunstâncias.</span></div>
+            <div class="criteria-card"><strong>Outras explicações</strong><span>As dificuldades não devem ser melhor explicadas por outra condição.</span></div>
+          </div>
+
+          <p class="soft-text">Receber o diagnóstico na vida adulta não significa que o TDAH começou nessa fase. Significa que um padrão iniciado no desenvolvimento foi reconhecido mais tarde.</p>
+        </section>
+
+        <section class="content-section" id="outras-condicoes" aria-labelledby="outrasTitle">
+          <p class="eyebrow">Evitar simplificações</p>
+          <h2 id="outrasTitle">O que pode coexistir ou produzir dificuldades parecidas?</h2>
+          <p>Problemas de atenção, organização e memória podem ter diferentes causas. Também é possível haver TDAH e outra condição ao mesmo tempo.</p>
+
+          <div class="tag-list" aria-label="Condições e fatores considerados na avaliação">
+            <span>Ansiedade</span>
+            <span>Depressão</span>
+            <span>Problemas de sono</span>
+            <span>Autismo</span>
+            <span>Dificuldades de aprendizagem</span>
+            <span>Estresse ou trauma</span>
+            <span>Uso de álcool ou outras substâncias</span>
+            <span>Condições físicas ou efeitos de medicamentos</span>
+          </div>
+
+          <p class="soft-text">A lista não serve para autodiagnóstico. Ela mostra por que uma avaliação cuidadosa precisa ir além de contar sintomas.</p>
+        </section>
+
+        <section class="content-section" id="estrategias" aria-labelledby="estrategiasTitle">
+          <p class="eyebrow">Estrutura externa intencional</p>
+          <h2 id="estrategiasTitle">Quais estratégias podem auxiliar?</h2>
+          <p>Estratégias funcionam melhor quando reduzem o número de decisões, deixam o tempo visível e aproximam o primeiro passo. Não existe um sistema universal, e uma estratégia que funciona em uma fase pode precisar de ajustes depois.</p>
+
+          <div class="strategy-grid">
+            <div class="strategy-card">
+              <span>Faculdade e trabalho</span>
+              <h3>Transformar projetos em próximas ações</h3>
+              <ul>
+                <li>usar um único local para capturar tarefas;</li>
+                <li>registrar a primeira ação concreta, não apenas o projeto;</li>
+                <li>criar prazos intermediários antes da entrega final;</li>
+                <li>pedir instruções e prioridades por escrito;</li>
+                <li>usar blocos curtos de trabalho e pausas planejadas.</li>
+              </ul>
+            </div>
+            <div class="strategy-card">
+              <span>Rotina e dinheiro</span>
+              <h3>Automatizar o que não precisa depender da memória</h3>
+              <ul>
+                <li>agrupar contas e datas em um único calendário;</li>
+                <li>usar débito automático apenas com controle de saldo;</li>
+                <li>definir locais fixos para chaves, documentos e medicamentos;</li>
+                <li>criar uma revisão semanal curta da rotina;</li>
+                <li>separar decisões financeiras impulsivas por um período de espera.</li>
+              </ul>
+            </div>
+            <div class="strategy-card">
+              <span>Relações e saúde</span>
+              <h3>Externalizar acordos importantes</h3>
+              <ul>
+                <li>registrar combinados e compromissos compartilhados;</li>
+                <li>combinar uma pausa antes de conversas muito carregadas;</li>
+                <li>preparar consultas com anotações;</li>
+                <li>usar lembretes para reposição e acompanhamento de medicamentos;</li>
+                <li>pedir apoio específico em vez de depender de cobranças gerais.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="safety-note">
+            <strong>Tratamento deve ser individualizado.</strong>
+            <p>O plano pode incluir mudanças ambientais, informação, intervenções psicológicas estruturadas e medicamentos prescritos e monitorados por profissional qualificado. Esta página não orienta escolha, dose, início, combinação ou interrupção de medicamentos.</p>
+          </div>
+        </section>
+
+        <section class="content-section" id="transicao" aria-labelledby="transicaoTitle">
+          <p class="eyebrow">Cuidado sem interrupção</p>
+          <h2 id="transicaoTitle">A transição para serviços adultos também precisa ser planejada</h2>
+          <p>Quem já recebia acompanhamento na adolescência pode precisar reorganizar o cuidado ao atingir a maioridade. Uma transferência estruturada reduz o risco de perder informações, prescrições, consultas ou objetivos de tratamento.</p>
+
+          <div class="information-card wide-card">
+            <ul>
+              <li><strong>Resumo clínico:</strong> solicitar diagnóstico, histórico de tratamentos, respostas, efeitos adversos e necessidades atuais.</li>
+              <li><strong>Continuidade:</strong> confirmar quem assumirá prescrições e acompanhamento antes de encerrar o serviço anterior.</li>
+              <li><strong>Autonomia gradual:</strong> conhecer nomes, objetivos e horários dos medicamentos e saber como marcar ou remarcar consultas.</li>
+              <li><strong>Privacidade e apoio:</strong> decidir quem pode participar das conversas, respeitando preferências e regras do serviço.</li>
+              <li><strong>Plano compartilhado:</strong> registrar metas de estudo, trabalho, saúde e vida diária que precisam ser acompanhadas.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="content-section" id="consulta" aria-labelledby="consultaTitle">
+          <p class="eyebrow">Próximo passo pequeno</p>
+          <h2 id="consultaTitle">Como preparar uma conversa com um profissional?</h2>
+          <p>Não é necessário organizar toda a vida antes da consulta. Levar alguns exemplos concretos costuma ser mais útil do que tentar lembrar de tudo durante a conversa.</p>
+
+          <ul class="consultation-checklist">
+            <li><input type="checkbox" id="young-check1"><label for="young-check1">Anotar duas situações recentes em que a dificuldade causou prejuízo.</label></li>
+            <li><input type="checkbox" id="young-check2"><label for="young-check2">Registrar lembranças, boletins ou relatos sobre sinais antes dos 12 anos, quando disponíveis.</label></li>
+            <li><input type="checkbox" id="young-check3"><label for="young-check3">Listar impactos em estudo, trabalho, dinheiro, casa, relações e saúde.</label></li>
+            <li><input type="checkbox" id="young-check4"><label for="young-check4">Anotar rotina de sono, humor, ansiedade e uso de cafeína, álcool ou outras substâncias.</label></li>
+            <li><input type="checkbox" id="young-check5"><label for="young-check5">Listar medicamentos, suplementos, tratamentos anteriores e efeitos percebidos.</label></li>
+            <li><input type="checkbox" id="young-check6"><label for="young-check6">Escolher uma meta concreta que gostaria de melhorar primeiro.</label></li>
+          </ul>
+
+          <div class="next-step-box">
+            <div>
+              <strong>Faça apenas isto agora:</strong>
+              <p>Complete a frase: “Eu consigo fazer algumas coisas, mas frequentemente tenho prejuízo quando preciso…”. Acrescente um exemplo recente.</p>
+            </div>
+            <button class="button button-secondary" type="button" id="printChecklist">Imprimir checklist</button>
+          </div>
+        </section>
+
+        <section class="content-section sources-section" id="fontes" aria-labelledby="fontesTitle">
+          <p class="eyebrow">Transparência editorial</p>
+          <h2 id="fontesTitle">Fontes consultadas</h2>
+          <p>Esta versão utiliza materiais institucionais e diretrizes clínicas. O conteúdo deverá receber revisão clínica externa antes de ser considerado pronto para publicação oficial.</p>
+
+          <ol class="source-list">
+            <li><a href="https://www.cdc.gov/adhd/articles/adhd-across-the-lifetime.html" target="_blank" rel="noopener noreferrer">CDC — ADHD in Adults</a><span>Manifestação do TDAH na vida adulta, diagnóstico, tratamento e impacto cotidiano; junho de 2026.</span></li>
+            <li><a href="https://www.nimh.nih.gov/health/publications/adhd-what-you-need-to-know" target="_blank" rel="noopener noreferrer">NIMH — ADHD in Adults: 4 Things to Know</a><span>Sintomas adultos, prejuízo funcional, avaliação e diagnóstico.</span></li>
+            <li><a href="https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know" target="_blank" rel="noopener noreferrer">NIMH — ADHD: What You Need to Know</a><span>Critérios gerais, mudanças ao longo da vida e opções de tratamento.</span></li>
+            <li><a href="https://www.nice.org.uk/guidance/ng87/chapter/recommendations" target="_blank" rel="noopener noreferrer">NICE NG87 — Recommendations</a><span>Avaliação especializada, transição para serviços adultos, plano compartilhado e manejo em adultos.</span></li>
+            <li><a href="https://www.nice.org.uk/guidance/ng87" target="_blank" rel="noopener noreferrer">NICE NG87 — Overview</a><span>Diretriz sobre reconhecimento, diagnóstico e manejo; revisada pelo NICE em maio de 2025.</span></li>
+            <li><a href="https://www.gottransition.org/six-core-elements/transitioning-youth-to-adult/transfer-of-care.cfm" target="_blank" rel="noopener noreferrer">Got Transition — Transfer of Care</a><span>Elementos de uma transferência estruturada para o cuidado adulto.</span></li>
+          </ol>
+
+          <div class="editorial-status">
+            <span>Estado: conteúdo fundamentado, revisão clínica externa pendente</span>
+            <span>Próxima revisão planejada: antes da publicação oficial</span>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <section class="stage-next section-shell section-muted" data-focus-dim aria-labelledby="nextStageTitle">
+      <div class="container stage-next-grid">
+        <div>
+          <p class="eyebrow">Continuar explorando</p>
+          <h2 id="nextStageTitle">A vida adulta amplia responsabilidades e padrões de longo prazo.</h2>
+        </div>
+        <div>
+          <p>A página de vida adulta será a próxima etapa desta sequência. Você também pode voltar para revisar a adolescência.</p>
+          <div class="stage-actions">
+            <a class="button button-secondary" href="adolescencia.html">← Voltar à adolescência</a>
+            <a class="button button-primary" href="../index.html#fases">Ver todas as fases</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-focus-dim>
+    <div class="container footer-grid">
+      <div>
+        <strong>EntreFoco</strong>
+        <p>Protótipo V0.5. Conteúdo educativo não substitui avaliação profissional.</p>
+      </div>
+      <a href="#topo">Voltar ao início ↑</a>
+    </div>
+  </footer>
+
+  <div class="progress-bar" aria-hidden="true"><span id="readingProgress"></span></div>
+
+  <script src="../app.js"></script>
+</body>
+</html>
