@@ -1,399 +1,391 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-version="0.11">
+
+<html data-version="0.12" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Como o TDAH pode aparecer, ser avaliado e acompanhado no envelhecimento, com atenção a memória, diagnóstico diferencial, autonomia, saúde, medicamentos e estratégias de apoio.">
-  <meta name="theme-color" content="#f7f8fc">
-  <title>TDAH no envelhecimento — EntreFoco</title>
-  <link rel="stylesheet" href="../styles.css?v=0.11">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Como o TDAH pode aparecer, ser avaliado e acompanhado no envelhecimento, com atenção a memória, diagnóstico diferencial, autonomia, saúde, medicamentos e estratégias de apoio." name="description"/>
+<meta content="#f7f8fc" name="theme-color"/>
+<title>TDAH no envelhecimento — EntreFoco</title>
+<link href="../styles.css?v=0.12" rel="stylesheet"/>
 </head>
 <body class="article-page">
-  <div id="topo" tabindex="-1" aria-label="Início da página"></div>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-  <header class="site-header" data-focus-dim>
-    <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="EntreFoco — voltar à página inicial">
-        <span class="brand-mark" aria-hidden="true">◉</span>
-        <span>EntreFoco</span>
-      </a>
-
-      <nav class="main-nav" aria-label="Navegação principal">
-        <a href="../index.html#agora">Ajuda agora</a>
-        <a href="../index.html#fases" aria-current="page">Fases da vida</a>
-        <a href="../index.html#pesquisas">Pesquisas</a>
-        <a href="../index.html#acolhimento">Acolhimento</a>
-      </nav>
-
-      <button class="icon-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
-        <span aria-hidden="true">☰</span>
-      </button>
-    </div>
-
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação móvel" hidden>
-      <a href="../index.html#agora">Ajuda agora</a>
-      <a href="../index.html#fases" aria-current="page">Fases da vida</a>
-      <a href="../index.html#pesquisas">Pesquisas</a>
-      <a href="../index.html#acolhimento">Acolhimento</a>
-    </nav>
-  </header>
-
-  <div class="focus-status" id="focusStatus" role="status" hidden>
-    <span id="focusStatusText">Modo foco ativo: artigo em destaque.</span>
-    <button type="button" id="exitFocus">Sair do foco</button>
-  </div>
-
-  <div class="reading-tools">
-    <button class="reading-tools-toggle" type="button" id="readingToolsToggle" aria-expanded="false" aria-controls="readingToolsPanel">
-      <span aria-hidden="true">⚙</span>
-      <span>Leitura</span>
-    </button>
-
-    <aside class="reading-tools-panel" id="readingToolsPanel" aria-label="Ferramentas de leitura" hidden>
-      <div class="tools-heading">
-        <strong>Ferramentas de leitura</strong>
-        <button class="panel-close" type="button" id="closeReadingTools" aria-label="Fechar ferramentas de leitura">×</button>
-      </div>
-
-      <button type="button" id="focusToggle" aria-pressed="false">Modo foco</button>
-      <p class="tool-hint" id="focusHint">Destaca o artigo e reduz os elementos ao redor.</p>
-
-      <div class="tool-group" role="group" aria-label="Tamanho do texto">
-        <button type="button" id="fontDecrease" aria-label="Diminuir tamanho do texto">A−</button>
-        <output id="fontScaleStatus" aria-live="polite">100%</output>
-        <button type="button" id="fontIncrease" aria-label="Aumentar tamanho do texto">A+</button>
-      </div>
-
-      <button type="button" id="themeToggle" aria-pressed="false">Tema escuro</button>
-      <button type="button" id="resetReading">Restaurar padrão</button>
-    </aside>
-  </div>
-
-  <main id="conteudo">
-    <section class="article-hero section-shell" data-focus-dim aria-labelledby="pageTitle">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Caminho da página">
-          <a href="../index.html">Início</a>
-          <span aria-hidden="true">/</span>
-          <a href="../index.html#fases">Fases da vida</a>
-          <span aria-hidden="true">/</span>
-          <span aria-current="page">Envelhecimento</span>
-        </nav>
-
-        <div class="article-hero-grid">
-          <div>
-            <p class="eyebrow">TDAH ao longo da vida · Envelhecimento</p>
-            <h1 id="pageTitle">Memória, saúde e autonomia precisam ser analisadas em conjunto</h1>
-            <p class="hero-summary">O TDAH pode continuar presente em adultos mais velhos, mas mudanças recentes de atenção ou memória exigem uma avaliação ampla, sem atribuir tudo ao envelhecimento ou ao próprio TDAH.</p>
-          </div>
-
-          <aside class="article-summary-card" aria-label="Resumo desta página">
-            <strong>Em poucos segundos</strong>
-            <ul>
-              <li>O TDAH começa na infância, mesmo quando o diagnóstico acontece somente após os 60 anos.</li>
-              <li>Queixas novas ou progressivas de memória precisam ser investigadas, pois podem ter outras causas.</li>
-              <li>O histórico ao longo da vida ajuda a diferenciar um padrão antigo de uma mudança cognitiva recente.</li>
-              <li>O cuidado deve considerar autonomia, sono, visão, audição, saúde física, outros medicamentos e apoio disponível.</li>
-            </ul>
-          </aside>
-        </div>
-
-        <div class="article-meta" aria-label="Informações editoriais">
-          <span>Leitura estimada: 15 minutos</span>
-          <span>Revisão: 30 de julho de 2026</span>
-          <span>Faixa editorial aproximada: 60 anos ou mais</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="article-jump-section" data-focus-dim aria-labelledby="jumpTitle">
-      <div class="container">
-        <h2 class="sr-only" id="jumpTitle">Ir diretamente a uma parte da página</h2>
-        <nav class="article-jump-grid" aria-label="Nesta página">
-          <a href="#manifestacoes"><span>01</span><strong>Como pode aparecer</strong><small>Rotina, estrutura e autonomia</small></a>
-          <a href="#avaliacao"><span>02</span><strong>Como é avaliado</strong><small>História e funcionamento atual</small></a>
-          <a href="#diferencial"><span>03</span><strong>O que precisa ser diferenciado</strong><small>Mudanças antigas e recentes</small></a>
-          <a href="#cognicao"><span>04</span><strong>Memória e cognição</strong><small>O que a pesquisa permite dizer</small></a>
-          <a href="#estrategias"><span>05</span><strong>Estratégias de apoio</strong><small>Segurança e menor carga mental</small></a>
-          <a href="#consulta"><span>06</span><strong>Preparar uma consulta</strong><small>Organizar histórico e mudanças</small></a>
-        </nav>
-      </div>
-    </section>
-
-    <div class="container article-layout">
-      <aside class="article-toc" data-focus-dim aria-label="Sumário do artigo">
-        <strong>Nesta página</strong>
-        <a href="#manifestacoes">Como pode aparecer</a>
-        <a href="#avaliacao">Como é avaliado</a>
-        <a href="#diagnostico">Diagnóstico tardio</a>
-        <a href="#diferencial">Outras explicações</a>
-        <a href="#cognicao">Memória e cognição</a>
-        <a href="#estrategias">Estratégias de apoio</a>
-        <a href="#tratamento">Cuidado e monitoramento</a>
-        <a href="#consulta">Preparar consulta</a>
-        <a href="#fontes">Fontes</a>
-        <a class="back-link" href="../index.html#fases">← Voltar às fases da vida</a>
-      </aside>
-
-      <article class="article-content" data-focus-content tabindex="-1">
-        <div class="notice article-notice" role="note">
-          <strong>Ponto principal</strong>
-          <span>Esquecimento, distração ou dificuldade de organização no envelhecimento não confirmam TDAH. O padrão precisa ter começado na infância, enquanto mudanças novas, aceleradas ou progressivas exigem investigação clínica.</span>
-        </div>
-
-        <section class="content-section" id="manifestacoes" aria-labelledby="manifestacoesTitle">
-          <p class="eyebrow">O contexto muda novamente</p>
-          <h2 id="manifestacoesTitle">Como o TDAH pode aparecer no envelhecimento?</h2>
-          <p>Em adultos mais velhos, desatenção, inquietação e impulsividade ainda podem estar presentes. O impacto pode mudar quando a pessoa se aposenta, perde rotinas externas, assume cuidados de saúde mais complexos ou passa a depender de sistemas que antes eram administrados pelo trabalho ou por familiares.</p>
-
-          <div class="symptom-grid">
-            <div class="information-card">
-              <h3>Perda de estrutura externa</h3>
-              <p>Aposentadoria, mudanças de casa ou redução de compromissos fixos podem retirar horários e cobranças que antes organizavam o dia.</p>
-            </div>
-            <div class="information-card">
-              <h3>Saúde e tarefas administrativas</h3>
-              <p>Consultas, exames, receitas, documentos e diferentes horários de tratamento podem aumentar o número de tarefas que dependem de planejamento e memória de trabalho.</p>
-            </div>
-            <div class="information-card">
-              <h3>Autonomia e relações</h3>
-              <p>Esquecimentos, decisões impulsivas ou atrasos podem gerar conflitos, vergonha ou receio de perder autonomia, mesmo quando a pessoa mantém muitas capacidades preservadas.</p>
-            </div>
-          </div>
-
-          <div class="key-point">
-            <strong>Uma dificuldade antiga pode ficar mais visível quando o apoio muda.</strong>
-            <p>A pessoa pode ter funcionado por décadas com rotinas rígidas, ajuda do parceiro, trabalho estruturado ou estratégias próprias. A perda desses apoios pode revelar um padrão anterior, mas não explica automaticamente toda mudança atual.</p>
-          </div>
-        </section>
-
-        <section class="content-section" id="avaliacao" aria-labelledby="avaliacaoTitle">
-          <p class="eyebrow">Olhar para a vida inteira</p>
-          <h2 id="avaliacaoTitle">Como é realizada a avaliação?</h2>
-          <p>A avaliação procura saber se existe um padrão persistente desde a infância e como ele interfere hoje. Ao mesmo tempo, investiga condições médicas, emocionais, sensoriais, cognitivas e medicamentosas que podem produzir ou intensificar sintomas semelhantes.</p>
-
-          <ol class="process-list">
-            <li><span>1</span><div><strong>Reconstruir o histórico</strong><p>Relatos sobre escola, trabalho, finanças, relacionamentos, direção, organização e tarefas domésticas ajudam a identificar padrões anteriores aos 12 anos.</p></div></li>
-            <li><span>2</span><div><strong>Ouvir pessoas de confiança</strong><p>Com autorização, familiares, parceiros ou pessoas próximas podem contribuir com exemplos de diferentes períodos e ambientes.</p></div></li>
-            <li><span>3</span><div><strong>Descrever o funcionamento atual</strong><p>O profissional avalia impacto sobre autonomia, segurança, rotina de saúde, compromissos, relações, finanças e qualidade de vida.</p></div></li>
-            <li><span>4</span><div><strong>Investigar mudanças recentes</strong><p>É importante registrar quando a dificuldade começou, se está piorando e se houve alterações de sono, humor, saúde, visão, audição ou medicamentos.</p></div></li>
-            <li><span>5</span><div><strong>Usar instrumentos como apoio</strong><p>Entrevistas, escalas e avaliação cognitiva podem ajudar, mas nenhum teste isolado confirma ou exclui TDAH.</p></div></li>
-          </ol>
-        </section>
-
-        <section class="content-section" id="diagnostico" aria-labelledby="diagnosticoTitle">
-          <p class="eyebrow">Diagnóstico tardio não é início tardio</p>
-          <h2 id="diagnosticoTitle">O TDAH pode ser diagnosticado após os 60 anos?</h2>
-          <p>Sim. Uma pessoa pode chegar ao envelhecimento sem diagnóstico anterior. No entanto, os critérios continuam exigindo sinais iniciados na infância, presentes em diferentes contextos e associados a prejuízo ou dificuldade funcional.</p>
-
-          <div class="information-card wide-card">
-            <ul>
-              <li><strong>Início:</strong> alguns sinais precisam ter existido antes dos 12 anos.</li>
-              <li><strong>Persistência:</strong> o padrão não deve ser explicado apenas por um período recente.</li>
-              <li><strong>Contextos:</strong> as dificuldades precisam aparecer em mais de uma área da vida.</li>
-              <li><strong>Impacto:</strong> deve haver interferência relevante no funcionamento cotidiano.</li>
-              <li><strong>Diferenciação:</strong> outras causas precisam ser consideradas antes da conclusão.</li>
-            </ul>
-          </div>
-
-          <div class="safety-note">
-            <strong>Mudanças recentes não devem ser normalizadas nem autodiagnosticadas.</strong>
-            <p>Confusão súbita, perda rápida de habilidades, desorientação, mudanças neurológicas, quedas recorrentes ou dificuldade nova para tarefas antes dominadas precisam de avaliação médica.</p>
-          </div>
-        </section>
-
-        <section class="content-section" id="diferencial" aria-labelledby="diferencialTitle">
-          <p class="eyebrow">Sintomas parecidos, causas diferentes</p>
-          <h2 id="diferencialTitle">O que precisa ser diferenciado?</h2>
-          <p>A avaliação não deve escolher entre “TDAH” e “envelhecimento” de forma simplista. Condições podem coexistir, e uma mudança recente pode se somar a dificuldades antigas.</p>
-
-          <div class="symptom-grid">
-            <div class="information-card">
-              <h3>Sono, humor e estresse</h3>
-              <p>Insônia, apneia do sono, ansiedade, depressão, luto e sobrecarga podem afetar atenção, memória, motivação e velocidade de processamento.</p>
-            </div>
-            <div class="information-card">
-              <h3>Saúde e medicamentos</h3>
-              <p>Condições clínicas, dor, efeitos adversos, interações e uso de vários medicamentos podem modificar energia, alerta e funcionamento cognitivo.</p>
-            </div>
-            <div class="information-card">
-              <h3>Alterações cognitivas</h3>
-              <p>Comprometimento cognitivo leve e demências exigem avaliação específica, principalmente quando há piora progressiva ou perda de habilidades previamente consolidadas.</p>
-            </div>
-          </div>
-
-          <div class="key-point">
-            <strong>A linha do tempo é uma das informações mais úteis.</strong>
-            <p>No TDAH, costuma existir um padrão antigo de organização, atenção ou impulsividade. Em condições neurocognitivas, pode haver declínio em relação ao funcionamento anterior, embora a diferenciação nem sempre seja simples.</p>
-          </div>
-        </section>
-
-        <section class="content-section" id="cognicao" aria-labelledby="cognicaoTitle">
-          <p class="eyebrow">Pesquisa ainda limitada</p>
-          <h2 id="cognicaoTitle">O que sabemos sobre memória e cognição?</h2>
-          <p>A pesquisa específica sobre TDAH em pessoas idosas ainda é pequena. Revisões recentes encontraram poucos estudos, diferentes métodos e resultados nem sempre consistentes. Isso limita conclusões sobre um perfil cognitivo exclusivo do TDAH no envelhecimento.</p>
-
-          <div class="information-card wide-card">
-            <ul>
-              <li><strong>Atenção e memória episódica:</strong> alguns estudos encontraram desempenho inferior em comparação com pessoas idosas sem TDAH.</li>
-              <li><strong>Funções executivas:</strong> os resultados são mistos e variam conforme a tarefa e a amostra.</li>
-              <li><strong>Diagnóstico diferencial:</strong> testes cognitivos podem contribuir, mas precisam ser interpretados junto com história, funcionamento e evolução dos sintomas.</li>
-              <li><strong>Limitação:</strong> ainda faltam protocolos amplamente acordados e estudos longitudinais maiores.</li>
-            </ul>
-          </div>
-
-          <div class="notice article-notice" role="note">
-            <strong>Estado da evidência</strong>
-            <span>O TDAH em adultos mais velhos é reconhecido, mas os dados sobre avaliação cognitiva, prevalência e tratamento específico nessa faixa etária permanecem limitados.</span>
-          </div>
-        </section>
-
-        <section class="content-section" id="estrategias" aria-labelledby="estrategiasTitle">
-          <p class="eyebrow">Menos dependência da memória</p>
-          <h2 id="estrategiasTitle">Quais estratégias podem auxiliar?</h2>
-          <p>As estratégias devem preservar autonomia sem depender de esforço mental constante. Sistemas simples, visíveis e compartilhados tendem a ser mais sustentáveis do que várias ferramentas paralelas.</p>
-
-          <div class="strategy-grid">
-            <div class="strategy-card">
-              <span>Rotina e compromissos</span>
-              <h3>Criar uma fonte única de verdade</h3>
-              <ul>
-                <li>usar um calendário principal para consultas e compromissos;</li>
-                <li>manter chaves, documentos e objetos essenciais em locais fixos;</li>
-                <li>registrar o próximo passo no momento em que a decisão é tomada;</li>
-                <li>usar lembretes com ação concreta, não apenas alarmes genéricos;</li>
-                <li>revisar a semana em um horário fixo e curto.</li>
-              </ul>
-            </div>
-            <div class="strategy-card">
-              <span>Saúde e medicamentos</span>
-              <h3>Reduzir erros de rotina</h3>
-              <ul>
-                <li>manter lista atualizada de medicamentos e profissionais;</li>
-                <li>usar organizador somente quando o esquema tiver sido conferido;</li>
-                <li>ligar cada ação de saúde a um horário ou hábito estável;</li>
-                <li>pedir instruções por escrito após consultas;</li>
-                <li>envolver uma pessoa de confiança quando houver dificuldade relevante.</li>
-              </ul>
-            </div>
-            <div class="strategy-card">
-              <span>Autonomia e segurança</span>
-              <h3>Adicionar apoio sem retirar controle</h3>
-              <ul>
-                <li>automatizar pagamentos previsíveis com revisão periódica;</li>
-                <li>usar limites e confirmação para decisões financeiras importantes;</li>
-                <li>simplificar ambientes e reduzir etapas desnecessárias;</li>
-                <li>combinar como e quando familiares podem ajudar;</li>
-                <li>reavaliar direção, finanças ou medicação quando surgirem sinais de risco.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="next-step-box">
-            <div>
-              <strong>Versão mínima para hoje:</strong>
-              <p>Escolha uma informação importante — próxima consulta, lista de medicamentos ou telefone de emergência — e coloque-a em um único lugar fácil de encontrar.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="content-section" id="tratamento" aria-labelledby="tratamentoTitle">
-          <p class="eyebrow">Benefícios, riscos e contexto atual</p>
-          <h2 id="tratamentoTitle">Como pode funcionar o cuidado e o monitoramento?</h2>
-          <p>O plano precisa ser individualizado. Diretrizes para adultos incluem adaptações ambientais, intervenções psicológicas estruturadas e medicamentos quando indicados, mas a pesquisa específica em pessoas idosas ainda é limitada.</p>
-
-          <div class="information-card wide-card">
-            <ul>
-              <li><strong>Revisão clínica:</strong> objetivos, benefícios e dificuldades devem ser reavaliados conforme saúde e rotina mudam.</li>
-              <li><strong>Lista completa:</strong> todos os medicamentos e condições clínicas precisam ser considerados para reduzir interações e efeitos adversos.</li>
-              <li><strong>Monitoramento:</strong> peso, pressão arterial, frequência cardíaca, sono e efeitos devem ser acompanhados conforme orientação profissional.</li>
-              <li><strong>Apoio não farmacológico:</strong> organização externa, terapia e adaptações podem ser úteis mesmo quando há tratamento medicamentoso.</li>
-              <li><strong>Decisão compartilhada:</strong> autonomia, preferências, riscos, suporte disponível e qualidade de vida fazem parte da escolha.</li>
-            </ul>
-          </div>
-
-          <div class="safety-note">
-            <strong>Não inicie, suspenda ou ajuste medicamentos por conta própria.</strong>
-            <p>Em adultos mais velhos, condições cardiovasculares, outros medicamentos e mudanças metabólicas tornam especialmente importante a avaliação individual e o acompanhamento regular.</p>
-          </div>
-        </section>
-
-        <section class="content-section" id="consulta" aria-labelledby="consultaTitle">
-          <p class="eyebrow">Próximo passo pequeno</p>
-          <h2 id="consultaTitle">Como preparar uma conversa com um profissional?</h2>
-          <p>Separe o padrão antigo das mudanças recentes. Levar exemplos concretos reduz a dependência da memória durante a consulta.</p>
-
-          <ul class="consultation-checklist">
-            <li><input type="checkbox" id="old-check1"><label for="old-check1">Anotar duas dificuldades presentes desde a infância ou vida adulta jovem.</label></li>
-            <li><input type="checkbox" id="old-check2"><label for="old-check2">Registrar o que começou ou piorou recentemente e em qual período.</label></li>
-            <li><input type="checkbox" id="old-check3"><label for="old-check3">Listar mudanças em sono, humor, visão, audição, equilíbrio e saúde física.</label></li>
-            <li><input type="checkbox" id="old-check4"><label for="old-check4">Levar todos os medicamentos, doses, horários e suplementos utilizados.</label></li>
-            <li><input type="checkbox" id="old-check5"><label for="old-check5">Anotar situações em que houve perda de autonomia, risco ou erro importante.</label></li>
-            <li><input type="checkbox" id="old-check6"><label for="old-check6">Escolher uma pessoa de confiança para contribuir com o histórico, se desejar.</label></li>
-          </ul>
-
-          <div class="next-step-box">
-            <div>
-              <strong>Faça apenas isto agora:</strong>
-              <p>Escreva dois exemplos: “isso sempre aconteceu” e “isso começou ou piorou recentemente”. Leve essa comparação à consulta.</p>
-            </div>
-            <button class="button button-secondary" type="button" id="printChecklist">Imprimir checklist</button>
-          </div>
-        </section>
-
-        <section class="content-section sources-section" id="fontes" aria-labelledby="fontesTitle">
-          <p class="eyebrow">Transparência editorial</p>
-          <h2 id="fontesTitle">Fontes consultadas</h2>
-          <p>Esta versão utiliza materiais institucionais e revisões científicas. A pesquisa específica sobre TDAH no envelhecimento ainda é limitada, e o conteúdo deverá receber revisão clínica externa antes da publicação oficial.</p>
-
-          <ol class="source-list">
-            <li><a href="https://www.cdc.gov/adhd/articles/adhd-across-the-lifetime.html" target="_blank" rel="noopener noreferrer">CDC — ADHD in Adults</a><span>Persistência e mudança dos sintomas ao longo da vida; atualizado em junho de 2026.</span></li>
-            <li><a href="https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know" target="_blank" rel="noopener noreferrer">NIMH — Attention-Deficit/Hyperactivity Disorder: What You Need to Know</a><span>Critérios gerais, avaliação, diagnóstico diferencial e apresentação em adultos, incluindo adultos mais velhos.</span></li>
-            <li><a href="https://www.nice.org.uk/guidance/ng87/chapter/recommendations" target="_blank" rel="noopener noreferrer">NICE NG87 — Recommendations</a><span>Tratamento de adultos, revisão de saúde física e monitoramento de peso, pressão arterial, frequência cardíaca e sono.</span></li>
-            <li><a href="https://pubmed.ncbi.nlm.nih.gov/41146423/" target="_blank" rel="noopener noreferrer">Cognitive Profile of ADHD in Older Adults: A Systematic Review, 2025</a><span>Revisão sistemática de dez estudos sobre atenção, memória e funções executivas em adultos mais velhos com TDAH.</span></li>
-            <li><a href="https://pubmed.ncbi.nlm.nih.gov/38622905/" target="_blank" rel="noopener noreferrer">ADHD in older adults — a scoping review, 2024</a><span>Mapeamento de 17 estudos sobre sintomas, condições coexistentes e desafios em pessoas com 60 anos ou mais.</span></li>
-            <li><a href="https://pubmed.ncbi.nlm.nih.gov/37725058/" target="_blank" rel="noopener noreferrer">The diagnosis and treatment of ADHD in older adults, 2023</a><span>Revisão sobre lacunas de conhecimento, avaliação, diagnóstico diferencial e tratamento nessa faixa etária.</span></li>
-            <li><a href="https://www.gov.br/saude/pt-br/assuntos/pcdt/t/transtorno-do-deficit-de-atencao-com-hiperatividade-tdah/view" target="_blank" rel="noopener noreferrer">Ministério da Saúde — PCDT do TDAH</a><span>Protocolo clínico brasileiro com critérios diagnósticos e diretrizes terapêuticas gerais.</span></li>
-          </ol>
-
-          <div class="editorial-status">
-            <span>Estado: conteúdo fundamentado, revisão clínica externa pendente</span>
-            <span>TDAH no envelhecimento: campo com evidência ainda limitada</span>
-          </div>
-        </section>
-      </article>
-    </div>
-
-    <section class="stage-next section-shell section-muted" data-focus-dim aria-labelledby="nextStageTitle">
-      <div class="container stage-next-grid">
-        <div>
-          <p class="eyebrow">Ciclo das fases concluído</p>
-          <h2 id="nextStageTitle">Explore outra etapa ou retorne ao mapa completo.</h2>
-        </div>
-        <div>
-          <p>Você pode voltar para Meia-idade ou escolher qualquer fase da vida na página inicial.</p>
-          <div class="stage-actions">
-            <a class="button button-secondary" href="meia-idade.html">← Voltar à meia-idade</a>
-            <a class="button button-primary" href="../index.html#fases">Ver todas as fases</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" data-focus-dim>
-    <div class="container footer-grid">
-      <div>
-        <strong>EntreFoco</strong>
-        <p>Protótipo V0.11. Conteúdo educativo não substitui avaliação profissional.</p>
-      </div>
-      <a href="#topo">Voltar ao início ↑</a>
-    </div>
-  </footer>
-
-  <div class="progress-bar" aria-hidden="true"><span id="readingProgress"></span></div>
-
-  <script src="../app.js?v=0.11"></script>
+<div aria-label="Início da página" id="topo" tabindex="-1"></div>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" data-focus-dim="">
+<div class="container header-inner">
+<a aria-label="EntreFoco — voltar à página inicial" class="brand" href="../index.html">
+<span aria-hidden="true" class="brand-mark">◉</span>
+<span>EntreFoco</span>
+</a>
+<nav aria-label="Navegação principal" class="main-nav">
+<a href="../index.html#agora">Ajuda agora</a>
+<a aria-current="page" href="../index.html#fases">Fases da vida</a>
+<a href="../index.html#pesquisas">Pesquisas</a>
+<a href="../index.html#acolhimento">Acolhimento</a>
+</nav>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menu" class="icon-button" id="menuButton" type="button">
+<span aria-hidden="true">☰</span>
+</button>
+</div>
+<nav aria-label="Navegação móvel" class="mobile-menu" hidden="" id="mobileMenu">
+<a href="../index.html#agora">Ajuda agora</a>
+<a aria-current="page" href="../index.html#fases">Fases da vida</a>
+<a href="../index.html#pesquisas">Pesquisas</a>
+<a href="../index.html#acolhimento">Acolhimento</a>
+</nav>
+</header>
+<div class="focus-status" hidden="" id="focusStatus" role="status">
+<span id="focusStatusText">Modo foco ativo: artigo em destaque.</span>
+<button id="exitFocus" type="button">Sair do foco</button>
+</div>
+<div class="reading-tools">
+<button aria-controls="readingToolsPanel" aria-expanded="false" class="reading-tools-toggle" id="readingToolsToggle" type="button">
+<span aria-hidden="true">⚙</span>
+<span>Leitura</span>
+</button>
+<aside aria-label="Ferramentas de leitura" class="reading-tools-panel" hidden="" id="readingToolsPanel">
+<div class="tools-heading">
+<strong>Ferramentas de leitura</strong>
+<button aria-label="Fechar ferramentas de leitura" class="panel-close" id="closeReadingTools" type="button">×</button>
+</div>
+<button aria-pressed="false" id="focusToggle" type="button">Modo foco</button>
+<p class="tool-hint" id="focusHint">Destaca o artigo e reduz os elementos ao redor.</p>
+<div aria-label="Tamanho do texto" class="tool-group" role="group">
+<button aria-label="Diminuir tamanho do texto" id="fontDecrease" type="button">A−</button>
+<output aria-live="polite" id="fontScaleStatus">100%</output>
+<button aria-label="Aumentar tamanho do texto" id="fontIncrease" type="button">A+</button>
+</div>
+<button aria-pressed="false" id="themeToggle" type="button">Tema escuro</button>
+<button id="resetReading" type="button">Restaurar padrão</button>
+</aside>
+</div>
+<main id="conteudo">
+<section aria-labelledby="pageTitle" class="article-hero section-shell" data-focus-dim="">
+<div class="container">
+<nav aria-label="Caminho da página" class="breadcrumb">
+<a href="../index.html">Início</a>
+<span aria-hidden="true">/</span>
+<a href="../index.html#fases">Fases da vida</a>
+<span aria-hidden="true">/</span>
+<span aria-current="page">Envelhecimento</span>
+</nav>
+<div class="article-hero-grid">
+<div>
+<p class="eyebrow">TDAH ao longo da vida · Envelhecimento</p>
+<h1 id="pageTitle">Memória, saúde e autonomia precisam ser analisadas em conjunto</h1>
+<p class="hero-summary">O TDAH pode continuar presente em adultos mais velhos, mas mudanças recentes de atenção ou memória exigem uma avaliação ampla, sem atribuir tudo ao envelhecimento ou ao próprio TDAH.</p>
+</div>
+<aside aria-label="Resumo desta página" class="article-summary-card">
+<strong>Em poucos segundos</strong>
+<ul>
+<li>O TDAH começa na infância, mesmo quando o diagnóstico acontece somente após os 60 anos.</li>
+<li>Queixas novas ou progressivas de memória precisam ser investigadas, pois podem ter outras causas.</li>
+<li>O histórico ao longo da vida ajuda a diferenciar um padrão antigo de uma mudança cognitiva recente.</li>
+<li>O cuidado deve considerar autonomia, sono, visão, audição, saúde física, outros medicamentos e apoio disponível.</li>
+</ul>
+</aside>
+</div>
+<div aria-label="Informações editoriais" class="article-meta">
+<span>Leitura estimada: 15 minutos</span>
+<span>Revisão: 30 de julho de 2026</span>
+<span>Faixa editorial aproximada: 60 anos ou mais</span>
+</div>
+</div>
+</section>
+<section aria-labelledby="jumpTitle" class="article-jump-section" data-focus-dim="">
+<div class="container">
+<h2 class="sr-only" id="jumpTitle">Ir diretamente a uma parte da página</h2>
+<nav aria-label="Nesta página" class="article-jump-grid">
+<a href="#manifestacoes"><span>01</span><strong>Como pode aparecer</strong><small>Rotina, estrutura e autonomia</small></a>
+<a href="#avaliacao"><span>02</span><strong>Como é avaliado</strong><small>História e funcionamento atual</small></a>
+<a href="#diferencial"><span>03</span><strong>O que precisa ser diferenciado</strong><small>Mudanças antigas e recentes</small></a>
+<a href="#cognicao"><span>04</span><strong>Memória e cognição</strong><small>O que a pesquisa permite dizer</small></a>
+<a href="#estrategias"><span>05</span><strong>Estratégias de apoio</strong><small>Segurança e menor carga mental</small></a>
+<a href="#consulta"><span>06</span><strong>Preparar uma consulta</strong><small>Organizar histórico e mudanças</small></a>
+</nav>
+</div>
+</section>
+<div class="container article-layout">
+<aside aria-label="Sumário do artigo" class="article-toc" data-focus-dim="">
+<strong>Nesta página</strong>
+<a href="#manifestacoes">Como pode aparecer</a>
+<a href="#avaliacao">Como é avaliado</a>
+<a href="#diagnostico">Diagnóstico tardio</a>
+<a href="#diferencial">Outras explicações</a>
+<a href="#cognicao">Memória e cognição</a>
+<a href="#estrategias">Estratégias de apoio</a>
+<a href="#tratamento">Cuidado e monitoramento</a>
+<a href="#consulta">Preparar consulta</a>
+<a href="#estudos">Estudos verificados</a><a href="#fontes">Fontes</a>
+<a class="back-link" href="../index.html#fases">← Voltar às fases da vida</a>
+</aside>
+<article class="article-content" data-focus-content="" tabindex="-1">
+<div class="notice article-notice" role="note">
+<strong>Ponto principal</strong>
+<span>Esquecimento, distração ou dificuldade de organização no envelhecimento não confirmam TDAH. O padrão precisa ter começado na infância, enquanto mudanças novas, aceleradas ou progressivas exigem investigação clínica.</span>
+</div>
+<section aria-labelledby="manifestacoesTitle" class="content-section" id="manifestacoes">
+<p class="eyebrow">O contexto muda novamente</p>
+<h2 id="manifestacoesTitle">Como o TDAH pode aparecer no envelhecimento?</h2>
+<p>Em adultos mais velhos, desatenção, inquietação e impulsividade ainda podem estar presentes. O impacto pode mudar quando a pessoa se aposenta, perde rotinas externas, assume cuidados de saúde mais complexos ou passa a depender de sistemas que antes eram administrados pelo trabalho ou por familiares.</p>
+<div class="symptom-grid">
+<div class="information-card">
+<h3>Perda de estrutura externa</h3>
+<p>Aposentadoria, mudanças de casa ou redução de compromissos fixos podem retirar horários e cobranças que antes organizavam o dia.</p>
+</div>
+<div class="information-card">
+<h3>Saúde e tarefas administrativas</h3>
+<p>Consultas, exames, receitas, documentos e diferentes horários de tratamento podem aumentar o número de tarefas que dependem de planejamento e memória de trabalho.</p>
+</div>
+<div class="information-card">
+<h3>Autonomia e relações</h3>
+<p>Esquecimentos, decisões impulsivas ou atrasos podem gerar conflitos, vergonha ou receio de perder autonomia, mesmo quando a pessoa mantém muitas capacidades preservadas.</p>
+</div>
+</div>
+<div class="key-point">
+<strong>Uma dificuldade antiga pode ficar mais visível quando o apoio muda.</strong>
+<p>A pessoa pode ter funcionado por décadas com rotinas rígidas, ajuda do parceiro, trabalho estruturado ou estratégias próprias. A perda desses apoios pode revelar um padrão anterior, mas não explica automaticamente toda mudança atual.</p>
+</div>
+</section>
+<section aria-labelledby="avaliacaoTitle" class="content-section" id="avaliacao">
+<p class="eyebrow">Olhar para a vida inteira</p>
+<h2 id="avaliacaoTitle">Como é realizada a avaliação?</h2>
+<p>A avaliação procura saber se existe um padrão persistente desde a infância e como ele interfere hoje. Ao mesmo tempo, investiga condições médicas, emocionais, sensoriais, cognitivas e medicamentosas que podem produzir ou intensificar sintomas semelhantes.</p>
+<ol class="process-list">
+<li><span>1</span><div><strong>Reconstruir o histórico</strong><p>Relatos sobre escola, trabalho, finanças, relacionamentos, direção, organização e tarefas domésticas ajudam a identificar padrões anteriores aos 12 anos.</p></div></li>
+<li><span>2</span><div><strong>Ouvir pessoas de confiança</strong><p>Com autorização, familiares, parceiros ou pessoas próximas podem contribuir com exemplos de diferentes períodos e ambientes.</p></div></li>
+<li><span>3</span><div><strong>Descrever o funcionamento atual</strong><p>O profissional avalia impacto sobre autonomia, segurança, rotina de saúde, compromissos, relações, finanças e qualidade de vida.</p></div></li>
+<li><span>4</span><div><strong>Investigar mudanças recentes</strong><p>É importante registrar quando a dificuldade começou, se está piorando e se houve alterações de sono, humor, saúde, visão, audição ou medicamentos.</p></div></li>
+<li><span>5</span><div><strong>Usar instrumentos como apoio</strong><p>Entrevistas, escalas e avaliação cognitiva podem ajudar, mas nenhum teste isolado confirma ou exclui TDAH.</p></div></li>
+</ol>
+</section>
+<section aria-labelledby="diagnosticoTitle" class="content-section" id="diagnostico">
+<p class="eyebrow">Diagnóstico tardio não é início tardio</p>
+<h2 id="diagnosticoTitle">O TDAH pode ser diagnosticado após os 60 anos?</h2>
+<p>Sim. Uma pessoa pode chegar ao envelhecimento sem diagnóstico anterior. No entanto, os critérios continuam exigindo sinais iniciados na infância, presentes em diferentes contextos e associados a prejuízo ou dificuldade funcional.</p>
+<div class="information-card wide-card">
+<ul>
+<li><strong>Início:</strong> alguns sinais precisam ter existido antes dos 12 anos.</li>
+<li><strong>Persistência:</strong> o padrão não deve ser explicado apenas por um período recente.</li>
+<li><strong>Contextos:</strong> as dificuldades precisam aparecer em mais de uma área da vida.</li>
+<li><strong>Impacto:</strong> deve haver interferência relevante no funcionamento cotidiano.</li>
+<li><strong>Diferenciação:</strong> outras causas precisam ser consideradas antes da conclusão.</li>
+</ul>
+</div>
+<div class="safety-note">
+<strong>Mudanças recentes não devem ser normalizadas nem autodiagnosticadas.</strong>
+<p>Confusão súbita, perda rápida de habilidades, desorientação, mudanças neurológicas, quedas recorrentes ou dificuldade nova para tarefas antes dominadas precisam de avaliação médica.</p>
+</div>
+</section>
+<section aria-labelledby="diferencialTitle" class="content-section" id="diferencial">
+<p class="eyebrow">Sintomas parecidos, causas diferentes</p>
+<h2 id="diferencialTitle">O que precisa ser diferenciado?</h2>
+<p>A avaliação não deve escolher entre “TDAH” e “envelhecimento” de forma simplista. Condições podem coexistir, e uma mudança recente pode se somar a dificuldades antigas.</p>
+<div class="symptom-grid">
+<div class="information-card">
+<h3>Sono, humor e estresse</h3>
+<p>Insônia, apneia do sono, ansiedade, depressão, luto e sobrecarga podem afetar atenção, memória, motivação e velocidade de processamento.</p>
+</div>
+<div class="information-card">
+<h3>Saúde e medicamentos</h3>
+<p>Condições clínicas, dor, efeitos adversos, interações e uso de vários medicamentos podem modificar energia, alerta e funcionamento cognitivo.</p>
+</div>
+<div class="information-card">
+<h3>Alterações cognitivas</h3>
+<p>Comprometimento cognitivo leve e demências exigem avaliação específica, principalmente quando há piora progressiva ou perda de habilidades previamente consolidadas.</p>
+</div>
+</div>
+<div class="key-point">
+<strong>A linha do tempo é uma das informações mais úteis.</strong>
+<p>No TDAH, costuma existir um padrão antigo de organização, atenção ou impulsividade. Em condições neurocognitivas, pode haver declínio em relação ao funcionamento anterior, embora a diferenciação nem sempre seja simples.</p>
+</div>
+</section>
+<section aria-labelledby="cognicaoTitle" class="content-section" id="cognicao">
+<p class="eyebrow">Pesquisa ainda limitada</p>
+<h2 id="cognicaoTitle">O que sabemos sobre memória e cognição?</h2>
+<p>A pesquisa específica sobre TDAH em pessoas idosas ainda é pequena. Revisões recentes encontraram poucos estudos, diferentes métodos e resultados nem sempre consistentes. Isso limita conclusões sobre um perfil cognitivo exclusivo do TDAH no envelhecimento.</p>
+<div class="information-card wide-card">
+<ul>
+<li><strong>Atenção e memória episódica:</strong> alguns estudos encontraram desempenho inferior em comparação com pessoas idosas sem TDAH.</li>
+<li><strong>Funções executivas:</strong> os resultados são mistos e variam conforme a tarefa e a amostra.</li>
+<li><strong>Diagnóstico diferencial:</strong> testes cognitivos podem contribuir, mas precisam ser interpretados junto com história, funcionamento e evolução dos sintomas.</li>
+<li><strong>Limitação:</strong> ainda faltam protocolos amplamente acordados e estudos longitudinais maiores.</li>
+</ul>
+</div>
+<div class="notice article-notice" role="note">
+<strong>Estado da evidência</strong>
+<span>O TDAH em adultos mais velhos é reconhecido, mas os dados sobre avaliação cognitiva, prevalência e tratamento específico nessa faixa etária permanecem limitados.</span>
+</div>
+</section>
+<section aria-labelledby="estrategiasTitle" class="content-section" id="estrategias">
+<p class="eyebrow">Menos dependência da memória</p>
+<h2 id="estrategiasTitle">Quais estratégias podem auxiliar?</h2>
+<p>As estratégias devem preservar autonomia sem depender de esforço mental constante. Sistemas simples, visíveis e compartilhados tendem a ser mais sustentáveis do que várias ferramentas paralelas.</p>
+<div class="strategy-grid">
+<div class="strategy-card">
+<span>Rotina e compromissos</span>
+<h3>Criar uma fonte única de verdade</h3>
+<ul>
+<li>usar um calendário principal para consultas e compromissos;</li>
+<li>manter chaves, documentos e objetos essenciais em locais fixos;</li>
+<li>registrar o próximo passo no momento em que a decisão é tomada;</li>
+<li>usar lembretes com ação concreta, não apenas alarmes genéricos;</li>
+<li>revisar a semana em um horário fixo e curto.</li>
+</ul>
+</div>
+<div class="strategy-card">
+<span>Saúde e medicamentos</span>
+<h3>Reduzir erros de rotina</h3>
+<ul>
+<li>manter lista atualizada de medicamentos e profissionais;</li>
+<li>usar organizador somente quando o esquema tiver sido conferido;</li>
+<li>ligar cada ação de saúde a um horário ou hábito estável;</li>
+<li>pedir instruções por escrito após consultas;</li>
+<li>envolver uma pessoa de confiança quando houver dificuldade relevante.</li>
+</ul>
+</div>
+<div class="strategy-card">
+<span>Autonomia e segurança</span>
+<h3>Adicionar apoio sem retirar controle</h3>
+<ul>
+<li>automatizar pagamentos previsíveis com revisão periódica;</li>
+<li>usar limites e confirmação para decisões financeiras importantes;</li>
+<li>simplificar ambientes e reduzir etapas desnecessárias;</li>
+<li>combinar como e quando familiares podem ajudar;</li>
+<li>reavaliar direção, finanças ou medicação quando surgirem sinais de risco.</li>
+</ul>
+</div>
+</div>
+<div class="next-step-box">
+<div>
+<strong>Versão mínima para hoje:</strong>
+<p>Escolha uma informação importante — próxima consulta, lista de medicamentos ou telefone de emergência — e coloque-a em um único lugar fácil de encontrar.</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="tratamentoTitle" class="content-section" id="tratamento">
+<p class="eyebrow">Benefícios, riscos e contexto atual</p>
+<h2 id="tratamentoTitle">Como pode funcionar o cuidado e o monitoramento?</h2>
+<p>O plano precisa ser individualizado. Diretrizes para adultos incluem adaptações ambientais, intervenções psicológicas estruturadas e medicamentos quando indicados, mas a pesquisa específica em pessoas idosas ainda é limitada.</p>
+<div class="information-card wide-card">
+<ul>
+<li><strong>Revisão clínica:</strong> objetivos, benefícios e dificuldades devem ser reavaliados conforme saúde e rotina mudam.</li>
+<li><strong>Lista completa:</strong> todos os medicamentos e condições clínicas precisam ser considerados para reduzir interações e efeitos adversos.</li>
+<li><strong>Monitoramento:</strong> peso, pressão arterial, frequência cardíaca, sono e efeitos devem ser acompanhados conforme orientação profissional.</li>
+<li><strong>Apoio não farmacológico:</strong> organização externa, terapia e adaptações podem ser úteis mesmo quando há tratamento medicamentoso.</li>
+<li><strong>Decisão compartilhada:</strong> autonomia, preferências, riscos, suporte disponível e qualidade de vida fazem parte da escolha.</li>
+</ul>
+</div>
+<div class="safety-note">
+<strong>Não inicie, suspenda ou ajuste medicamentos por conta própria.</strong>
+<p>Em adultos mais velhos, condições cardiovasculares, outros medicamentos e mudanças metabólicas tornam especialmente importante a avaliação individual e o acompanhamento regular.</p>
+</div>
+</section>
+<section aria-labelledby="consultaTitle" class="content-section" id="consulta">
+<p class="eyebrow">Próximo passo pequeno</p>
+<h2 id="consultaTitle">Como preparar uma conversa com um profissional?</h2>
+<p>Separe o padrão antigo das mudanças recentes. Levar exemplos concretos reduz a dependência da memória durante a consulta.</p>
+<ul class="consultation-checklist">
+<li><input id="old-check1" type="checkbox"/><label for="old-check1">Anotar duas dificuldades presentes desde a infância ou vida adulta jovem.</label></li>
+<li><input id="old-check2" type="checkbox"/><label for="old-check2">Registrar o que começou ou piorou recentemente e em qual período.</label></li>
+<li><input id="old-check3" type="checkbox"/><label for="old-check3">Listar mudanças em sono, humor, visão, audição, equilíbrio e saúde física.</label></li>
+<li><input id="old-check4" type="checkbox"/><label for="old-check4">Levar todos os medicamentos, doses, horários e suplementos utilizados.</label></li>
+<li><input id="old-check5" type="checkbox"/><label for="old-check5">Anotar situações em que houve perda de autonomia, risco ou erro importante.</label></li>
+<li><input id="old-check6" type="checkbox"/><label for="old-check6">Escolher uma pessoa de confiança para contribuir com o histórico, se desejar.</label></li>
+</ul>
+<div class="next-step-box">
+<div>
+<strong>Faça apenas isto agora:</strong>
+<p>Escreva dois exemplos: “isso sempre aconteceu” e “isso começou ou piorou recentemente”. Leve essa comparação à consulta.</p>
+</div>
+<button class="button button-secondary" id="printChecklist" type="button">Imprimir checklist</button>
+</div>
+</section>
+<section class="content-section studies-section" id="estudos">
+<p class="eyebrow">Evidência rastreável</p>
+<h2>O que os estudos permitem afirmar?</h2>
+<div class="notice evidence-method" role="note">
+<strong>Critério editorial</strong>
+<span>Cada resumo abaixo foi conferido em duas fontes bibliográficas. Resultado observacional é apresentado como associação; limitações e divergências permanecem visíveis.</span>
+</div>
+<div class="study-grid"><article class="study-card">
+<div class="study-meta"><span>Revisão sistemática · 2026</span><span class="verification-badge">Duplo-check</span></div>
+<h3>Perfil cognitivo do TDAH em adultos mais velhos</h3>
+<p class="study-citation">Pardo-Palenzuela N, Onandia-Hinchado I, Diaz-Orueta U. J Atten Disord. 2026;30(1):152–162.</p>
+<dl class="study-facts">
+<div><dt>Escopo</dt><dd>A revisão incluiu 10 estudos — 3 longitudinais e 7 transversais — com dados separados de adultos com 50 anos ou mais e diagnóstico confirmado de TDAH.</dd></div>
+<div><dt>Achado principal</dt><dd>Em conjunto, os estudos indicaram pior desempenho em atenção e memória episódica em comparação com controles mais velhos ou grupos mais jovens. Os resultados sobre funções executivas foram mistos.</dd></div>
+<div><dt>Limitação</dt><dd>A base é pequena e heterogênea. A revisão não identifica um perfil cognitivo exclusivo e ressalta a necessidade de protocolos comuns e diagnóstico diferencial com condições relacionadas à idade.</dd></div>
+</dl>
+<p class="study-check"><strong>Verificação:</strong> PubMed + texto integral no PMC · conferido em 30 de julho de 2026.</p>
+<div class="study-links">
+<a href="https://pubmed.ncbi.nlm.nih.gov/41146423/" rel="noopener noreferrer" target="_blank">Registro PubMed</a>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12686184/" rel="noopener noreferrer" target="_blank">Texto/registro complementar</a>
+<a href="https://doi.org/10.1177/10870547251385758" rel="noopener noreferrer" target="_blank">DOI</a>
+</div>
+</article><article class="study-card">
+<div class="study-meta"><span>Revisão de escopo · 2024</span><span class="verification-badge">Duplo-check</span></div>
+<h3>Sintomas e desafios do TDAH em pessoas com 60 anos ou mais</h3>
+<p class="study-citation">Fischer S, Nilsen C. Aging Ment Health. 2024;28(9):1189–1196.</p>
+<dl class="study-facts">
+<div><dt>Escopo</dt><dd>A revisão mapeou 17 estudos primários revisados por pares que incluíam pessoas com 60 anos ou mais.</dd></div>
+<div><dt>Achado principal</dt><dd>Os estudos indicaram persistência de sintomas, manifestações que podem mudar com a idade e desafios relacionados a saúde mental, relações, isolamento social e qualidade de vida.</dd></div>
+<div><dt>Limitação</dt><dd>Uma revisão de escopo descreve o campo, mas não estima um efeito único. Os estudos eram poucos e diferentes entre si, portanto não permitem conclusões firmes sobre prevalência ou melhor tratamento.</dd></div>
+</dl>
+<p class="study-check"><strong>Verificação:</strong> PubMed + página do periódico · conferido em 30 de julho de 2026.</p>
+<div class="study-links">
+<a href="https://pubmed.ncbi.nlm.nih.gov/38622905/" rel="noopener noreferrer" target="_blank">Registro PubMed</a>
+<a href="https://www.tandfonline.com/doi/full/10.1080/13607863.2024.2339994" rel="noopener noreferrer" target="_blank">Texto/registro complementar</a>
+<a href="https://doi.org/10.1080/13607863.2024.2339994" rel="noopener noreferrer" target="_blank">DOI</a>
+</div>
+</article></div>
+</section><section aria-labelledby="fontesTitle" class="content-section sources-section" id="fontes">
+<p class="eyebrow">Transparência editorial</p>
+<h2 id="fontesTitle">Fontes consultadas</h2>
+<p>Esta versão utiliza materiais institucionais e revisões científicas. A pesquisa específica sobre TDAH no envelhecimento ainda é limitada, e o conteúdo deverá receber revisão clínica externa antes da publicação oficial.</p>
+<ol class="source-list">
+<li><a href="https://www.cdc.gov/adhd/articles/adhd-across-the-lifetime.html" rel="noopener noreferrer" target="_blank">CDC — ADHD in Adults</a><span>Persistência e mudança dos sintomas ao longo da vida; atualizado em junho de 2026.</span></li>
+<li><a href="https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know" rel="noopener noreferrer" target="_blank">NIMH — Attention-Deficit/Hyperactivity Disorder: What You Need to Know</a><span>Critérios gerais, avaliação, diagnóstico diferencial e apresentação em adultos, incluindo adultos mais velhos.</span></li>
+<li><a href="https://www.nice.org.uk/guidance/ng87/chapter/recommendations" rel="noopener noreferrer" target="_blank">NICE NG87 — Recommendations</a><span>Tratamento de adultos, revisão de saúde física e monitoramento de peso, pressão arterial, frequência cardíaca e sono.</span></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/41146423/" rel="noopener noreferrer" target="_blank">Cognitive Profile of ADHD in Older Adults: A Systematic Review, 2026</a><span>Revisão sistemática de dez estudos sobre atenção, memória e funções executivas em adultos mais velhos com TDAH.</span></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/38622905/" rel="noopener noreferrer" target="_blank">ADHD in older adults — a scoping review, 2024</a><span>Mapeamento de 17 estudos sobre sintomas, condições coexistentes e desafios em pessoas com 60 anos ou mais.</span></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/37725058/" rel="noopener noreferrer" target="_blank">The diagnosis and treatment of ADHD in older adults, 2023</a><span>Revisão sobre lacunas de conhecimento, avaliação, diagnóstico diferencial e tratamento nessa faixa etária.</span></li>
+<li><a href="https://www.gov.br/saude/pt-br/assuntos/pcdt/t/transtorno-do-deficit-de-atencao-com-hiperatividade-tdah/view" rel="noopener noreferrer" target="_blank">Ministério da Saúde — PCDT do TDAH</a><span>Página do portal publicada em 21 de janeiro de 2025; anexo do protocolo alterado em 30 de agosto de 2022.</span></li>
+</ol>
+<div class="editorial-status">
+<span>Estado: estudos bibliograficamente verificados; revisão clínica externa ainda pendente</span>
+<span>TDAH no envelhecimento: campo com evidência ainda limitada</span>
+</div>
+</section>
+</article>
+</div>
+<section aria-labelledby="nextStageTitle" class="stage-next section-shell section-muted" data-focus-dim="">
+<div class="container stage-next-grid">
+<div>
+<p class="eyebrow">Ciclo das fases concluído</p>
+<h2 id="nextStageTitle">Explore outra etapa ou retorne ao mapa completo.</h2>
+</div>
+<div>
+<p>Você pode voltar para Meia-idade ou escolher qualquer fase da vida na página inicial.</p>
+<div class="stage-actions">
+<a class="button button-secondary" href="meia-idade.html">← Voltar à meia-idade</a>
+<a class="button button-primary" href="../index.html#fases">Ver todas as fases</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer" data-focus-dim="">
+<div class="container footer-grid">
+<div>
+<strong>EntreFoco</strong>
+<p>Protótipo V0.12.11. Conteúdo educativo não substitui avaliação profissional.</p>
+</div>
+<a href="#topo">Voltar ao início ↑</a>
+</div>
+</footer>
+<div aria-hidden="true" class="progress-bar"><span id="readingProgress"></span></div>
+<script src="../app.js?v=0.12"></script>
 </body>
 </html>

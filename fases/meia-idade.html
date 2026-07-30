@@ -1,403 +1,394 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-version="0.11">
+
+<html data-version="0.12" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Como o TDAH pode aparecer, ser avaliado e acompanhado na meia-idade, com atenção a diagnóstico tardio, sono, saúde, transições hormonais, trabalho, cuidado familiar e tratamento.">
-  <meta name="theme-color" content="#f7f8fc">
-  <title>TDAH na meia-idade — EntreFoco</title>
-  <link rel="stylesheet" href="../styles.css?v=0.11">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Como o TDAH pode aparecer, ser avaliado e acompanhado na meia-idade, com atenção a diagnóstico tardio, sono, saúde, transições hormonais, trabalho, cuidado familiar e tratamento." name="description"/>
+<meta content="#f7f8fc" name="theme-color"/>
+<title>TDAH na meia-idade — EntreFoco</title>
+<link href="../styles.css?v=0.12" rel="stylesheet"/>
 </head>
 <body class="article-page">
-  <div id="topo" tabindex="-1" aria-label="Início da página"></div>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-  <header class="site-header" data-focus-dim>
-    <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="EntreFoco — voltar à página inicial">
-        <span class="brand-mark" aria-hidden="true">◉</span>
-        <span>EntreFoco</span>
-      </a>
-
-      <nav class="main-nav" aria-label="Navegação principal">
-        <a href="../index.html#agora">Ajuda agora</a>
-        <a href="../index.html#fases" aria-current="page">Fases da vida</a>
-        <a href="../index.html#pesquisas">Pesquisas</a>
-        <a href="../index.html#acolhimento">Acolhimento</a>
-      </nav>
-
-      <button class="icon-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
-        <span aria-hidden="true">☰</span>
-      </button>
-    </div>
-
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação móvel" hidden>
-      <a href="../index.html#agora">Ajuda agora</a>
-      <a href="../index.html#fases" aria-current="page">Fases da vida</a>
-      <a href="../index.html#pesquisas">Pesquisas</a>
-      <a href="../index.html#acolhimento">Acolhimento</a>
-    </nav>
-  </header>
-
-  <div class="focus-status" id="focusStatus" role="status" hidden>
-    <span id="focusStatusText">Modo foco ativo: artigo em destaque.</span>
-    <button type="button" id="exitFocus">Sair do foco</button>
-  </div>
-
-  <div class="reading-tools">
-    <button class="reading-tools-toggle" type="button" id="readingToolsToggle" aria-expanded="false" aria-controls="readingToolsPanel">
-      <span aria-hidden="true">⚙</span>
-      <span>Leitura</span>
-    </button>
-
-    <aside class="reading-tools-panel" id="readingToolsPanel" aria-label="Ferramentas de leitura" hidden>
-      <div class="tools-heading">
-        <strong>Ferramentas de leitura</strong>
-        <button class="panel-close" type="button" id="closeReadingTools" aria-label="Fechar ferramentas de leitura">×</button>
-      </div>
-
-      <button type="button" id="focusToggle" aria-pressed="false">Modo foco</button>
-      <p class="tool-hint" id="focusHint">Destaca o artigo e reduz os elementos ao redor.</p>
-
-      <div class="tool-group" role="group" aria-label="Tamanho do texto">
-        <button type="button" id="fontDecrease" aria-label="Diminuir tamanho do texto">A−</button>
-        <output id="fontScaleStatus" aria-live="polite">100%</output>
-        <button type="button" id="fontIncrease" aria-label="Aumentar tamanho do texto">A+</button>
-      </div>
-
-      <button type="button" id="themeToggle" aria-pressed="false">Tema escuro</button>
-      <button type="button" id="resetReading">Restaurar padrão</button>
-    </aside>
-  </div>
-
-  <main id="conteudo">
-    <section class="article-hero section-shell" data-focus-dim aria-labelledby="pageTitle">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Caminho da página">
-          <a href="../index.html">Início</a>
-          <span aria-hidden="true">/</span>
-          <a href="../index.html#fases">Fases da vida</a>
-          <span aria-hidden="true">/</span>
-          <span aria-current="page">Meia-idade</span>
-        </nav>
-
-        <div class="article-hero-grid">
-          <div>
-            <p class="eyebrow">TDAH ao longo da vida · Meia-idade</p>
-            <h1 id="pageTitle">Quando a vida muda, estratégias antigas podem deixar de ser suficientes</h1>
-            <p class="hero-summary">Carreira, cuidado de familiares, saúde, sono e transições hormonais podem alterar a forma como atenção, memória, energia e impulsividade afetam o cotidiano.</p>
-          </div>
-
-          <aside class="article-summary-card" aria-label="Resumo desta página">
-            <strong>Em poucos segundos</strong>
-            <ul>
-              <li>O TDAH não começa na meia-idade, mas pode ser reconhecido somente nessa etapa.</li>
-              <li>Novas dificuldades exigem investigar sono, humor, saúde, medicamentos e outras possíveis explicações.</li>
-              <li>Transições hormonais podem coincidir com mudanças cognitivas, mas a evidência específica sobre TDAH ainda está em desenvolvimento.</li>
-              <li>O acompanhamento precisa considerar benefícios, efeitos adversos, pressão arterial, frequência cardíaca, peso e sono.</li>
-            </ul>
-          </aside>
-        </div>
-
-        <div class="article-meta" aria-label="Informações editoriais">
-          <span>Leitura estimada: 15 minutos</span>
-          <span>Revisão: 30 de julho de 2026</span>
-          <span>Faixa editorial aproximada: 45 a 59 anos</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="article-jump-section" data-focus-dim aria-labelledby="jumpTitle">
-      <div class="container">
-        <h2 class="sr-only" id="jumpTitle">Ir diretamente a uma parte da página</h2>
-        <nav class="article-jump-grid" aria-label="Nesta página">
-          <a href="#manifestacoes"><span>01</span><strong>Como pode aparecer</strong><small>Demandas e compensações</small></a>
-          <a href="#avaliacao"><span>02</span><strong>Como é avaliado</strong><small>História e mudanças recentes</small></a>
-          <a href="#diagnostico"><span>03</span><strong>Diagnóstico tardio</strong><small>O que precisa ser diferenciado</small></a>
-          <a href="#transicoes"><span>04</span><strong>Transições da meia-idade</strong><small>Saúde, sono e hormônios</small></a>
-          <a href="#estrategias"><span>05</span><strong>Estratégias de apoio</strong><small>Reduzir carga e decisões</small></a>
-          <a href="#consulta"><span>06</span><strong>Preparar uma consulta</strong><small>Registrar padrões e mudanças</small></a>
-        </nav>
-      </div>
-    </section>
-
-    <div class="container article-layout">
-      <aside class="article-toc" data-focus-dim aria-label="Sumário do artigo">
-        <strong>Nesta página</strong>
-        <a href="#manifestacoes">Como pode aparecer</a>
-        <a href="#avaliacao">Como é avaliado</a>
-        <a href="#diagnostico">Diagnóstico tardio</a>
-        <a href="#outras-condicoes">Outras explicações</a>
-        <a href="#transicoes">Transições da meia-idade</a>
-        <a href="#estrategias">Estratégias de apoio</a>
-        <a href="#tratamento">Cuidado e monitoramento</a>
-        <a href="#consulta">Preparar consulta</a>
-        <a href="#fontes">Fontes</a>
-        <a class="back-link" href="../index.html#fases">← Voltar às fases da vida</a>
-      </aside>
-
-      <article class="article-content" data-focus-content tabindex="-1">
-        <div class="notice article-notice" role="note">
-          <strong>Ponto principal</strong>
-          <span>Uma piora recente de atenção ou memória não confirma TDAH. Na meia-idade, é especialmente importante separar um padrão iniciado na infância de mudanças relacionadas a sono, estresse, saúde, humor, medicamentos ou transições hormonais.</span>
-        </div>
-
-        <section class="content-section" id="manifestacoes" aria-labelledby="manifestacoesTitle">
-          <p class="eyebrow">Mais papéis, menos margem</p>
-          <h2 id="manifestacoesTitle">Como o TDAH pode aparecer na meia-idade?</h2>
-          <p>Os sintomas podem continuar semelhantes aos de outras etapas adultas, mas o impacto muda quando aumentam as responsabilidades ou diminuem as estruturas que antes ajudavam. A pessoa pode estar cuidando de filhos, pais, trabalho, casa, saúde e finanças ao mesmo tempo.</p>
-
-          <div class="symptom-grid">
-            <div class="information-card">
-              <h3>Carreira e responsabilidades</h3>
-              <p>Dificuldade para sustentar projetos longos, administrar equipes, acompanhar mudanças tecnológicas, priorizar demandas concorrentes ou manter tarefas administrativas em dia.</p>
-            </div>
-            <div class="information-card">
-              <h3>Cuidado de outras pessoas</h3>
-              <p>Consultas, medicações, escola, documentos e rotinas familiares podem aumentar a carga mental e reduzir o tempo disponível para organizar a própria vida.</p>
-            </div>
-            <div class="information-card">
-              <h3>Energia, sono e autorregulação</h3>
-              <p>Privação de sono, estresse persistente, mudanças de saúde e menor tempo de recuperação podem tornar esquecimentos, impulsividade e irritabilidade mais difíceis de administrar.</p>
-            </div>
-          </div>
-
-          <div class="key-point">
-            <strong>O problema pode ser a perda de margem, não o surgimento de um novo transtorno.</strong>
-            <p>Uma pessoa pode ter funcionado por anos com urgência, perfeccionismo, apoio de terceiros ou jornadas excessivas. Quando essas compensações deixam de funcionar, dificuldades antigas podem ficar mais evidentes.</p>
-          </div>
-        </section>
-
-        <section class="content-section" id="avaliacao" aria-labelledby="avaliacaoTitle">
-          <p class="eyebrow">História completa e mudanças recentes</p>
-          <h2 id="avaliacaoTitle">Como é realizada a avaliação?</h2>
-          <p>A avaliação precisa reunir dois eixos: o padrão de funcionamento ao longo da vida e o que mudou recentemente. O objetivo é reconhecer TDAH quando os critérios são atendidos sem atribuir automaticamente qualquer dificuldade atual a ele.</p>
-
-          <ol class="process-list">
-            <li><span>1</span><div><strong>Dificuldades atuais</strong><p>O profissional investiga exemplos concretos em trabalho, casa, relações, finanças, saúde, direção e cuidado familiar.</p></div></li>
-            <li><span>2</span><div><strong>História desde a infância</strong><p>São buscados sinais anteriores aos 12 anos por meio de lembranças, documentos e relatos de pessoas que conheceram o indivíduo em diferentes etapas.</p></div></li>
-            <li><span>3</span><div><strong>Ambientes e prejuízo</strong><p>É analisado se o padrão aparece em mais de um contexto e interfere de forma persistente no funcionamento.</p></div></li>
-            <li><span>4</span><div><strong>Mudanças recentes</strong><p>Sono, humor, estresse, dor, condições médicas, transições hormonais, uso de substâncias e medicamentos precisam ser revisados.</p></div></li>
-            <li><span>5</span><div><strong>Estratégias e custo</strong><p>A avaliação considera sistemas de compensação, esforço necessário, dependência de outras pessoas e situações em que a estrutura deixa de funcionar.</p></div></li>
-          </ol>
-
-          <div class="safety-note">
-            <strong>Esquecimento recente não deve ser explicado por um único motivo.</strong>
-            <p>Mudanças cognitivas novas, progressivas ou acompanhadas de alterações neurológicas, funcionais ou comportamentais precisam de avaliação médica apropriada.</p>
-          </div>
-        </section>
-
-        <section class="content-section" id="diagnostico" aria-labelledby="diagnosticoTitle">
-          <p class="eyebrow">Critérios continuam valendo</p>
-          <h2 id="diagnosticoTitle">Como funciona o diagnóstico tardio?</h2>
-          <p>O diagnóstico continua sendo clínico. Para adultos, geralmente são necessários pelo menos cinco sintomas de desatenção e/ou hiperatividade e impulsividade, além de persistência, prejuízo, presença em mais de um ambiente e evidências de alguns sinais antes dos 12 anos.</p>
-
-          <div class="criteria-grid">
-            <div class="criteria-card"><strong>Não começa agora</strong><span>O TDAH é do neurodesenvolvimento; o reconhecimento pode ser tardio, mas o padrão precisa remontar à infância.</span></div>
-            <div class="criteria-card"><strong>Prejuízo atual</strong><span>Os sintomas devem interferir de forma relevante em áreas importantes da vida.</span></div>
-            <div class="criteria-card"><strong>Mais de um contexto</strong><span>O padrão não deve estar limitado a uma única situação específica.</span></div>
-            <div class="criteria-card"><strong>Persistência</strong><span>As dificuldades precisam ser frequentes e duradouras, não apenas episódicas.</span></div>
-            <div class="criteria-card"><strong>História compatível</strong><span>Relatos e documentos antigos ajudam, mas a ausência de registros perfeitos não encerra automaticamente a avaliação.</span></div>
-            <div class="criteria-card"><strong>Diferencial</strong><span>Outras condições e mudanças da meia-idade precisam ser consideradas.</span></div>
-          </div>
-
-          <p class="soft-text">Questionários, testes cognitivos e avaliações de atenção podem acrescentar informações, mas não substituem entrevista clínica, história do desenvolvimento e análise do funcionamento cotidiano.</p>
-        </section>
-
-        <section class="content-section" id="outras-condicoes" aria-labelledby="outrasTitle">
-          <p class="eyebrow">Sintomas sobrepostos</p>
-          <h2 id="outrasTitle">O que pode coexistir ou produzir dificuldades parecidas?</h2>
-          <p>Na meia-idade, novas condições podem se somar ao TDAH ou explicar parte das dificuldades. A avaliação precisa observar o momento de início, o padrão ao longo da vida e a relação com sono, saúde e acontecimentos recentes.</p>
-
-          <div class="tag-list" aria-label="Condições e fatores considerados na avaliação">
-            <span>Ansiedade e depressão</span>
-            <span>Privação de sono ou apneia</span>
-            <span>Estresse crônico e esgotamento</span>
-            <span>Perimenopausa e menopausa</span>
-            <span>Condições da tireoide e outras causas médicas</span>
-            <span>Dor persistente</span>
-            <span>Uso de álcool ou outras substâncias</span>
-            <span>Efeitos e interações de medicamentos</span>
-          </div>
-
-          <p class="soft-text">A lista é educativa. Ela não permite concluir qual condição está presente nem substituir avaliação profissional.</p>
-        </section>
-
-        <section class="content-section" id="transicoes" aria-labelledby="transicoesTitle">
-          <p class="eyebrow">Pesquisa ainda em desenvolvimento</p>
-          <h2 id="transicoesTitle">Como saúde, sono e transições hormonais entram nessa conversa?</h2>
-          <p>A meia-idade pode trazer mudanças de sono, saúde cardiovascular, metabolismo, humor e responsabilidades. Em mulheres e outras pessoas que passam pela perimenopausa ou menopausa, sintomas como alterações de sono, humor, memória e concentração podem se sobrepor às dificuldades atribuídas ao TDAH.</p>
-
-          <div class="strategy-grid">
-            <div class="strategy-card">
-              <span>Sono e saúde</span>
-              <h3>Registrar mudanças antes de tentar explicá-las</h3>
-              <p>Anotar quando a piora começou, como varia ao longo das semanas e quais alterações de sono, dor, humor, ciclo, medicação ou saúde ocorreram no mesmo período.</p>
-            </div>
-            <div class="strategy-card">
-              <span>Transições hormonais</span>
-              <h3>Evitar conclusões universais</h3>
-              <p>Estudos recentes encontraram resultados diferentes sobre a intensidade de sintomas menopausais em pessoas com TDAH. A evidência é emergente e ainda não define uma regra clínica única.</p>
-            </div>
-            <div class="strategy-card">
-              <span>Cuidado integrado</span>
-              <h3>Levar a visão completa à consulta</h3>
-              <p>Quando houver mudanças hormonais ou de saúde, pode ser necessário integrar informações de saúde mental, atenção primária e especialidades pertinentes.</p>
-            </div>
-          </div>
-
-          <div class="notice article-notice" role="note">
-            <strong>Estado da evidência</strong>
-            <span>Um estudo populacional de 2025 encontrou maior prevalência de sintomas perimenopausais graves em mulheres com TDAH; outro estudo exploratório não encontrou diferenças de grupo após correção estatística. Isso reforça que o tema precisa de pesquisas longitudinais e avaliação individual.</span>
-          </div>
-        </section>
-
-        <section class="content-section" id="estrategias" aria-labelledby="estrategiasTitle">
-          <p class="eyebrow">Reduzir carga e aumentar previsibilidade</p>
-          <h2 id="estrategiasTitle">Quais estratégias podem auxiliar?</h2>
-          <p>Nesta etapa, o sistema precisa continuar funcionando mesmo em semanas de pouca energia. Estratégias sustentáveis costumam reduzir decisões, distribuir responsabilidades e tornar compromissos visíveis.</p>
-
-          <div class="strategy-grid">
-            <div class="strategy-card">
-              <span>Trabalho e transições</span>
-              <h3>Planejar por capacidade real</h3>
-              <ul>
-                <li>limitar o número de projetos ativos;</li>
-                <li>registrar decisões e próximos passos por escrito;</li>
-                <li>proteger blocos de trabalho sem interrupção;</li>
-                <li>prever tempo para recuperação após períodos intensos;</li>
-                <li>reavaliar sistemas quando responsabilidades mudarem.</li>
-              </ul>
-            </div>
-            <div class="strategy-card">
-              <span>Família e cuidado</span>
-              <h3>Distribuir a carga mental</h3>
-              <ul>
-                <li>usar calendário compartilhado para consultas e compromissos;</li>
-                <li>atribuir responsável e prazo a cada tarefa;</li>
-                <li>manter uma única lista de informações importantes;</li>
-                <li>criar planos mínimos para períodos de sobrecarga;</li>
-                <li>pedir apoio antes de chegar ao limite.</li>
-              </ul>
-            </div>
-            <div class="strategy-card">
-              <span>Saúde e continuidade</span>
-              <h3>Transformar cuidado em rotina visível</h3>
-              <ul>
-                <li>agendar revisões clínicas antes de sair da consulta;</li>
-                <li>usar organizadores e lembretes para tratamentos prescritos;</li>
-                <li>registrar sono, pressão, pulso ou efeitos quando solicitado;</li>
-                <li>manter lista atualizada de medicamentos;</li>
-                <li>levar uma prioridade por consulta.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="next-step-box">
-            <div>
-              <strong>Versão mínima para hoje:</strong>
-              <p>Escolha uma responsabilidade que depende apenas da sua memória e mova-a para um lugar visível: calendário, lista compartilhada ou lembrete com data.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="content-section" id="tratamento" aria-labelledby="tratamentoTitle">
-          <p class="eyebrow">Revisar o plano conforme a vida muda</p>
-          <h2 id="tratamentoTitle">Como pode funcionar o cuidado e o monitoramento?</h2>
-          <p>O plano pode incluir adaptações ambientais, informação e apoio, intervenções psicológicas estruturadas e medicamentos quando indicados. Na meia-idade, o acompanhamento também precisa considerar novas condições de saúde, outros medicamentos e mudanças no sono ou no peso.</p>
-
-          <div class="information-card wide-card">
-            <ul>
-              <li><strong>Revisão de objetivos:</strong> o tratamento deve mirar dificuldades atuais, não apenas repetir metas de anos anteriores.</li>
-              <li><strong>Monitoramento:</strong> diretrizes recomendam acompanhar eficácia, efeitos adversos, peso, pressão arterial, frequência cardíaca e padrão de sono.</li>
-              <li><strong>Interações e saúde geral:</strong> novos diagnósticos e medicamentos precisam ser informados ao profissional responsável pelo tratamento do TDAH.</li>
-              <li><strong>Intervenções psicológicas:</strong> podem ajudar a reconstruir sistemas, lidar com autocrítica e adaptar estratégias às novas responsabilidades.</li>
-              <li><strong>Decisão compartilhada:</strong> benefícios, riscos, preferências e limitações devem ser discutidos ao revisar o plano.</li>
-            </ul>
-          </div>
-
-          <div class="safety-note">
-            <strong>Não ajuste medicamentos ou hormônios por conta própria.</strong>
-            <p>Esta página não orienta escolha, dose, combinação, interrupção ou desmame. Mudanças devem ser discutidas com profissionais qualificados e com acesso ao seu histórico clínico.</p>
-          </div>
-        </section>
-
-        <section class="content-section" id="consulta" aria-labelledby="consultaTitle">
-          <p class="eyebrow">Próximo passo pequeno</p>
-          <h2 id="consultaTitle">Como preparar uma conversa com um profissional?</h2>
-          <p>Organize o que é antigo e o que mudou recentemente. Essa separação ajuda a investigar TDAH sem ignorar outras causas possíveis.</p>
-
-          <ul class="consultation-checklist">
-            <li><input type="checkbox" id="mid-check1"><label for="mid-check1">Anotar duas dificuldades presentes desde etapas anteriores da vida.</label></li>
-            <li><input type="checkbox" id="mid-check2"><label for="mid-check2">Registrar o que mudou recentemente e quando essa mudança começou.</label></li>
-            <li><input type="checkbox" id="mid-check3"><label for="mid-check3">Listar alterações de sono, humor, ciclo hormonal, dor, energia e saúde.</label></li>
-            <li><input type="checkbox" id="mid-check4"><label for="mid-check4">Levar a lista completa de medicamentos, doses e horários prescritos.</label></li>
-            <li><input type="checkbox" id="mid-check5"><label for="mid-check5">Anotar pressão, pulso, peso ou efeitos adversos quando houver orientação para monitorar.</label></li>
-            <li><input type="checkbox" id="mid-check6"><label for="mid-check6">Escolher uma mudança funcional concreta que gostaria de alcançar.</label></li>
-          </ul>
-
-          <div class="next-step-box">
-            <div>
-              <strong>Faça apenas isto agora:</strong>
-              <p>Divida uma folha em duas colunas: “sempre aconteceu” e “começou ou piorou recentemente”. Anote um exemplo em cada coluna.</p>
-            </div>
-            <button class="button button-secondary" type="button" id="printChecklist">Imprimir checklist</button>
-          </div>
-        </section>
-
-        <section class="content-section sources-section" id="fontes" aria-labelledby="fontesTitle">
-          <p class="eyebrow">Transparência editorial</p>
-          <h2 id="fontesTitle">Fontes consultadas</h2>
-          <p>Esta versão utiliza materiais institucionais, diretrizes clínicas e estudos recentes. O conteúdo deverá receber revisão clínica externa antes de ser considerado pronto para publicação oficial.</p>
-
-          <ol class="source-list">
-            <li><a href="https://www.cdc.gov/adhd/articles/adhd-across-the-lifetime.html" target="_blank" rel="noopener noreferrer">CDC — ADHD in Adults</a><span>Manifestação, diagnóstico, tratamento e mudanças dos sintomas ao longo da vida; atualizado em junho de 2026.</span></li>
-            <li><a href="https://www.nimh.nih.gov/health/publications/adhd-what-you-need-to-know" target="_blank" rel="noopener noreferrer">NIMH — ADHD in Adults: 4 Things to Know</a><span>Sintomas, prejuízo, histórico anterior aos 12 anos, avaliação e tratamento.</span></li>
-            <li><a href="https://www.nice.org.uk/guidance/ng87/chapter/recommendations" target="_blank" rel="noopener noreferrer">NICE NG87 — Recommendations</a><span>Avaliação, tratamento, revisão de saúde física e monitoramento de peso, pressão, frequência cardíaca e sono.</span></li>
-            <li><a href="https://www.gov.br/saude/pt-br/assuntos/pcdt/t/transtorno-do-deficit-de-atencao-com-hiperatividade-tdah/view" target="_blank" rel="noopener noreferrer">Ministério da Saúde — PCDT do TDAH</a><span>Protocolo clínico brasileiro com critérios diagnósticos e diretrizes terapêuticas.</span></li>
-            <li><a href="https://pubmed.ncbi.nlm.nih.gov/40903825/" target="_blank" rel="noopener noreferrer">Smári e colaboradores, 2025</a><span>Estudo populacional sobre sintomas perimenopausais em mulheres com e sem TDAH.</span></li>
-            <li><a href="https://pubmed.ncbi.nlm.nih.gov/40738484/" target="_blank" rel="noopener noreferrer">Examining the Link Between ADHD Symptoms and Menopausal Experiences</a><span>Estudo exploratório com resultados que não confirmaram diferenças de grupo após correção estatística.</span></li>
-            <li><a href="https://pubmed.ncbi.nlm.nih.gov/42466994/" target="_blank" rel="noopener noreferrer">Kini-Seery e colaboradores, 2026</a><span>Estudo qualitativo sobre experiências de perimenopausa em mulheres com TDAH; evidência exploratória.</span></li>
-          </ol>
-
-          <div class="editorial-status">
-            <span>Estado: conteúdo fundamentado, revisão clínica externa pendente</span>
-            <span>Pesquisa sobre TDAH e transições hormonais: evidência emergente</span>
-          </div>
-        </section>
-      </article>
-    </div>
-
-    <section class="stage-next section-shell section-muted" data-focus-dim aria-labelledby="nextStageTitle">
-      <div class="container stage-next-grid">
-        <div>
-          <p class="eyebrow">Continuar explorando</p>
-          <h2 id="nextStageTitle">No envelhecimento, memória, saúde e autonomia precisam ser analisadas em conjunto.</h2>
-        </div>
-        <div>
-          <p>Continue para a etapa de envelhecimento ou volte para revisar vida adulta.</p>
-          <div class="stage-actions">
-            <a class="button button-secondary" href="vida-adulta.html">← Voltar à vida adulta</a>
-            <a class="button button-primary" href="../index.html#fases">Ver todas as fases</a>
-            <a class="button button-primary" href="envelhecimento.html" aria-label="Abrir a próxima fase: Envelhecimento">Próxima Fase →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" data-focus-dim>
-    <div class="container footer-grid">
-      <div>
-        <strong>EntreFoco</strong>
-        <p>Protótipo V0.11. Conteúdo educativo não substitui avaliação profissional.</p>
-      </div>
-      <a href="#topo">Voltar ao início ↑</a>
-    </div>
-  </footer>
-
-  <div class="progress-bar" aria-hidden="true"><span id="readingProgress"></span></div>
-
-  <script src="../app.js?v=0.11"></script>
+<div aria-label="Início da página" id="topo" tabindex="-1"></div>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" data-focus-dim="">
+<div class="container header-inner">
+<a aria-label="EntreFoco — voltar à página inicial" class="brand" href="../index.html">
+<span aria-hidden="true" class="brand-mark">◉</span>
+<span>EntreFoco</span>
+</a>
+<nav aria-label="Navegação principal" class="main-nav">
+<a href="../index.html#agora">Ajuda agora</a>
+<a aria-current="page" href="../index.html#fases">Fases da vida</a>
+<a href="../index.html#pesquisas">Pesquisas</a>
+<a href="../index.html#acolhimento">Acolhimento</a>
+</nav>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menu" class="icon-button" id="menuButton" type="button">
+<span aria-hidden="true">☰</span>
+</button>
+</div>
+<nav aria-label="Navegação móvel" class="mobile-menu" hidden="" id="mobileMenu">
+<a href="../index.html#agora">Ajuda agora</a>
+<a aria-current="page" href="../index.html#fases">Fases da vida</a>
+<a href="../index.html#pesquisas">Pesquisas</a>
+<a href="../index.html#acolhimento">Acolhimento</a>
+</nav>
+</header>
+<div class="focus-status" hidden="" id="focusStatus" role="status">
+<span id="focusStatusText">Modo foco ativo: artigo em destaque.</span>
+<button id="exitFocus" type="button">Sair do foco</button>
+</div>
+<div class="reading-tools">
+<button aria-controls="readingToolsPanel" aria-expanded="false" class="reading-tools-toggle" id="readingToolsToggle" type="button">
+<span aria-hidden="true">⚙</span>
+<span>Leitura</span>
+</button>
+<aside aria-label="Ferramentas de leitura" class="reading-tools-panel" hidden="" id="readingToolsPanel">
+<div class="tools-heading">
+<strong>Ferramentas de leitura</strong>
+<button aria-label="Fechar ferramentas de leitura" class="panel-close" id="closeReadingTools" type="button">×</button>
+</div>
+<button aria-pressed="false" id="focusToggle" type="button">Modo foco</button>
+<p class="tool-hint" id="focusHint">Destaca o artigo e reduz os elementos ao redor.</p>
+<div aria-label="Tamanho do texto" class="tool-group" role="group">
+<button aria-label="Diminuir tamanho do texto" id="fontDecrease" type="button">A−</button>
+<output aria-live="polite" id="fontScaleStatus">100%</output>
+<button aria-label="Aumentar tamanho do texto" id="fontIncrease" type="button">A+</button>
+</div>
+<button aria-pressed="false" id="themeToggle" type="button">Tema escuro</button>
+<button id="resetReading" type="button">Restaurar padrão</button>
+</aside>
+</div>
+<main id="conteudo">
+<section aria-labelledby="pageTitle" class="article-hero section-shell" data-focus-dim="">
+<div class="container">
+<nav aria-label="Caminho da página" class="breadcrumb">
+<a href="../index.html">Início</a>
+<span aria-hidden="true">/</span>
+<a href="../index.html#fases">Fases da vida</a>
+<span aria-hidden="true">/</span>
+<span aria-current="page">Meia-idade</span>
+</nav>
+<div class="article-hero-grid">
+<div>
+<p class="eyebrow">TDAH ao longo da vida · Meia-idade</p>
+<h1 id="pageTitle">Quando a vida muda, estratégias antigas podem deixar de ser suficientes</h1>
+<p class="hero-summary">Carreira, cuidado de familiares, saúde, sono e transições hormonais podem alterar a forma como atenção, memória, energia e impulsividade afetam o cotidiano.</p>
+</div>
+<aside aria-label="Resumo desta página" class="article-summary-card">
+<strong>Em poucos segundos</strong>
+<ul>
+<li>O TDAH não começa na meia-idade, mas pode ser reconhecido somente nessa etapa.</li>
+<li>Novas dificuldades exigem investigar sono, humor, saúde, medicamentos e outras possíveis explicações.</li>
+<li>Transições hormonais podem coincidir com mudanças cognitivas, mas a evidência específica sobre TDAH ainda está em desenvolvimento.</li>
+<li>O acompanhamento precisa considerar benefícios, efeitos adversos, pressão arterial, frequência cardíaca, peso e sono.</li>
+</ul>
+</aside>
+</div>
+<div aria-label="Informações editoriais" class="article-meta">
+<span>Leitura estimada: 15 minutos</span>
+<span>Revisão: 30 de julho de 2026</span>
+<span>Faixa editorial aproximada: 45 a 59 anos</span>
+</div>
+</div>
+</section>
+<section aria-labelledby="jumpTitle" class="article-jump-section" data-focus-dim="">
+<div class="container">
+<h2 class="sr-only" id="jumpTitle">Ir diretamente a uma parte da página</h2>
+<nav aria-label="Nesta página" class="article-jump-grid">
+<a href="#manifestacoes"><span>01</span><strong>Como pode aparecer</strong><small>Demandas e compensações</small></a>
+<a href="#avaliacao"><span>02</span><strong>Como é avaliado</strong><small>História e mudanças recentes</small></a>
+<a href="#diagnostico"><span>03</span><strong>Diagnóstico tardio</strong><small>O que precisa ser diferenciado</small></a>
+<a href="#transicoes"><span>04</span><strong>Transições da meia-idade</strong><small>Saúde, sono e hormônios</small></a>
+<a href="#estrategias"><span>05</span><strong>Estratégias de apoio</strong><small>Reduzir carga e decisões</small></a>
+<a href="#consulta"><span>06</span><strong>Preparar uma consulta</strong><small>Registrar padrões e mudanças</small></a>
+</nav>
+</div>
+</section>
+<div class="container article-layout">
+<aside aria-label="Sumário do artigo" class="article-toc" data-focus-dim="">
+<strong>Nesta página</strong>
+<a href="#manifestacoes">Como pode aparecer</a>
+<a href="#avaliacao">Como é avaliado</a>
+<a href="#diagnostico">Diagnóstico tardio</a>
+<a href="#outras-condicoes">Outras explicações</a>
+<a href="#transicoes">Transições da meia-idade</a>
+<a href="#estrategias">Estratégias de apoio</a>
+<a href="#tratamento">Cuidado e monitoramento</a>
+<a href="#consulta">Preparar consulta</a>
+<a href="#estudos">Estudos verificados</a><a href="#fontes">Fontes</a>
+<a class="back-link" href="../index.html#fases">← Voltar às fases da vida</a>
+</aside>
+<article class="article-content" data-focus-content="" tabindex="-1">
+<div class="notice article-notice" role="note">
+<strong>Ponto principal</strong>
+<span>Uma piora recente de atenção ou memória não confirma TDAH. Na meia-idade, é especialmente importante separar um padrão iniciado na infância de mudanças relacionadas a sono, estresse, saúde, humor, medicamentos ou transições hormonais.</span>
+</div>
+<section aria-labelledby="manifestacoesTitle" class="content-section" id="manifestacoes">
+<p class="eyebrow">Mais papéis, menos margem</p>
+<h2 id="manifestacoesTitle">Como o TDAH pode aparecer na meia-idade?</h2>
+<p>Os sintomas podem continuar semelhantes aos de outras etapas adultas, mas o impacto muda quando aumentam as responsabilidades ou diminuem as estruturas que antes ajudavam. A pessoa pode estar cuidando de filhos, pais, trabalho, casa, saúde e finanças ao mesmo tempo.</p>
+<div class="symptom-grid">
+<div class="information-card">
+<h3>Carreira e responsabilidades</h3>
+<p>Dificuldade para sustentar projetos longos, administrar equipes, acompanhar mudanças tecnológicas, priorizar demandas concorrentes ou manter tarefas administrativas em dia.</p>
+</div>
+<div class="information-card">
+<h3>Cuidado de outras pessoas</h3>
+<p>Consultas, medicações, escola, documentos e rotinas familiares podem aumentar a carga mental e reduzir o tempo disponível para organizar a própria vida.</p>
+</div>
+<div class="information-card">
+<h3>Energia, sono e autorregulação</h3>
+<p>Privação de sono, estresse persistente, mudanças de saúde e menor tempo de recuperação podem tornar esquecimentos, impulsividade e irritabilidade mais difíceis de administrar.</p>
+</div>
+</div>
+<div class="key-point">
+<strong>O problema pode ser a perda de margem, não o surgimento de um novo transtorno.</strong>
+<p>Uma pessoa pode ter funcionado por anos com urgência, perfeccionismo, apoio de terceiros ou jornadas excessivas. Quando essas compensações deixam de funcionar, dificuldades antigas podem ficar mais evidentes.</p>
+</div>
+</section>
+<section aria-labelledby="avaliacaoTitle" class="content-section" id="avaliacao">
+<p class="eyebrow">História completa e mudanças recentes</p>
+<h2 id="avaliacaoTitle">Como é realizada a avaliação?</h2>
+<p>A avaliação precisa reunir dois eixos: o padrão de funcionamento ao longo da vida e o que mudou recentemente. O objetivo é reconhecer TDAH quando os critérios são atendidos sem atribuir automaticamente qualquer dificuldade atual a ele.</p>
+<ol class="process-list">
+<li><span>1</span><div><strong>Dificuldades atuais</strong><p>O profissional investiga exemplos concretos em trabalho, casa, relações, finanças, saúde, direção e cuidado familiar.</p></div></li>
+<li><span>2</span><div><strong>História desde a infância</strong><p>São buscados sinais anteriores aos 12 anos por meio de lembranças, documentos e relatos de pessoas que conheceram o indivíduo em diferentes etapas.</p></div></li>
+<li><span>3</span><div><strong>Ambientes e prejuízo</strong><p>É analisado se o padrão aparece em mais de um contexto e interfere de forma persistente no funcionamento.</p></div></li>
+<li><span>4</span><div><strong>Mudanças recentes</strong><p>Sono, humor, estresse, dor, condições médicas, transições hormonais, uso de substâncias e medicamentos precisam ser revisados.</p></div></li>
+<li><span>5</span><div><strong>Estratégias e custo</strong><p>A avaliação considera sistemas de compensação, esforço necessário, dependência de outras pessoas e situações em que a estrutura deixa de funcionar.</p></div></li>
+</ol>
+<div class="safety-note">
+<strong>Esquecimento recente não deve ser explicado por um único motivo.</strong>
+<p>Mudanças cognitivas novas, progressivas ou acompanhadas de alterações neurológicas, funcionais ou comportamentais precisam de avaliação médica apropriada.</p>
+</div>
+</section>
+<section aria-labelledby="diagnosticoTitle" class="content-section" id="diagnostico">
+<p class="eyebrow">Critérios continuam valendo</p>
+<h2 id="diagnosticoTitle">Como funciona o diagnóstico tardio?</h2>
+<p>O diagnóstico continua sendo clínico. Para adultos, geralmente são necessários pelo menos cinco sintomas de desatenção e/ou hiperatividade e impulsividade, além de persistência, prejuízo, presença em mais de um ambiente e evidências de alguns sinais antes dos 12 anos.</p>
+<div class="criteria-grid">
+<div class="criteria-card"><strong>Não começa agora</strong><span>O TDAH é do neurodesenvolvimento; o reconhecimento pode ser tardio, mas o padrão precisa remontar à infância.</span></div>
+<div class="criteria-card"><strong>Prejuízo atual</strong><span>Os sintomas devem interferir de forma relevante em áreas importantes da vida.</span></div>
+<div class="criteria-card"><strong>Mais de um contexto</strong><span>O padrão não deve estar limitado a uma única situação específica.</span></div>
+<div class="criteria-card"><strong>Persistência</strong><span>As dificuldades precisam ser frequentes e duradouras, não apenas episódicas.</span></div>
+<div class="criteria-card"><strong>História compatível</strong><span>Relatos e documentos antigos ajudam, mas a ausência de registros perfeitos não encerra automaticamente a avaliação.</span></div>
+<div class="criteria-card"><strong>Diferencial</strong><span>Outras condições e mudanças da meia-idade precisam ser consideradas.</span></div>
+</div>
+<p class="soft-text">Questionários, testes cognitivos e avaliações de atenção podem acrescentar informações, mas não substituem entrevista clínica, história do desenvolvimento e análise do funcionamento cotidiano.</p>
+</section>
+<section aria-labelledby="outrasTitle" class="content-section" id="outras-condicoes">
+<p class="eyebrow">Sintomas sobrepostos</p>
+<h2 id="outrasTitle">O que pode coexistir ou produzir dificuldades parecidas?</h2>
+<p>Na meia-idade, novas condições podem se somar ao TDAH ou explicar parte das dificuldades. A avaliação precisa observar o momento de início, o padrão ao longo da vida e a relação com sono, saúde e acontecimentos recentes.</p>
+<div aria-label="Condições e fatores considerados na avaliação" class="tag-list">
+<span>Ansiedade e depressão</span>
+<span>Privação de sono ou apneia</span>
+<span>Estresse crônico e esgotamento</span>
+<span>Perimenopausa e menopausa</span>
+<span>Condições da tireoide e outras causas médicas</span>
+<span>Dor persistente</span>
+<span>Uso de álcool ou outras substâncias</span>
+<span>Efeitos e interações de medicamentos</span>
+</div>
+<p class="soft-text">A lista é educativa. Ela não permite concluir qual condição está presente nem substituir avaliação profissional.</p>
+</section>
+<section aria-labelledby="transicoesTitle" class="content-section" id="transicoes">
+<p class="eyebrow">Pesquisa ainda em desenvolvimento</p>
+<h2 id="transicoesTitle">Como saúde, sono e transições hormonais entram nessa conversa?</h2>
+<p>A meia-idade pode trazer mudanças de sono, saúde cardiovascular, metabolismo, humor e responsabilidades. Em mulheres e outras pessoas que passam pela perimenopausa ou menopausa, sintomas como alterações de sono, humor, memória e concentração podem se sobrepor às dificuldades atribuídas ao TDAH.</p>
+<div class="strategy-grid">
+<div class="strategy-card">
+<span>Sono e saúde</span>
+<h3>Registrar mudanças antes de tentar explicá-las</h3>
+<p>Anotar quando a piora começou, como varia ao longo das semanas e quais alterações de sono, dor, humor, ciclo, medicação ou saúde ocorreram no mesmo período.</p>
+</div>
+<div class="strategy-card">
+<span>Transições hormonais</span>
+<h3>Evitar conclusões universais</h3>
+<p>Estudos recentes encontraram resultados diferentes sobre a intensidade de sintomas menopausais em pessoas com TDAH. A evidência é emergente e ainda não define uma regra clínica única.</p>
+</div>
+<div class="strategy-card">
+<span>Cuidado integrado</span>
+<h3>Levar a visão completa à consulta</h3>
+<p>Quando houver mudanças hormonais ou de saúde, pode ser necessário integrar informações de saúde mental, atenção primária e especialidades pertinentes.</p>
+</div>
+</div>
+<div class="notice article-notice" role="note">
+<strong>Estado da evidência</strong>
+<span>Um estudo populacional de 2025 encontrou maior prevalência de sintomas perimenopausais graves em mulheres com TDAH; outro estudo exploratório não encontrou diferenças de grupo após correção estatística. Isso reforça que o tema precisa de pesquisas longitudinais e avaliação individual.</span>
+</div>
+</section>
+<section aria-labelledby="estrategiasTitle" class="content-section" id="estrategias">
+<p class="eyebrow">Reduzir carga e aumentar previsibilidade</p>
+<h2 id="estrategiasTitle">Quais estratégias podem auxiliar?</h2>
+<p>Nesta etapa, o sistema precisa continuar funcionando mesmo em semanas de pouca energia. Estratégias sustentáveis costumam reduzir decisões, distribuir responsabilidades e tornar compromissos visíveis.</p>
+<div class="strategy-grid">
+<div class="strategy-card">
+<span>Trabalho e transições</span>
+<h3>Planejar por capacidade real</h3>
+<ul>
+<li>limitar o número de projetos ativos;</li>
+<li>registrar decisões e próximos passos por escrito;</li>
+<li>proteger blocos de trabalho sem interrupção;</li>
+<li>prever tempo para recuperação após períodos intensos;</li>
+<li>reavaliar sistemas quando responsabilidades mudarem.</li>
+</ul>
+</div>
+<div class="strategy-card">
+<span>Família e cuidado</span>
+<h3>Distribuir a carga mental</h3>
+<ul>
+<li>usar calendário compartilhado para consultas e compromissos;</li>
+<li>atribuir responsável e prazo a cada tarefa;</li>
+<li>manter uma única lista de informações importantes;</li>
+<li>criar planos mínimos para períodos de sobrecarga;</li>
+<li>pedir apoio antes de chegar ao limite.</li>
+</ul>
+</div>
+<div class="strategy-card">
+<span>Saúde e continuidade</span>
+<h3>Transformar cuidado em rotina visível</h3>
+<ul>
+<li>agendar revisões clínicas antes de sair da consulta;</li>
+<li>usar organizadores e lembretes para tratamentos prescritos;</li>
+<li>registrar sono, pressão, pulso ou efeitos quando solicitado;</li>
+<li>manter lista atualizada de medicamentos;</li>
+<li>levar uma prioridade por consulta.</li>
+</ul>
+</div>
+</div>
+<div class="next-step-box">
+<div>
+<strong>Versão mínima para hoje:</strong>
+<p>Escolha uma responsabilidade que depende apenas da sua memória e mova-a para um lugar visível: calendário, lista compartilhada ou lembrete com data.</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="tratamentoTitle" class="content-section" id="tratamento">
+<p class="eyebrow">Revisar o plano conforme a vida muda</p>
+<h2 id="tratamentoTitle">Como pode funcionar o cuidado e o monitoramento?</h2>
+<p>O plano pode incluir adaptações ambientais, informação e apoio, intervenções psicológicas estruturadas e medicamentos quando indicados. Na meia-idade, o acompanhamento também precisa considerar novas condições de saúde, outros medicamentos e mudanças no sono ou no peso.</p>
+<div class="information-card wide-card">
+<ul>
+<li><strong>Revisão de objetivos:</strong> o tratamento deve mirar dificuldades atuais, não apenas repetir metas de anos anteriores.</li>
+<li><strong>Monitoramento:</strong> diretrizes recomendam acompanhar eficácia, efeitos adversos, peso, pressão arterial, frequência cardíaca e padrão de sono.</li>
+<li><strong>Interações e saúde geral:</strong> novos diagnósticos e medicamentos precisam ser informados ao profissional responsável pelo tratamento do TDAH.</li>
+<li><strong>Intervenções psicológicas:</strong> podem ajudar a reconstruir sistemas, lidar com autocrítica e adaptar estratégias às novas responsabilidades.</li>
+<li><strong>Decisão compartilhada:</strong> benefícios, riscos, preferências e limitações devem ser discutidos ao revisar o plano.</li>
+</ul>
+</div>
+<div class="safety-note">
+<strong>Não ajuste medicamentos ou hormônios por conta própria.</strong>
+<p>Esta página não orienta escolha, dose, combinação, interrupção ou desmame. Mudanças devem ser discutidas com profissionais qualificados e com acesso ao seu histórico clínico.</p>
+</div>
+</section>
+<section aria-labelledby="consultaTitle" class="content-section" id="consulta">
+<p class="eyebrow">Próximo passo pequeno</p>
+<h2 id="consultaTitle">Como preparar uma conversa com um profissional?</h2>
+<p>Organize o que é antigo e o que mudou recentemente. Essa separação ajuda a investigar TDAH sem ignorar outras causas possíveis.</p>
+<ul class="consultation-checklist">
+<li><input id="mid-check1" type="checkbox"/><label for="mid-check1">Anotar duas dificuldades presentes desde etapas anteriores da vida.</label></li>
+<li><input id="mid-check2" type="checkbox"/><label for="mid-check2">Registrar o que mudou recentemente e quando essa mudança começou.</label></li>
+<li><input id="mid-check3" type="checkbox"/><label for="mid-check3">Listar alterações de sono, humor, ciclo hormonal, dor, energia e saúde.</label></li>
+<li><input id="mid-check4" type="checkbox"/><label for="mid-check4">Levar a lista completa de medicamentos, doses e horários prescritos.</label></li>
+<li><input id="mid-check5" type="checkbox"/><label for="mid-check5">Anotar pressão, pulso, peso ou efeitos adversos quando houver orientação para monitorar.</label></li>
+<li><input id="mid-check6" type="checkbox"/><label for="mid-check6">Escolher uma mudança funcional concreta que gostaria de alcançar.</label></li>
+</ul>
+<div class="next-step-box">
+<div>
+<strong>Faça apenas isto agora:</strong>
+<p>Divida uma folha em duas colunas: “sempre aconteceu” e “começou ou piorou recentemente”. Anote um exemplo em cada coluna.</p>
+</div>
+<button class="button button-secondary" id="printChecklist" type="button">Imprimir checklist</button>
+</div>
+</section>
+<section class="content-section studies-section" id="estudos">
+<p class="eyebrow">Evidência rastreável</p>
+<h2>O que os estudos permitem afirmar?</h2>
+<div class="notice evidence-method" role="note">
+<strong>Critério editorial</strong>
+<span>Cada resumo abaixo foi conferido em duas fontes bibliográficas. Resultado observacional é apresentado como associação; limitações e divergências permanecem visíveis.</span>
+</div>
+<div class="study-grid"><article class="study-card">
+<div class="study-meta"><span>Coorte populacional observacional · 2025</span><span class="verification-badge">Duplo-check</span></div>
+<h3>Sintomas perimenopausais em mulheres com e sem TDAH</h3>
+<p class="study-citation">Smári UJ et al. Eur Psychiatry. 2025;68(1):e133.</p>
+<dl class="study-facts">
+<div><dt>Escopo</dt><dd>Foram comparadas 535 mulheres que relataram diagnóstico de TDAH e 4.857 sem TDAH em uma coorte populacional da Islândia.</dd></div>
+<div><dt>Achado principal</dt><dd>Sintomas perimenopausais graves foram relatados por 54,2% do grupo com TDAH e 30,1% do grupo sem TDAH; a razão de prevalência ajustada informada foi 1,80.</dd></div>
+<div><dt>Limitação</dt><dd>O diagnóstico e os sintomas foram autorrelatados e o desenho observacional não demonstra causalidade, não comprova que hormônios pioram o TDAH e não permite concluir individualmente quando a perimenopausa começa.</dd></div>
+</dl>
+<p class="study-check"><strong>Verificação:</strong> PubMed + texto integral no PMC · conferido em 30 de julho de 2026.</p>
+<div class="study-links">
+<a href="https://pubmed.ncbi.nlm.nih.gov/40903825/" rel="noopener noreferrer" target="_blank">Registro PubMed</a>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12538516/" rel="noopener noreferrer" target="_blank">Texto/registro complementar</a>
+<a href="https://doi.org/10.1192/j.eurpsy.2025.10101" rel="noopener noreferrer" target="_blank">DOI</a>
+</div>
+</article><article class="study-card">
+<div class="study-meta"><span>Estudo transversal exploratório · 2025</span><span class="verification-badge">Duplo-check</span></div>
+<h3>TDAH e experiências da menopausa: resultado divergente</h3>
+<p class="study-citation">Chapman L et al. J Atten Disord. 2025;29(14):1263–1277.</p>
+<dl class="study-facts">
+<div><dt>Escopo</dt><dd>Participaram 656 mulheres entre 45 e 60 anos; 245 tinham diagnóstico prévio de TDAH.</dd></div>
+<div><dt>Achado principal</dt><dd>Após correção para múltiplas comparações, não houve efeito significativo do diagnóstico de TDAH nem interação entre diagnóstico e estágio da menopausa sobre as queixas avaliadas.</dd></div>
+<div><dt>Limitação</dt><dd>O estudo foi transversal e baseado em questionários. Ele não anula a coorte anterior, mas mostra que a evidência é divergente e que ainda faltam estudos longitudinais e medidas clínicas independentes.</dd></div>
+</dl>
+<p class="study-check"><strong>Verificação:</strong> PubMed + texto integral no PMC · conferido em 30 de julho de 2026.</p>
+<div class="study-links">
+<a href="https://pubmed.ncbi.nlm.nih.gov/40738484/" rel="noopener noreferrer" target="_blank">Registro PubMed</a>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12569137/" rel="noopener noreferrer" target="_blank">Texto/registro complementar</a>
+<a href="https://doi.org/10.1177/10870547251355006" rel="noopener noreferrer" target="_blank">DOI</a>
+</div>
+</article></div>
+</section><section aria-labelledby="fontesTitle" class="content-section sources-section" id="fontes">
+<p class="eyebrow">Transparência editorial</p>
+<h2 id="fontesTitle">Fontes consultadas</h2>
+<p>Esta versão utiliza materiais institucionais, diretrizes clínicas e estudos recentes. O conteúdo deverá receber revisão clínica externa antes de ser considerado pronto para publicação oficial.</p>
+<ol class="source-list">
+<li><a href="https://www.cdc.gov/adhd/articles/adhd-across-the-lifetime.html" rel="noopener noreferrer" target="_blank">CDC — ADHD in Adults</a><span>Manifestação, diagnóstico, tratamento e mudanças dos sintomas ao longo da vida; atualizado em junho de 2026.</span></li>
+<li><a href="https://www.nimh.nih.gov/health/publications/adhd-what-you-need-to-know" rel="noopener noreferrer" target="_blank">NIMH — ADHD in Adults: 4 Things to Know</a><span>Sintomas, prejuízo, histórico anterior aos 12 anos, avaliação e tratamento.</span></li>
+<li><a href="https://www.nice.org.uk/guidance/ng87/chapter/recommendations" rel="noopener noreferrer" target="_blank">NICE NG87 — Recommendations</a><span>Avaliação, tratamento, revisão de saúde física e monitoramento de peso, pressão, frequência cardíaca e sono.</span></li>
+<li><a href="https://www.gov.br/saude/pt-br/assuntos/pcdt/t/transtorno-do-deficit-de-atencao-com-hiperatividade-tdah/view" rel="noopener noreferrer" target="_blank">Ministério da Saúde — PCDT do TDAH</a><span>Protocolo clínico brasileiro com critérios diagnósticos e diretrizes terapêuticas.</span></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/40903825/" rel="noopener noreferrer" target="_blank">Smári e colaboradores, 2025</a><span>Estudo populacional sobre sintomas perimenopausais em mulheres com e sem TDAH.</span></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/40738484/" rel="noopener noreferrer" target="_blank">Examining the Link Between ADHD Symptoms and Menopausal Experiences</a><span>Estudo exploratório com resultados que não confirmaram diferenças de grupo após correção estatística.</span></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/42466994/" rel="noopener noreferrer" target="_blank">Kini-Seery e colaboradores, 2026</a><span>Estudo qualitativo sobre experiências de perimenopausa em mulheres com TDAH; evidência exploratória.</span></li>
+</ol>
+<div class="editorial-status">
+<span>Estado: estudos bibliograficamente verificados; revisão clínica externa ainda pendente</span>
+<span>Pesquisa sobre TDAH e transições hormonais: evidência emergente</span>
+</div>
+</section>
+</article>
+</div>
+<section aria-labelledby="nextStageTitle" class="stage-next section-shell section-muted" data-focus-dim="">
+<div class="container stage-next-grid">
+<div>
+<p class="eyebrow">Continuar explorando</p>
+<h2 id="nextStageTitle">No envelhecimento, memória, saúde e autonomia precisam ser analisadas em conjunto.</h2>
+</div>
+<div>
+<p>Continue para a etapa de envelhecimento ou volte para revisar vida adulta.</p>
+<div class="stage-actions">
+<a class="button button-secondary" href="vida-adulta.html">← Voltar à vida adulta</a>
+<a class="button button-primary" href="../index.html#fases">Ver todas as fases</a>
+<a aria-label="Abrir a próxima fase: Envelhecimento" class="button button-primary" href="envelhecimento.html">Próxima Fase →</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer" data-focus-dim="">
+<div class="container footer-grid">
+<div>
+<strong>EntreFoco</strong>
+<p>Protótipo V0.12.11. Conteúdo educativo não substitui avaliação profissional.</p>
+</div>
+<a href="#topo">Voltar ao início ↑</a>
+</div>
+</footer>
+<div aria-hidden="true" class="progress-bar"><span id="readingProgress"></span></div>
+<script src="../app.js?v=0.12"></script>
 </body>
 </html>

@@ -1,339 +1,337 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-version="0.11">
+
+<html data-version="0.12" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Como sinais de TDAH são observados, avaliados e diagnosticados na infância, além de estratégias de apoio para família e escola.">
-  <meta name="theme-color" content="#f7f8fc">
-  <title>TDAH na infância — EntreFoco</title>
-  <link rel="stylesheet" href="../styles.css?v=0.11">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Como sinais de TDAH são observados, avaliados e diagnosticados na infância, além de estratégias de apoio para família e escola." name="description"/>
+<meta content="#f7f8fc" name="theme-color"/>
+<title>TDAH na infância — EntreFoco</title>
+<link href="../styles.css?v=0.12" rel="stylesheet"/>
 </head>
 <body class="article-page">
-  <div id="topo" tabindex="-1" aria-label="Início da página"></div>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-  <header class="site-header" data-focus-dim>
-    <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="EntreFoco — voltar à página inicial">
-        <span class="brand-mark" aria-hidden="true">◉</span>
-        <span>EntreFoco</span>
-      </a>
-
-      <nav class="main-nav" aria-label="Navegação principal">
-        <a href="../index.html#agora">Ajuda agora</a>
-        <a href="../index.html#fases" aria-current="page">Fases da vida</a>
-        <a href="../index.html#pesquisas">Pesquisas</a>
-        <a href="../index.html#acolhimento">Acolhimento</a>
-      </nav>
-
-      <button class="icon-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
-        <span aria-hidden="true">☰</span>
-      </button>
-    </div>
-
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação móvel" hidden>
-      <a href="../index.html#agora">Ajuda agora</a>
-      <a href="../index.html#fases" aria-current="page">Fases da vida</a>
-      <a href="../index.html#pesquisas">Pesquisas</a>
-      <a href="../index.html#acolhimento">Acolhimento</a>
-    </nav>
-  </header>
-
-  <div class="focus-status" id="focusStatus" role="status" hidden>
-    <span id="focusStatusText">Modo foco ativo: artigo em destaque.</span>
-    <button type="button" id="exitFocus">Sair do foco</button>
-  </div>
-
-  <div class="reading-tools">
-    <button class="reading-tools-toggle" type="button" id="readingToolsToggle" aria-expanded="false" aria-controls="readingToolsPanel">
-      <span aria-hidden="true">⚙</span>
-      <span>Leitura</span>
-    </button>
-
-    <aside class="reading-tools-panel" id="readingToolsPanel" aria-label="Ferramentas de leitura" hidden>
-      <div class="tools-heading">
-        <strong>Ferramentas de leitura</strong>
-        <button class="panel-close" type="button" id="closeReadingTools" aria-label="Fechar ferramentas de leitura">×</button>
-      </div>
-
-      <button type="button" id="focusToggle" aria-pressed="false">Modo foco</button>
-      <p class="tool-hint" id="focusHint">Destaca o artigo e reduz os elementos ao redor.</p>
-
-      <div class="tool-group" role="group" aria-label="Tamanho do texto">
-        <button type="button" id="fontDecrease" aria-label="Diminuir tamanho do texto">A−</button>
-        <output id="fontScaleStatus" aria-live="polite">100%</output>
-        <button type="button" id="fontIncrease" aria-label="Aumentar tamanho do texto">A+</button>
-      </div>
-
-      <button type="button" id="themeToggle" aria-pressed="false">Tema escuro</button>
-      <button type="button" id="resetReading">Restaurar padrão</button>
-    </aside>
-  </div>
-
-  <main id="conteudo">
-    <section class="article-hero section-shell" data-focus-dim aria-labelledby="pageTitle">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Caminho da página">
-          <a href="../index.html">Início</a>
-          <span aria-hidden="true">/</span>
-          <a href="../index.html#fases">Fases da vida</a>
-          <span aria-hidden="true">/</span>
-          <span aria-current="page">Infância</span>
-        </nav>
-
-        <div class="article-hero-grid">
-          <div>
-            <p class="eyebrow">TDAH ao longo da vida · Infância</p>
-            <h1 id="pageTitle">Como o TDAH é observado e avaliado na infância</h1>
-            <p class="hero-summary">Sinais isolados não fecham diagnóstico. O processo considera desenvolvimento, duração, prejuízo e comportamento em mais de um ambiente.</p>
-          </div>
-
-          <aside class="article-summary-card" aria-label="Resumo desta página">
-            <strong>Em poucos segundos</strong>
-            <ul>
-              <li>Não existe um exame único para diagnosticar TDAH.</li>
-              <li>Família, escola e criança fornecem partes diferentes do contexto.</li>
-              <li>Outras condições precisam ser consideradas.</li>
-              <li>O apoio é definido conforme idade, necessidades e prejuízos.</li>
-            </ul>
-          </aside>
-        </div>
-
-        <div class="article-meta" aria-label="Informações editoriais">
-          <span>Leitura estimada: 9 minutos</span>
-          <span>Revisão: 30 de julho de 2026</span>
-          <span>Faixa editorial aproximada: 6 a 12 anos</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="article-jump-section" data-focus-dim aria-labelledby="jumpTitle">
-      <div class="container">
-        <h2 class="sr-only" id="jumpTitle">Ir diretamente a uma parte da página</h2>
-        <nav class="article-jump-grid" aria-label="Nesta página">
-          <a href="#sinais"><span>01</span><strong>Sinais observados</strong><small>O que chama atenção</small></a>
-          <a href="#avaliacao"><span>02</span><strong>Como é avaliado</strong><small>Etapas do processo</small></a>
-          <a href="#diagnostico"><span>03</span><strong>Como funciona o diagnóstico</strong><small>Critérios e contexto</small></a>
-          <a href="#estrategias"><span>04</span><strong>Estratégias de apoio</strong><small>Casa, escola e tratamento</small></a>
-          <a href="#consulta"><span>05</span><strong>Preparar uma consulta</strong><small>O que registrar</small></a>
-          <a href="#fontes"><span>06</span><strong>Fontes consultadas</strong><small>Evidências e revisão</small></a>
-        </nav>
-      </div>
-    </section>
-
-    <div class="container article-layout">
-      <aside class="article-toc" data-focus-dim aria-label="Sumário do artigo">
-        <strong>Nesta página</strong>
-        <a href="#sinais">Sinais observados</a>
-        <a href="#avaliacao">Como é avaliado</a>
-        <a href="#diagnostico">Diagnóstico</a>
-        <a href="#outras-condicoes">Outras explicações</a>
-        <a href="#estrategias">Estratégias de apoio</a>
-        <a href="#consulta">Preparar consulta</a>
-        <a href="#fontes">Fontes</a>
-        <a class="back-link" href="../index.html#fases">← Voltar às fases da vida</a>
-      </aside>
-
-      <article class="article-content" data-focus-content tabindex="-1">
-        <div class="notice article-notice" role="note">
-          <strong>Ponto principal</strong>
-          <span>Comportamentos como distração, inquietação e impulsividade podem ocorrer em qualquer criança. A avaliação investiga quando são persistentes, desproporcionais ao desenvolvimento e causam prejuízo real.</span>
-        </div>
-
-        <section class="content-section" id="sinais" aria-labelledby="sinaisTitle">
-          <p class="eyebrow">Primeira observação</p>
-          <h2 id="sinaisTitle">Quais sinais costumam chamar atenção?</h2>
-          <p>Os sinais podem aparecer principalmente como desatenção, hiperatividade e impulsividade. A forma como aparecem varia conforme a idade, as exigências do ambiente e as características da criança.</p>
-
-          <div class="symptom-grid">
-            <div class="information-card">
-              <h3>Desatenção</h3>
-              <p>Dificuldade frequente para acompanhar instruções, concluir tarefas, organizar materiais, manter atenção ou lembrar atividades cotidianas.</p>
-            </div>
-            <div class="information-card">
-              <h3>Hiperatividade</h3>
-              <p>Movimento ou fala excessivos para o contexto, dificuldade para permanecer sentada e sensação de estar constantemente em atividade.</p>
-            </div>
-            <div class="information-card">
-              <h3>Impulsividade</h3>
-              <p>Responder antes da pergunta terminar, interromper, ter dificuldade para esperar ou agir sem avaliar suficientemente as consequências.</p>
-            </div>
-          </div>
-
-          <div class="key-point">
-            <strong>O comportamento precisa ser analisado no contexto.</strong>
-            <p>Uma criança pode ficar inquieta por cansaço, ansiedade, dificuldade de aprendizagem, problemas de sono, ambiente inadequado ou outras razões. Uma lista de sinais não substitui avaliação.</p>
-          </div>
-        </section>
-
-        <section class="content-section" id="avaliacao" aria-labelledby="avaliacaoTitle">
-          <p class="eyebrow">Processo, não teste único</p>
-          <h2 id="avaliacaoTitle">Como é realizada a avaliação?</h2>
-          <p>A avaliação reúne informações de diferentes fontes. O objetivo é entender o comportamento da criança, o desenvolvimento, os prejuízos e as possíveis explicações alternativas.</p>
-
-          <ol class="process-list">
-            <li><span>1</span><div><strong>Motivo da preocupação</strong><p>São registrados os comportamentos observados, quando começaram, com que frequência aparecem e quais problemas estão causando.</p></div></li>
-            <li><span>2</span><div><strong>Relatos em diferentes ambientes</strong><p>Pais ou responsáveis, professores, outros cuidadores e a própria criança podem fornecer informações. O comportamento precisa ser analisado em mais de um contexto.</p></div></li>
-            <li><span>3</span><div><strong>Histórico de desenvolvimento e saúde</strong><p>O profissional investiga gestação, desenvolvimento, aprendizagem, sono, saúde física, saúde emocional, histórico familiar e acontecimentos importantes.</p></div></li>
-            <li><span>4</span><div><strong>Escalas e documentos</strong><p>Questionários padronizados, relatórios escolares e registros podem ajudar a organizar evidências. Escalas apoiam a avaliação, mas não confirmam o diagnóstico sozinhas.</p></div></li>
-            <li><span>5</span><div><strong>Avaliação de outras condições</strong><p>Podem ser considerados problemas de visão ou audição, sono, aprendizagem, linguagem, ansiedade, depressão, autismo, tiques e outras condições que coexistem ou produzem sinais semelhantes.</p></div></li>
-          </ol>
-        </section>
-
-        <section class="content-section" id="diagnostico" aria-labelledby="diagnosticoTitle">
-          <p class="eyebrow">Decisão clínica fundamentada</p>
-          <h2 id="diagnosticoTitle">Como funciona o diagnóstico?</h2>
-          <p>O diagnóstico é clínico: ele depende do conjunto de informações, dos critérios diagnósticos e da avaliação de um profissional qualificado. Não existe exame de sangue, imagem cerebral, teste escolar ou questionário capaz de confirmar TDAH isoladamente.</p>
-
-          <div class="criteria-box">
-            <h3>O profissional procura confirmar se:</h3>
-            <ul class="check-list">
-              <li>os sintomas persistem por pelo menos seis meses;</li>
-              <li>são incompatíveis com o nível de desenvolvimento;</li>
-              <li>vários sinais estavam presentes antes dos 12 anos;</li>
-              <li>aparecem em dois ou mais ambientes, como casa e escola;</li>
-              <li>interferem no funcionamento escolar, social ou familiar;</li>
-              <li>não são melhor explicados por outra condição.</li>
-            </ul>
-          </div>
-
-          <p>As diretrizes da Academia Americana de Pediatria recomendam avaliar crianças e adolescentes de 4 a 18 anos quando existem dificuldades acadêmicas ou comportamentais acompanhadas de desatenção, hiperatividade ou impulsividade. No Brasil, a porta de entrada pode variar conforme a rede local; uma UBS ou pediatra pode orientar o encaminhamento necessário.</p>
-        </section>
-
-        <section class="content-section" id="outras-condicoes" aria-labelledby="outrasTitle">
-          <p class="eyebrow">Evitar conclusões apressadas</p>
-          <h2 id="outrasTitle">O que pode coexistir ou parecer TDAH?</h2>
-          <p>Uma avaliação completa considera condições que podem produzir manifestações parecidas ou existir junto com o TDAH.</p>
-
-          <div class="tag-list" aria-label="Condições consideradas na avaliação">
-            <span>Dificuldades de aprendizagem</span>
-            <span>Transtornos de linguagem</span>
-            <span>Ansiedade</span>
-            <span>Depressão</span>
-            <span>Autismo</span>
-            <span>Problemas de sono</span>
-            <span>Tiques</span>
-            <span>Alterações de visão ou audição</span>
-            <span>Estresse e mudanças ambientais</span>
-          </div>
-
-          <p class="soft-text">Essa lista não serve para autodiagnóstico. Ela demonstra por que o processo precisa ir além de observar alguns comportamentos.</p>
-        </section>
-
-        <section class="content-section" id="estrategias" aria-labelledby="estrategiasTitle">
-          <p class="eyebrow">Apoio individualizado</p>
-          <h2 id="estrategiasTitle">Quais estratégias podem auxiliar?</h2>
-          <p>As estratégias devem responder às dificuldades reais da criança. Elas podem envolver família, escola e profissionais de saúde, com acompanhamento do que está ou não funcionando.</p>
-
-          <div class="strategy-grid">
-            <div class="strategy-card">
-              <span>Em casa</span>
-              <h3>Reduzir a carga de cada instrução</h3>
-              <ul>
-                <li>dar uma instrução por vez;</li>
-                <li>usar rotinas visuais simples;</li>
-                <li>dividir tarefas longas em etapas;</li>
-                <li>elogiar de forma específica o comportamento esperado;</li>
-                <li>manter regras previsíveis e proporcionais.</li>
-              </ul>
-            </div>
-            <div class="strategy-card">
-              <span>Na escola</span>
-              <h3>Ajustar ambiente e acompanhamento</h3>
-              <ul>
-                <li>reduzir distrações desnecessárias;</li>
-                <li>confirmar que a instrução foi compreendida;</li>
-                <li>usar feedback frequente e objetivo;</li>
-                <li>apoiar organização de materiais e prazos;</li>
-                <li>alinhar estratégias com a família.</li>
-              </ul>
-            </div>
-            <div class="strategy-card">
-              <span>Com profissionais</span>
-              <h3>Construir um plano por idade e necessidade</h3>
-              <p>Para crianças menores de 6 anos, diretrizes recomendam treinamento parental em manejo comportamental como primeira linha. A partir dos 6 anos, o plano pode combinar intervenções comportamentais, apoio escolar e medicamento, conforme avaliação clínica.</p>
-            </div>
-          </div>
-
-          <div class="safety-note">
-            <strong>Medicamentos exigem avaliação e acompanhamento profissional.</strong>
-            <p>Esta página não orienta escolha, dose, início ou interrupção de medicamentos.</p>
-          </div>
-        </section>
-
-        <section class="content-section" id="consulta" aria-labelledby="consultaTitle">
-          <p class="eyebrow">Próximo passo pequeno</p>
-          <h2 id="consultaTitle">Como preparar uma primeira conversa com um profissional?</h2>
-          <p>Não é necessário chegar com uma conclusão. Leve exemplos concretos para ajudar a reconstruir o contexto.</p>
-
-          <ul class="consultation-checklist">
-            <li><input type="checkbox" id="check1"><label for="check1">Anotar dois exemplos recentes em casa.</label></li>
-            <li><input type="checkbox" id="check2"><label for="check2">Pedir à escola exemplos e situações específicas.</label></li>
-            <li><input type="checkbox" id="check3"><label for="check3">Registrar há quanto tempo as dificuldades são percebidas.</label></li>
-            <li><input type="checkbox" id="check4"><label for="check4">Anotar impactos em aprendizagem, relações e rotina.</label></li>
-            <li><input type="checkbox" id="check5"><label for="check5">Levar informações sobre sono, saúde e medicamentos em uso.</label></li>
-            <li><input type="checkbox" id="check6"><label for="check6">Escrever as principais perguntas antes da consulta.</label></li>
-          </ul>
-
-          <div class="next-step-box">
-            <div>
-              <strong>Faça apenas isto agora:</strong>
-              <p>Registre um comportamento, onde aconteceu e qual foi a consequência. Um exemplo concreto já é um começo.</p>
-            </div>
-            <button class="button button-secondary" type="button" id="printChecklist">Imprimir checklist</button>
-          </div>
-        </section>
-
-        <section class="content-section sources-section" id="fontes" aria-labelledby="fontesTitle">
-          <p class="eyebrow">Transparência editorial</p>
-          <h2 id="fontesTitle">Fontes consultadas</h2>
-          <p>Esta versão usa diretrizes e materiais institucionais. O conteúdo deverá receber revisão clínica antes de ser considerado pronto para publicação pública.</p>
-
-          <ol class="source-list">
-            <li><a href="https://www.cdc.gov/adhd/diagnosis/index.html" target="_blank" rel="noopener noreferrer">CDC — Diagnosing ADHD</a><span>Atualizado em junho de 2026.</span></li>
-            <li><a href="https://www.cdc.gov/adhd/hcp/treatment-recommendations/index.html" target="_blank" rel="noopener noreferrer">CDC — Clinical Care of ADHD in Children</a><span>Resumo das recomendações da AAP, atualizado em junho de 2026.</span></li>
-            <li><a href="https://www.cdc.gov/adhd/treatment/index.html" target="_blank" rel="noopener noreferrer">CDC — Treatment of ADHD</a><span>Recomendações por faixa etária, atualizado em junho de 2026.</span></li>
-            <li><a href="https://www.nice.org.uk/guidance/ng87/chapter/recommendations" target="_blank" rel="noopener noreferrer">NICE NG87 — Recommendations</a><span>Diagnóstico e manejo de TDAH; revisão de atualização em 2025.</span></li>
-            <li><a href="https://publications.aap.org/pediatrics/article/144/4/e20192528/81590/Clinical-Practice-Guideline-for-the-Diagnosis" target="_blank" rel="noopener noreferrer">American Academy of Pediatrics — Clinical Practice Guideline</a><span>Diretriz clínica para crianças e adolescentes.</span></li>
-          </ol>
-
-          <div class="editorial-status">
-            <span>Estado: conteúdo fundamentado, revisão clínica externa pendente</span>
-            <span>Próxima revisão planejada: antes da publicação oficial</span>
-          </div>
-        </section>
-      </article>
-    </div>
-
-    <section class="stage-next section-shell section-muted" data-focus-dim aria-labelledby="nextStageTitle">
-      <div class="container stage-next-grid">
-        <div>
-          <p class="eyebrow">Continuar explorando</p>
-          <h2 id="nextStageTitle">As necessidades mudam com o desenvolvimento.</h2>
-        </div>
-        <div>
-          <p>A página de adolescência é a próxima etapa desta sequência. Você também pode retornar ao mapa completo das fases da vida.</p>
-          <div class="stage-actions">
-            <a class="button button-primary" href="../index.html#fases">Ver todas as fases</a>
-            <a class="button button-primary" href="adolescencia.html" aria-label="Abrir a próxima fase: Adolescência">Próxima Fase →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" data-focus-dim>
-    <div class="container footer-grid">
-      <div>
-        <strong>EntreFoco</strong>
-        <p>Protótipo V0.11. Conteúdo educativo não substitui avaliação profissional.</p>
-      </div>
-      <a href="#topo">Voltar ao início ↑</a>
-    </div>
-  </footer>
-
-  <div class="progress-bar" aria-hidden="true"><span id="readingProgress"></span></div>
-
-  <script src="../app.js?v=0.11"></script>
+<div aria-label="Início da página" id="topo" tabindex="-1"></div>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" data-focus-dim="">
+<div class="container header-inner">
+<a aria-label="EntreFoco — voltar à página inicial" class="brand" href="../index.html">
+<span aria-hidden="true" class="brand-mark">◉</span>
+<span>EntreFoco</span>
+</a>
+<nav aria-label="Navegação principal" class="main-nav">
+<a href="../index.html#agora">Ajuda agora</a>
+<a aria-current="page" href="../index.html#fases">Fases da vida</a>
+<a href="../index.html#pesquisas">Pesquisas</a>
+<a href="../index.html#acolhimento">Acolhimento</a>
+</nav>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menu" class="icon-button" id="menuButton" type="button">
+<span aria-hidden="true">☰</span>
+</button>
+</div>
+<nav aria-label="Navegação móvel" class="mobile-menu" hidden="" id="mobileMenu">
+<a href="../index.html#agora">Ajuda agora</a>
+<a aria-current="page" href="../index.html#fases">Fases da vida</a>
+<a href="../index.html#pesquisas">Pesquisas</a>
+<a href="../index.html#acolhimento">Acolhimento</a>
+</nav>
+</header>
+<div class="focus-status" hidden="" id="focusStatus" role="status">
+<span id="focusStatusText">Modo foco ativo: artigo em destaque.</span>
+<button id="exitFocus" type="button">Sair do foco</button>
+</div>
+<div class="reading-tools">
+<button aria-controls="readingToolsPanel" aria-expanded="false" class="reading-tools-toggle" id="readingToolsToggle" type="button">
+<span aria-hidden="true">⚙</span>
+<span>Leitura</span>
+</button>
+<aside aria-label="Ferramentas de leitura" class="reading-tools-panel" hidden="" id="readingToolsPanel">
+<div class="tools-heading">
+<strong>Ferramentas de leitura</strong>
+<button aria-label="Fechar ferramentas de leitura" class="panel-close" id="closeReadingTools" type="button">×</button>
+</div>
+<button aria-pressed="false" id="focusToggle" type="button">Modo foco</button>
+<p class="tool-hint" id="focusHint">Destaca o artigo e reduz os elementos ao redor.</p>
+<div aria-label="Tamanho do texto" class="tool-group" role="group">
+<button aria-label="Diminuir tamanho do texto" id="fontDecrease" type="button">A−</button>
+<output aria-live="polite" id="fontScaleStatus">100%</output>
+<button aria-label="Aumentar tamanho do texto" id="fontIncrease" type="button">A+</button>
+</div>
+<button aria-pressed="false" id="themeToggle" type="button">Tema escuro</button>
+<button id="resetReading" type="button">Restaurar padrão</button>
+</aside>
+</div>
+<main id="conteudo">
+<section aria-labelledby="pageTitle" class="article-hero section-shell" data-focus-dim="">
+<div class="container">
+<nav aria-label="Caminho da página" class="breadcrumb">
+<a href="../index.html">Início</a>
+<span aria-hidden="true">/</span>
+<a href="../index.html#fases">Fases da vida</a>
+<span aria-hidden="true">/</span>
+<span aria-current="page">Infância</span>
+</nav>
+<div class="article-hero-grid">
+<div>
+<p class="eyebrow">TDAH ao longo da vida · Infância</p>
+<h1 id="pageTitle">Como o TDAH é observado e avaliado na infância</h1>
+<p class="hero-summary">Sinais isolados não fecham diagnóstico. O processo considera desenvolvimento, duração, prejuízo e comportamento em mais de um ambiente.</p>
+</div>
+<aside aria-label="Resumo desta página" class="article-summary-card">
+<strong>Em poucos segundos</strong>
+<ul>
+<li>Não existe um exame único para diagnosticar TDAH.</li>
+<li>Família, escola e criança fornecem partes diferentes do contexto.</li>
+<li>Outras condições precisam ser consideradas.</li>
+<li>O apoio é definido conforme idade, necessidades e prejuízos.</li>
+</ul>
+</aside>
+</div>
+<div aria-label="Informações editoriais" class="article-meta">
+<span>Leitura estimada: 9 minutos</span>
+<span>Revisão: 30 de julho de 2026</span>
+<span>Faixa editorial aproximada: 6 a 12 anos</span>
+</div>
+</div>
+</section>
+<section aria-labelledby="jumpTitle" class="article-jump-section" data-focus-dim="">
+<div class="container">
+<h2 class="sr-only" id="jumpTitle">Ir diretamente a uma parte da página</h2>
+<nav aria-label="Nesta página" class="article-jump-grid">
+<a href="#sinais"><span>01</span><strong>Sinais observados</strong><small>O que chama atenção</small></a>
+<a href="#avaliacao"><span>02</span><strong>Como é avaliado</strong><small>Etapas do processo</small></a>
+<a href="#diagnostico"><span>03</span><strong>Como funciona o diagnóstico</strong><small>Critérios e contexto</small></a>
+<a href="#estrategias"><span>04</span><strong>Estratégias de apoio</strong><small>Casa, escola e tratamento</small></a>
+<a href="#consulta"><span>05</span><strong>Preparar uma consulta</strong><small>O que registrar</small></a>
+<a href="#fontes"><span>06</span><strong>Fontes consultadas</strong><small>Evidências e revisão</small></a>
+</nav>
+</div>
+</section>
+<div class="container article-layout">
+<aside aria-label="Sumário do artigo" class="article-toc" data-focus-dim="">
+<strong>Nesta página</strong>
+<a href="#sinais">Sinais observados</a>
+<a href="#avaliacao">Como é avaliado</a>
+<a href="#diagnostico">Diagnóstico</a>
+<a href="#outras-condicoes">Outras explicações</a>
+<a href="#estrategias">Estratégias de apoio</a>
+<a href="#consulta">Preparar consulta</a>
+<a href="#estudos">Estudos verificados</a><a href="#fontes">Fontes</a>
+<a class="back-link" href="../index.html#fases">← Voltar às fases da vida</a>
+</aside>
+<article class="article-content" data-focus-content="" tabindex="-1">
+<div class="notice article-notice" role="note">
+<strong>Ponto principal</strong>
+<span>Comportamentos como distração, inquietação e impulsividade podem ocorrer em qualquer criança. A avaliação investiga quando são persistentes, desproporcionais ao desenvolvimento e causam prejuízo real.</span>
+</div>
+<section aria-labelledby="sinaisTitle" class="content-section" id="sinais">
+<p class="eyebrow">Primeira observação</p>
+<h2 id="sinaisTitle">Quais sinais costumam chamar atenção?</h2>
+<p>Os sinais podem aparecer principalmente como desatenção, hiperatividade e impulsividade. A forma como aparecem varia conforme a idade, as exigências do ambiente e as características da criança.</p>
+<div class="symptom-grid">
+<div class="information-card">
+<h3>Desatenção</h3>
+<p>Dificuldade frequente para acompanhar instruções, concluir tarefas, organizar materiais, manter atenção ou lembrar atividades cotidianas.</p>
+</div>
+<div class="information-card">
+<h3>Hiperatividade</h3>
+<p>Movimento ou fala excessivos para o contexto, dificuldade para permanecer sentada e sensação de estar constantemente em atividade.</p>
+</div>
+<div class="information-card">
+<h3>Impulsividade</h3>
+<p>Responder antes da pergunta terminar, interromper, ter dificuldade para esperar ou agir sem avaliar suficientemente as consequências.</p>
+</div>
+</div>
+<div class="key-point">
+<strong>O comportamento precisa ser analisado no contexto.</strong>
+<p>Uma criança pode ficar inquieta por cansaço, ansiedade, dificuldade de aprendizagem, problemas de sono, ambiente inadequado ou outras razões. Uma lista de sinais não substitui avaliação.</p>
+</div>
+</section>
+<section aria-labelledby="avaliacaoTitle" class="content-section" id="avaliacao">
+<p class="eyebrow">Processo, não teste único</p>
+<h2 id="avaliacaoTitle">Como é realizada a avaliação?</h2>
+<p>A avaliação reúne informações de diferentes fontes. O objetivo é entender o comportamento da criança, o desenvolvimento, os prejuízos e as possíveis explicações alternativas.</p>
+<ol class="process-list">
+<li><span>1</span><div><strong>Motivo da preocupação</strong><p>São registrados os comportamentos observados, quando começaram, com que frequência aparecem e quais problemas estão causando.</p></div></li>
+<li><span>2</span><div><strong>Relatos em diferentes ambientes</strong><p>Pais ou responsáveis, professores, outros cuidadores e a própria criança podem fornecer informações. O comportamento precisa ser analisado em mais de um contexto.</p></div></li>
+<li><span>3</span><div><strong>Histórico de desenvolvimento e saúde</strong><p>O profissional investiga gestação, desenvolvimento, aprendizagem, sono, saúde física, saúde emocional, histórico familiar e acontecimentos importantes.</p></div></li>
+<li><span>4</span><div><strong>Escalas e documentos</strong><p>Questionários padronizados, relatórios escolares e registros podem ajudar a organizar evidências. Escalas apoiam a avaliação, mas não confirmam o diagnóstico sozinhas.</p></div></li>
+<li><span>5</span><div><strong>Avaliação de outras condições</strong><p>Podem ser considerados problemas de visão ou audição, sono, aprendizagem, linguagem, ansiedade, depressão, autismo, tiques e outras condições que coexistem ou produzem sinais semelhantes.</p></div></li>
+</ol>
+</section>
+<section aria-labelledby="diagnosticoTitle" class="content-section" id="diagnostico">
+<p class="eyebrow">Decisão clínica fundamentada</p>
+<h2 id="diagnosticoTitle">Como funciona o diagnóstico?</h2>
+<p>O diagnóstico é clínico: ele depende do conjunto de informações, dos critérios diagnósticos e da avaliação de um profissional qualificado. Não existe exame de sangue, imagem cerebral, teste escolar ou questionário capaz de confirmar TDAH isoladamente.</p>
+<div class="criteria-box">
+<h3>O profissional procura confirmar se:</h3>
+<ul class="check-list">
+<li>os sintomas persistem por pelo menos seis meses;</li>
+<li>são incompatíveis com o nível de desenvolvimento;</li>
+<li>vários sinais estavam presentes antes dos 12 anos;</li>
+<li>aparecem em dois ou mais ambientes, como casa e escola;</li>
+<li>interferem no funcionamento escolar, social ou familiar;</li>
+<li>não são melhor explicados por outra condição.</li>
+</ul>
+</div>
+<p>As diretrizes da Academia Americana de Pediatria recomendam avaliar crianças e adolescentes de 4 a 18 anos quando existem dificuldades acadêmicas ou comportamentais acompanhadas de desatenção, hiperatividade ou impulsividade. No Brasil, a porta de entrada pode variar conforme a rede local; uma UBS ou pediatra pode orientar o encaminhamento necessário.</p>
+</section>
+<section aria-labelledby="outrasTitle" class="content-section" id="outras-condicoes">
+<p class="eyebrow">Evitar conclusões apressadas</p>
+<h2 id="outrasTitle">O que pode coexistir ou parecer TDAH?</h2>
+<p>Uma avaliação completa considera condições que podem produzir manifestações parecidas ou existir junto com o TDAH.</p>
+<div aria-label="Condições consideradas na avaliação" class="tag-list">
+<span>Dificuldades de aprendizagem</span>
+<span>Transtornos de linguagem</span>
+<span>Ansiedade</span>
+<span>Depressão</span>
+<span>Autismo</span>
+<span>Problemas de sono</span>
+<span>Tiques</span>
+<span>Alterações de visão ou audição</span>
+<span>Estresse e mudanças ambientais</span>
+</div>
+<p class="soft-text">Essa lista não serve para autodiagnóstico. Ela demonstra por que o processo precisa ir além de observar alguns comportamentos.</p>
+</section>
+<section aria-labelledby="estrategiasTitle" class="content-section" id="estrategias">
+<p class="eyebrow">Apoio individualizado</p>
+<h2 id="estrategiasTitle">Quais estratégias podem auxiliar?</h2>
+<p>As estratégias devem responder às dificuldades reais da criança. Elas podem envolver família, escola e profissionais de saúde, com acompanhamento do que está ou não funcionando.</p>
+<div class="strategy-grid">
+<div class="strategy-card">
+<span>Em casa</span>
+<h3>Reduzir a carga de cada instrução</h3>
+<ul>
+<li>dar uma instrução por vez;</li>
+<li>usar rotinas visuais simples;</li>
+<li>dividir tarefas longas em etapas;</li>
+<li>elogiar de forma específica o comportamento esperado;</li>
+<li>manter regras previsíveis e proporcionais.</li>
+</ul>
+</div>
+<div class="strategy-card">
+<span>Na escola</span>
+<h3>Ajustar ambiente e acompanhamento</h3>
+<ul>
+<li>reduzir distrações desnecessárias;</li>
+<li>confirmar que a instrução foi compreendida;</li>
+<li>usar feedback frequente e objetivo;</li>
+<li>apoiar organização de materiais e prazos;</li>
+<li>alinhar estratégias com a família.</li>
+</ul>
+</div>
+<div class="strategy-card">
+<span>Com profissionais</span>
+<h3>Construir um plano por idade e necessidade</h3>
+<p>Para crianças menores de 6 anos, diretrizes recomendam treinamento parental em manejo comportamental como primeira linha. A partir dos 6 anos, o plano pode combinar intervenções comportamentais, apoio escolar e medicamento, conforme avaliação clínica.</p>
+</div>
+</div>
+<div class="safety-note">
+<strong>Medicamentos exigem avaliação e acompanhamento profissional.</strong>
+<p>Esta página não orienta escolha, dose, início ou interrupção de medicamentos.</p>
+</div>
+</section>
+<section aria-labelledby="consultaTitle" class="content-section" id="consulta">
+<p class="eyebrow">Próximo passo pequeno</p>
+<h2 id="consultaTitle">Como preparar uma primeira conversa com um profissional?</h2>
+<p>Não é necessário chegar com uma conclusão. Leve exemplos concretos para ajudar a reconstruir o contexto.</p>
+<ul class="consultation-checklist">
+<li><input id="check1" type="checkbox"/><label for="check1">Anotar dois exemplos recentes em casa.</label></li>
+<li><input id="check2" type="checkbox"/><label for="check2">Pedir à escola exemplos e situações específicas.</label></li>
+<li><input id="check3" type="checkbox"/><label for="check3">Registrar há quanto tempo as dificuldades são percebidas.</label></li>
+<li><input id="check4" type="checkbox"/><label for="check4">Anotar impactos em aprendizagem, relações e rotina.</label></li>
+<li><input id="check5" type="checkbox"/><label for="check5">Levar informações sobre sono, saúde e medicamentos em uso.</label></li>
+<li><input id="check6" type="checkbox"/><label for="check6">Escrever as principais perguntas antes da consulta.</label></li>
+</ul>
+<div class="next-step-box">
+<div>
+<strong>Faça apenas isto agora:</strong>
+<p>Registre um comportamento, onde aconteceu e qual foi a consequência. Um exemplo concreto já é um começo.</p>
+</div>
+<button class="button button-secondary" id="printChecklist" type="button">Imprimir checklist</button>
+</div>
+</section>
+<section class="content-section studies-section" id="estudos">
+<p class="eyebrow">Evidência rastreável</p>
+<h2>O que os estudos permitem afirmar?</h2>
+<div class="notice evidence-method" role="note">
+<strong>Critério editorial</strong>
+<span>Cada resumo abaixo foi conferido em duas fontes bibliográficas. Resultado observacional é apresentado como associação; limitações e divergências permanecem visíveis.</span>
+</div>
+<div class="study-grid"><article class="study-card">
+<div class="study-meta"><span>Revisão sistemática · 2024</span><span class="verification-badge">Duplo-check</span></div>
+<h3>Ferramentas para o diagnóstico de TDAH em crianças e adolescentes</h3>
+<p class="study-citation">Peterson BS et al. Pediatrics. 2024;153(4):e2024065854.</p>
+<dl class="study-facts">
+<div><dt>Escopo</dt><dd>A revisão AHRQ identificou 550 estudos elegíveis no relatório completo, incluindo 231 estudos sobre diagnóstico, 312 sobre tratamento e 10 sobre monitoramento.</dd></div>
+<div><dt>Achado principal</dt><dd>Escalas e outros instrumentos podem apoiar a avaliação, mas o desempenho variou muito. A conclusão foi que o diagnóstico confiável exige julgamento clínico experiente, informações de vários informantes e observação em diferentes contextos; nenhum teste isolado substitui esse processo.</dd></div>
+<div><dt>Limitação</dt><dd>A força da evidência diagnóstica foi geralmente baixa, os métodos foram heterogêneos e havia poucos estudos com crianças menores de 7 anos.</dd></div>
+</dl>
+<p class="study-check"><strong>Verificação:</strong> PubMed + relatório oficial AHRQ/NCBI · conferido em 30 de julho de 2026.</p>
+<div class="study-links">
+<a href="https://pubmed.ncbi.nlm.nih.gov/38523599/" rel="noopener noreferrer" target="_blank">Registro PubMed</a>
+<a href="https://www.ncbi.nlm.nih.gov/books/NBK602989/" rel="noopener noreferrer" target="_blank">Texto/registro complementar</a>
+<a href="https://doi.org/10.1542/peds.2024-065854" rel="noopener noreferrer" target="_blank">DOI</a>
+</div>
+</article><article class="study-card">
+<div class="study-meta"><span>Revisão de ensaios randomizados · 2024</span><span class="verification-badge">Duplo-check</span></div>
+<h3>Treinamento comportamental para pais de crianças em idade escolar</h3>
+<p class="study-citation">Marquet-Doléac J, Biotteau M, Chaix Y. J Atten Disord. 2024;28(3):377–393.</p>
+<dl class="study-facts">
+<div><dt>Escopo</dt><dd>Foram incluídos 20 ensaios randomizados com programas para pais de crianças com TDAH entre 4 e 12 anos.</dd></div>
+<div><dt>Achado principal</dt><dd>A síntese encontrou efeitos positivos em estresse parental, percepção de eficácia dos pais e práticas educativas negativas. Para as crianças, os efeitos apareceram principalmente nas avaliações feitas pelos próprios pais, incluindo sintomas, comportamentos externalizantes e habilidades sociais.</dd></div>
+<div><dt>Limitação</dt><dd>Os estudos foram heterogêneos e algumas categorias tinham poucos ensaios; por isso, os resultados não significam que todo programa funcione da mesma maneira nem que haja efeito igual em casa e na escola.</dd></div>
+</dl>
+<p class="study-check"><strong>Verificação:</strong> PubMed + página do periódico · conferido em 30 de julho de 2026.</p>
+<div class="study-links">
+<a href="https://pubmed.ncbi.nlm.nih.gov/38083879/" rel="noopener noreferrer" target="_blank">Registro PubMed</a>
+<a href="https://journals.sagepub.com/doi/10.1177/10870547231211595" rel="noopener noreferrer" target="_blank">Texto/registro complementar</a>
+<a href="https://doi.org/10.1177/10870547231211595" rel="noopener noreferrer" target="_blank">DOI</a>
+</div>
+</article></div>
+</section><section aria-labelledby="fontesTitle" class="content-section sources-section" id="fontes">
+<p class="eyebrow">Transparência editorial</p>
+<h2 id="fontesTitle">Fontes consultadas</h2>
+<p>Esta versão usa diretrizes e materiais institucionais. O conteúdo deverá receber revisão clínica antes de ser considerado pronto para publicação pública.</p>
+<ol class="source-list">
+<li><a href="https://www.cdc.gov/adhd/diagnosis/index.html" rel="noopener noreferrer" target="_blank">CDC — Diagnosing ADHD</a><span>Atualizado em junho de 2026.</span></li>
+<li><a href="https://www.cdc.gov/adhd/hcp/treatment-recommendations/index.html" rel="noopener noreferrer" target="_blank">CDC — Clinical Care of ADHD in Children</a><span>Resumo das recomendações da AAP, atualizado em junho de 2026.</span></li>
+<li><a href="https://www.cdc.gov/adhd/treatment/index.html" rel="noopener noreferrer" target="_blank">CDC — Treatment of ADHD</a><span>Recomendações por faixa etária, atualizado em junho de 2026.</span></li>
+<li><a href="https://www.nice.org.uk/guidance/ng87/chapter/recommendations" rel="noopener noreferrer" target="_blank">NICE NG87 — Recommendations</a><span>Diretriz publicada em 2018; recomendações atualizadas em 2019; revisão de prioridade realizada em 7 de maio de 2025.</span></li>
+<li><a href="https://publications.aap.org/pediatrics/article/144/4/e20192528/81590/Clinical-Practice-Guideline-for-the-Diagnosis" rel="noopener noreferrer" target="_blank">American Academy of Pediatrics — Clinical Practice Guideline</a><span>Diretriz clínica para crianças e adolescentes.</span></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/38523599/" rel="noopener noreferrer" target="_blank">Peterson e colaboradores — Ferramentas diagnósticas, 2024</a><span>Revisão sistemática publicada em Pediatrics; PMID 38523599; DOI 10.1542/peds.2024-065854.</span></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/38083879/" rel="noopener noreferrer" target="_blank">Marquet-Doléac e colaboradores — Treinamento parental, 2024</a><span>Revisão de 20 ensaios randomizados; PMID 38083879; DOI 10.1177/10870547231211595.</span></li></ol>
+<div class="editorial-status">
+<span>Estado: estudos bibliograficamente verificados; revisão clínica externa ainda pendente</span>
+<span>Próxima revisão planejada: antes da publicação oficial</span>
+</div>
+</section>
+</article>
+</div>
+<section aria-labelledby="nextStageTitle" class="stage-next section-shell section-muted" data-focus-dim="">
+<div class="container stage-next-grid">
+<div>
+<p class="eyebrow">Continuar explorando</p>
+<h2 id="nextStageTitle">As necessidades mudam com o desenvolvimento.</h2>
+</div>
+<div>
+<p>A página de adolescência é a próxima etapa desta sequência. Você também pode retornar ao mapa completo das fases da vida.</p>
+<div class="stage-actions">
+<a class="button button-primary" href="../index.html#fases">Ver todas as fases</a>
+<a aria-label="Abrir a próxima fase: Adolescência" class="button button-primary" href="adolescencia.html">Próxima Fase →</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer" data-focus-dim="">
+<div class="container footer-grid">
+<div>
+<strong>EntreFoco</strong>
+<p>Protótipo V0.12.11. Conteúdo educativo não substitui avaliação profissional.</p>
+</div>
+<a href="#topo">Voltar ao início ↑</a>
+</div>
+</footer>
+<div aria-hidden="true" class="progress-bar"><span id="readingProgress"></span></div>
+<script src="../app.js?v=0.12"></script>
 </body>
 </html>

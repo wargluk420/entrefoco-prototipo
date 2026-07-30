@@ -1,10 +1,16 @@
-# EntreFoco — Protótipo V0.11
+# EntreFoco — Protótipo V0.12
 
-Portal informativo e acolhedor sobre TDAH ao longo da vida.
+Portal estático sobre TDAH ao longo da vida.
 
-## Estado editorial
+## Alteração desta versão
 
-O conteúdo é educativo e não substitui avaliação profissional. Todas as páginas científicas permanecem com revisão clínica externa pendente.
+- seção de estudos reais e verificáveis na página inicial;
+- dois estudos detalhados em cada fase da vida;
+- resultado, amostra/escopo, limitação, PubMed, DOI e segundo caminho de conferência;
+- registro editorial em `EVIDENCIAS.md`;
+- datas de fontes institucionais corrigidas e separadas de datas de anexos/documentos;
+- navegação e padrão visual da V0.11 preservados.
 
+## Aviso
 
-
+O conteúdo é educativo. A dupla-checagem bibliográfica foi concluída em 30 de julho de 2026, mas a revisão clínica externa permanece pendente.
