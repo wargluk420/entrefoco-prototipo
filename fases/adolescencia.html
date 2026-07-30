@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-version="0.4">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Como o TDAH pode aparecer, ser avaliado e acompanhado na adolescência, com estratégias para estudos, autonomia, relações e segurança.">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>TDAH na adolescência — EntreFoco</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="article-page">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo" data-focus-dim>
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="EntreFoco — voltar à página inicial">
+        <span class="brand-mark" aria-hidden="true">◉</span>
+        <span>EntreFoco</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="../index.html#agora">Ajuda agora</a>
+        <a href="../index.html#fases" aria-current="page">Fases da vida</a>
+        <a href="../index.html#pesquisas">Pesquisas</a>
+        <a href="../index.html#acolhimento">Acolhimento</a>
+      </nav>
+
+      <button class="icon-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação móvel" hidden>
+      <a href="../index.html#agora">Ajuda agora</a>
+      <a href="../index.html#fases" aria-current="page">Fases da vida</a>
+      <a href="../index.html#pesquisas">Pesquisas</a>
+      <a href="../index.html#acolhimento">Acolhimento</a>
+    </nav>
+  </header>
+
+  <div class="focus-status" id="focusStatus" role="status" hidden>
+    <span id="focusStatusText">Modo foco ativo: artigo em destaque.</span>
+    <button type="button" id="exitFocus">Sair do foco</button>
+  </div>
+
+  <div class="reading-tools">
+    <button class="reading-tools-toggle" type="button" id="readingToolsToggle" aria-expanded="false" aria-controls="readingToolsPanel">
+      <span aria-hidden="true">⚙</span>
+      <span>Leitura</span>
+    </button>
+
+    <aside class="reading-tools-panel" id="readingToolsPanel" aria-label="Ferramentas de leitura" hidden>
+      <div class="tools-heading">
+        <strong>Ferramentas de leitura</strong>
+        <button class="panel-close" type="button" id="closeReadingTools" aria-label="Fechar ferramentas de leitura">×</button>
+      </div>
+
+      <button type="button" id="focusToggle" aria-pressed="false">Modo foco</button>
+      <p class="tool-hint" id="focusHint">Destaca o artigo e reduz os elementos ao redor.</p>
+
+      <div class="tool-group" role="group" aria-label="Tamanho do texto">
+        <button type="button" id="fontDecrease" aria-label="Diminuir tamanho do texto">A−</button>
+        <output id="fontScaleStatus" aria-live="polite">100%</output>
+        <button type="button" id="fontIncrease" aria-label="Aumentar tamanho do texto">A+</button>
+      </div>
+
+      <button type="button" id="themeToggle" aria-pressed="false">Tema escuro</button>
+      <button type="button" id="resetReading">Restaurar padrão</button>
+    </aside>
+  </div>
+
+  <main id="conteudo">
+    <section class="article-hero section-shell" data-focus-dim aria-labelledby="pageTitle">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Caminho da página">
+          <a href="../index.html">Início</a>
+          <span aria-hidden="true">/</span>
+          <a href="../index.html#fases">Fases da vida</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Adolescência</span>
+        </nav>
+
+        <div class="article-hero-grid">
+          <div>
+            <p class="eyebrow">TDAH ao longo da vida · Adolescência</p>
+            <h1 id="pageTitle">Quando aumentam as exigências, as dificuldades podem mudar de forma</h1>
+            <p class="hero-summary">Na adolescência, a inquietação pode ficar menos visível, enquanto organização, prazos, autonomia, relações e decisões passam a exigir mais autorregulação.</p>
+          </div>
+
+          <aside class="article-summary-card" aria-label="Resumo desta página">
+            <strong>Em poucos segundos</strong>
+            <ul>
+              <li>O TDAH pode continuar mesmo quando a hiperatividade física diminui.</li>
+              <li>A avaliação inclui o adolescente, a família, a escola e o histórico desde a infância.</li>
+              <li>Ansiedade, depressão, sono, aprendizagem e uso de substâncias também precisam ser considerados.</li>
+              <li>Tratamento e apoio funcionam melhor quando o adolescente participa das decisões.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="article-meta" aria-label="Informações editoriais">
+          <span>Leitura estimada: 11 minutos</span>
+          <span>Revisão: 30 de julho de 2026</span>
+          <span>Conteúdo educativo</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-jump-section" data-focus-dim aria-labelledby="jumpTitle">
+      <div class="container">
+        <h2 class="sr-only" id="jumpTitle">Ir diretamente a uma parte da página</h2>
+        <nav class="article-jump-grid" aria-label="Nesta página">
+          <a href="#mudancas"><span>01</span><strong>O que muda</strong><small>Sinais e novas demandas</small></a>
+          <a href="#avaliacao"><span>02</span><strong>Como é avaliado</strong><small>Histórico e ambientes</small></a>
+          <a href="#diagnostico"><span>03</span><strong>Como funciona o diagnóstico</strong><small>Critérios e contexto</small></a>
+          <a href="#estrategias"><span>04</span><strong>Estratégias de apoio</strong><small>Estudos, casa e autonomia</small></a>
+          <a href="#consulta"><span>05</span><strong>Preparar uma consulta</strong><small>O que registrar</small></a>
+          <a href="#fontes"><span>06</span><strong>Fontes consultadas</strong><small>Evidências e revisão</small></a>
+        </nav>
+      </div>
+    </section>
+
+    <div class="container article-layout">
+      <aside class="article-toc" data-focus-dim aria-label="Sumário do artigo">
+        <strong>Nesta página</strong>
+        <a href="#mudancas">O que muda</a>
+        <a href="#avaliacao">Como é avaliado</a>
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#outras-condicoes">Outras explicações</a>
+        <a href="#estrategias">Estratégias de apoio</a>
+        <a href="#seguranca">Autonomia e segurança</a>
+        <a href="#consulta">Preparar consulta</a>
+        <a href="#fontes">Fontes</a>
+        <a class="back-link" href="../index.html#fases">← Voltar às fases da vida</a>
+      </aside>
+
+      <article class="article-content" data-focus-content tabindex="-1">
+        <div class="notice article-notice" role="note">
+          <strong>Ponto principal</strong>
+          <span>A adolescência não “apaga” o TDAH. Mudanças de rotina e aumento das responsabilidades podem revelar dificuldades que antes eram compensadas pela família ou por uma estrutura escolar mais simples.</span>
+        </div>
+
+        <section class="content-section" id="mudancas" aria-labelledby="mudancasTitle">
+          <p class="eyebrow">Novas exigências</p>
+          <h2 id="mudancasTitle">Como os sinais podem aparecer na adolescência?</h2>
+          <p>Os sintomas centrais continuam relacionados à desatenção, hiperatividade e impulsividade, mas a forma de manifestação pode mudar. A hiperatividade física intensa pode se tornar inquietação, impaciência ou sensação interna de estar sempre acelerado.</p>
+
+          <div class="symptom-grid">
+            <div class="information-card">
+              <h3>Organização e atenção</h3>
+              <p>Esquecer prazos, perder materiais, iniciar trabalhos tarde, alternar entre tarefas, subestimar o tempo necessário ou ter dificuldade para acompanhar várias disciplinas e professores.</p>
+            </div>
+            <div class="information-card">
+              <h3>Inquietação e impulsividade</h3>
+              <p>Interromper conversas, agir antes de avaliar consequências, procurar estímulos, tomar decisões apressadas ou sentir dificuldade para permanecer em atividades pouco interessantes.</p>
+            </div>
+            <div class="information-card">
+              <h3>Relações e autoestima</h3>
+              <p>Conflitos repetidos, críticas frequentes e dificuldades escolares podem afetar a autoconfiança. Ansiedade, depressão ou irritabilidade exigem avaliação própria e não devem ser automaticamente atribuídas ao TDAH.</p>
+            </div>
+          </div>
+
+          <div class="key-point">
+            <strong>Bom desempenho em algumas atividades não exclui TDAH.</strong>
+            <p>Interesse, novidade, urgência, estrutura externa e recompensa imediata podem mudar muito o desempenho. O diagnóstico considera o padrão geral e os prejuízos, não apenas a capacidade de se concentrar em situações específicas.</p>
+          </div>
+        </section>
+
+        <section class="content-section" id="avaliacao" aria-labelledby="avaliacaoTitle">
+          <p class="eyebrow">Participação do adolescente</p>
+          <h2 id="avaliacaoTitle">Como é realizada a avaliação?</h2>
+          <p>A avaliação busca reconstruir o desenvolvimento dos sintomas e entender como eles afetam estudos, rotina, relações, saúde e autonomia. Não depende de uma única conversa ou de um questionário isolado.</p>
+
+          <ol class="process-list">
+            <li><span>1</span><div><strong>Queixa atual e objetivos</strong><p>O adolescente, a família e a escola podem perceber problemas diferentes. O profissional registra exemplos concretos e pergunta o que a própria pessoa deseja melhorar.</p></div></li>
+            <li><span>2</span><div><strong>Histórico anterior aos 12 anos</strong><p>Para o diagnóstico, é necessário verificar se vários sintomas já estavam presentes na infância, mesmo que não tenham sido reconhecidos como TDAH naquela época.</p></div></li>
+            <li><span>3</span><div><strong>Mais de um ambiente</strong><p>São consideradas situações como casa, escola, curso, trabalho, atividades sociais e esportivas. Relatórios escolares e informações de pessoas que convivem com o adolescente podem ajudar.</p></div></li>
+            <li><span>4</span><div><strong>Entrevistas, escalas e documentos</strong><p>Escalas padronizadas podem organizar informações, mas não confirmam o diagnóstico sozinhas. O profissional interpreta os resultados junto com o histórico e o funcionamento real.</p></div></li>
+            <li><span>5</span><div><strong>Saúde e condições coexistentes</strong><p>Também são investigados sono, aprendizagem, ansiedade, depressão, comportamento, autismo, tics, uso de substâncias, saúde física e outros fatores que possam explicar ou ampliar as dificuldades.</p></div></li>
+          </ol>
+        </section>
+
+        <section class="content-section" id="diagnostico" aria-labelledby="diagnosticoTitle">
+          <p class="eyebrow">Critérios clínicos</p>
+          <h2 id="diagnosticoTitle">Como funciona o diagnóstico?</h2>
+          <p>Não existe exame de sangue, imagem cerebral ou teste digital que confirme TDAH sozinho. O diagnóstico é clínico e verifica um conjunto de critérios.</p>
+
+          <div class="criteria-grid">
+            <div class="criteria-card"><strong>Duração</strong><span>O padrão precisa persistir por pelo menos seis meses.</span></div>
+            <div class="criteria-card"><strong>Início</strong><span>Vários sintomas devem ter estado presentes antes dos 12 anos.</span></div>
+            <div class="criteria-card"><strong>Ambientes</strong><span>Os sintomas precisam aparecer em dois ou mais contextos relevantes.</span></div>
+            <div class="criteria-card"><strong>Prejuízo</strong><span>Deve existir impacto claro no funcionamento escolar, social, familiar ou em outras responsabilidades.</span></div>
+            <div class="criteria-card"><strong>Desenvolvimento</strong><span>Os comportamentos precisam ser incompatíveis com o esperado para a idade e o contexto.</span></div>
+            <div class="criteria-card"><strong>Outras explicações</strong><span>O padrão não deve ser melhor explicado por outra condição.</span></div>
+          </div>
+
+          <p class="soft-text">O número de sintomas exigido varia com a idade: até os 16 anos, geralmente são necessários seis sintomas em um dos grupos; a partir dos 17 anos, cinco podem ser suficientes, desde que todos os demais critérios estejam presentes.</p>
+        </section>
+
+        <section class="content-section" id="outras-condicoes" aria-labelledby="outrasTitle">
+          <p class="eyebrow">Evitar conclusões apressadas</p>
+          <h2 id="outrasTitle">O que pode coexistir ou parecer TDAH?</h2>
+          <p>Na adolescência, mudanças de humor, sono irregular, pressões escolares e sociais ou outras condições podem produzir dificuldades parecidas. Também é possível haver mais de uma condição ao mesmo tempo.</p>
+
+          <div class="tag-list" aria-label="Condições e fatores considerados na avaliação">
+            <span>Ansiedade</span>
+            <span>Depressão</span>
+            <span>Dificuldades de aprendizagem</span>
+            <span>Autismo</span>
+            <span>Problemas de sono</span>
+            <span>Tiques</span>
+            <span>Transtornos de comportamento</span>
+            <span>Uso de álcool ou outras substâncias</span>
+            <span>Estresse, trauma ou conflitos</span>
+          </div>
+
+          <p class="soft-text">A presença desses sinais não confirma nenhuma condição. O objetivo da avaliação é compreender o conjunto e decidir quais necessidades exigem atenção.</p>
+        </section>
+
+        <section class="content-section" id="estrategias" aria-labelledby="estrategiasTitle">
+          <p class="eyebrow">Autonomia com suporte</p>
+          <h2 id="estrategiasTitle">Quais estratégias podem auxiliar?</h2>
+          <p>O objetivo não é controlar cada passo do adolescente nem retirar todo o apoio de uma vez. A autonomia costuma funcionar melhor quando as responsabilidades aumentam gradualmente e existe uma estrutura visível.</p>
+
+          <div class="strategy-grid">
+            <div class="strategy-card">
+              <span>Estudos</span>
+              <h3>Deixar prazos e etapas visíveis</h3>
+              <ul>
+                <li>usar um único local para registrar tarefas;</li>
+                <li>dividir trabalhos longos em entregas menores;</li>
+                <li>marcar o primeiro passo, não apenas a data final;</li>
+                <li>usar blocos curtos de estudo com pausas planejadas;</li>
+                <li>pedir instruções por escrito quando necessário.</li>
+              </ul>
+            </div>
+            <div class="strategy-card">
+              <span>Em casa</span>
+              <h3>Combinar responsabilidades com clareza</h3>
+              <ul>
+                <li>definir poucas prioridades por vez;</li>
+                <li>combinar horários e consequências antes do problema;</li>
+                <li>evitar transformar esquecimento em julgamento moral;</li>
+                <li>revisar semanalmente o que precisa de mais ou menos apoio;</li>
+                <li>valorizar progresso específico, não perfeição.</li>
+              </ul>
+            </div>
+            <div class="strategy-card">
+              <span>Escola e profissionais</span>
+              <h3>Construir um plano compartilhado</h3>
+              <p>Intervenções educacionais, treinamento de habilidades organizacionais ou comportamentais e tratamento clínico podem fazer parte do plano. Diretrizes recomendam que o adolescente participe das decisões e dê seu assentimento ao uso de medicamento.</p>
+            </div>
+          </div>
+
+          <div class="safety-note">
+            <strong>Tratamento não é uma solução única.</strong>
+            <p>O plano pode incluir informação, apoio familiar, adaptações educacionais, intervenções comportamentais e medicamentos prescritos e acompanhados por profissional. Esta página não orienta escolha, dose, início ou interrupção de medicamentos.</p>
+          </div>
+        </section>
+
+        <section class="content-section" id="seguranca" aria-labelledby="segurancaTitle">
+          <p class="eyebrow">Responsabilidade gradual</p>
+          <h2 id="segurancaTitle">Autonomia também envolve segurança</h2>
+          <p>Algumas decisões passam a ter consequências maiores na adolescência. Esses assuntos devem ser tratados sem ameaça ou vergonha, com orientações concretas.</p>
+
+          <div class="information-card wide-card">
+            <ul>
+              <li><strong>Medicamentos:</strong> não compartilhar doses, manter armazenamento seguro e avisar o profissional sobre efeitos adversos ou dificuldades de adesão.</li>
+              <li><strong>Álcool e outras substâncias:</strong> conversar abertamente sobre riscos, automedicação e interações, sem presumir uso.</li>
+              <li><strong>Direção:</strong> quando aplicável, discutir distração, impulsividade, sono, uso de celular e efeito do tratamento com o profissional responsável.</li>
+              <li><strong>Transição para o cuidado adulto:</strong> aprender aos poucos o nome dos medicamentos, horários, objetivos do tratamento e como marcar consultas.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="content-section" id="consulta" aria-labelledby="consultaTitle">
+          <p class="eyebrow">Próximo passo pequeno</p>
+          <h2 id="consultaTitle">Como preparar uma conversa com um profissional?</h2>
+          <p>O adolescente deve participar da preparação. O objetivo é levar exemplos, dúvidas e metas — não chegar com uma conclusão pronta.</p>
+
+          <ul class="consultation-checklist">
+            <li><input type="checkbox" id="teen-check1"><label for="teen-check1">Anotar duas situações recentes em que a dificuldade causou prejuízo.</label></li>
+            <li><input type="checkbox" id="teen-check2"><label for="teen-check2">Registrar quando os sinais começaram e como eram na infância.</label></li>
+            <li><input type="checkbox" id="teen-check3"><label for="teen-check3">Levar boletins, relatórios ou exemplos de organização escolar, se disponíveis.</label></li>
+            <li><input type="checkbox" id="teen-check4"><label for="teen-check4">Anotar rotina de sono, humor, ansiedade e uso de cafeína, álcool ou outras substâncias.</label></li>
+            <li><input type="checkbox" id="teen-check5"><label for="teen-check5">Listar medicamentos, suplementos e tratamentos atuais.</label></li>
+            <li><input type="checkbox" id="teen-check6"><label for="teen-check6">Escolher uma meta que o próprio adolescente gostaria de melhorar.</label></li>
+          </ul>
+
+          <div class="next-step-box">
+            <div>
+              <strong>Faça apenas isto agora:</strong>
+              <p>Complete a frase: “A dificuldade que mais atrapalha minha semana é…”. Esse é um bom ponto de partida para a conversa.</p>
+            </div>
+            <button class="button button-secondary" type="button" id="printChecklist">Imprimir checklist</button>
+          </div>
+        </section>
+
+        <section class="content-section sources-section" id="fontes" aria-labelledby="fontesTitle">
+          <p class="eyebrow">Transparência editorial</p>
+          <h2 id="fontesTitle">Fontes consultadas</h2>
+          <p>Esta versão utiliza diretrizes clínicas e materiais institucionais. O conteúdo deverá receber revisão clínica externa antes de ser considerado pronto para publicação oficial.</p>
+
+          <ol class="source-list">
+            <li><a href="https://www.cdc.gov/adhd/diagnosis/index.html" target="_blank" rel="noopener noreferrer">CDC — Diagnosing ADHD</a><span>Critérios gerais, avaliação e diagnósticos diferenciais; atualizado em junho de 2026.</span></li>
+            <li><a href="https://www.cdc.gov/adhd/hcp/treatment-recommendations/index.html" target="_blank" rel="noopener noreferrer">CDC — Clinical Care of ADHD in Children</a><span>Resumo atual das recomendações da AAP para crianças e adolescentes; junho de 2026.</span></li>
+            <li><a href="https://www.cdc.gov/adhd/treatment/index.html" target="_blank" rel="noopener noreferrer">CDC — Treatment of ADHD</a><span>Visão geral de tratamento comportamental, medicamentos e apoio escolar; junho de 2026.</span></li>
+            <li><a href="https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know" target="_blank" rel="noopener noreferrer">NIMH — ADHD: What You Need to Know</a><span>Manifestação dos sintomas na adolescência, diagnóstico e tratamento.</span></li>
+            <li><a href="https://www.nice.org.uk/guidance/ng87/chapter/recommendations" target="_blank" rel="noopener noreferrer">NICE NG87 — Recommendations</a><span>Diagnóstico, participação nas decisões e manejo de crianças, jovens e adultos.</span></li>
+            <li><a href="https://publications.aap.org/pediatrics/article/144/4/e20192528/81590/Clinical-Practice-Guideline-for-the-Diagnosis" target="_blank" rel="noopener noreferrer">American Academy of Pediatrics — Clinical Practice Guideline</a><span>Diretriz para diagnóstico, avaliação e tratamento dos 4 aos 18 anos.</span></li>
+          </ol>
+
+          <div class="editorial-status">
+            <span>Estado: conteúdo fundamentado, revisão clínica externa pendente</span>
+            <span>Próxima revisão planejada: antes da publicação oficial</span>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <section class="stage-next section-shell section-muted" data-focus-dim aria-labelledby="nextStageTitle">
+      <div class="container stage-next-grid">
+        <div>
+          <p class="eyebrow">Continuar explorando</p>
+          <h2 id="nextStageTitle">A próxima transição aumenta a independência.</h2>
+        </div>
+        <div>
+          <p>A página de jovens adultos será a próxima etapa desta sequência. Você também pode voltar para revisar a infância.</p>
+          <div class="stage-actions">
+            <a class="button button-secondary" href="infancia.html">← Voltar à infância</a>
+            <a class="button button-primary" href="../index.html#fases">Ver todas as fases</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-focus-dim>
+    <div class="container footer-grid">
+      <div>
+        <strong>EntreFoco</strong>
+        <p>Protótipo V0.4. Conteúdo educativo não substitui avaliação profissional.</p>
+      </div>
+      <a href="#topo">Voltar ao início ↑</a>
+    </div>
+  </footer>
+
+  <div class="progress-bar" aria-hidden="true"><span id="readingProgress"></span></div>
+
+  <script src="../app.js"></script>
+</body>
+</html>
