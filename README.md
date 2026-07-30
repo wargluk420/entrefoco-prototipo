@@ -1,28 +1,26 @@
-# EntreFoco — Protótipo inicial
+# EntreFoco — Protótipo V0.3
 
-Protótipo estático de uma página inicial para um portal informativo e acolhedor sobre TDAH ao longo da vida.
+Protótipo estático de um portal informativo, acessível e acolhedor sobre TDAH ao longo da vida.
 
 ## Objetivo deste ciclo
 
-Testar se uma pessoa consegue:
+Transformar a seção **TDAH ao longo da vida** em navegação real e validar a primeira página editorial completa: **TDAH na infância**.
 
-1. entender rapidamente a proposta do site;
-2. encontrar uma ajuda prática;
-3. navegar por fases da vida;
-4. controlar a carga visual e o tamanho do texto;
-5. interromper a leitura sem perder o contexto.
+## Alterações da V0.3
 
-## Recursos do protótipo
-
-- layout responsivo;
-- navegação sem dependências externas;
-- modo foco;
-- tema claro e escuro;
-- ajuste de tamanho do texto;
-- progresso de leitura;
-- cartões de estratégias imediatas;
-- preferências salvas localmente no navegador;
-- conteúdo científico claramente marcado como demonstrativo.
+- cartão **Infância** convertido em link real;
+- criação de `fases/infancia.html`;
+- navegação interna por sinais, avaliação, diagnóstico, estratégias, consulta e fontes;
+- conteúdo fundamentado em CDC, AAP e NICE;
+- diferenciação entre observação, avaliação e diagnóstico;
+- aviso de que não existe teste único para confirmar TDAH;
+- orientações gerais para família e escola;
+- checklist para preparar uma consulta;
+- botão para imprimir o checklist;
+- Modo foco adaptado para páginas de artigo;
+- tema e tamanho do texto compartilhados entre a página inicial e a página de infância;
+- cartões das demais fases mantidos como **Em preparação**, sem links falsos;
+- melhorias de responsividade e quebra de textos longos.
 
 ## Estrutura
 
@@ -32,36 +30,58 @@ portal-tdah-prototipo/
 ├── styles.css
 ├── app.js
 ├── README.md
-└── .nojekyll
+├── .nojekyll
+└── fases/
+    └── infancia.html
 ```
 
-## Testar localmente
+## Executar localmente
 
-Opção simples: abra `index.html` no navegador.
-
-Opção recomendada, com Python instalado:
+Na pasta do projeto:
 
 ```bash
 python -m http.server 8000
 ```
 
-Depois abra `http://localhost:8000`.
-
-## Publicar no GitHub Pages
-
-1. Crie um repositório no GitHub.
-2. Envie os cinco arquivos para a raiz do repositório.
-3. Abra **Settings > Pages**.
-4. Em **Build and deployment**, selecione **Deploy from a branch**.
-5. Escolha a branch `main` e a pasta `/ (root)`.
-6. Salve e aguarde a publicação.
-
-O endereço normalmente seguirá o formato:
+Acesse:
 
 ```text
-https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/
+http://localhost:8000
 ```
 
-## Estado do conteúdo
+Teste a navegação:
 
-Os textos de estratégias são apenas exemplos de experiência e não substituem orientação clínica. Os cartões de pesquisas são modelos editoriais e ainda não contêm resultados científicos revisados.
+```text
+Página inicial → Fases da vida → Infância
+```
+
+## Publicar com GitHub Pages
+
+Envie todos os arquivos e a pasta `fases` para a raiz do repositório. O endereço da nova página seguirá este formato:
+
+```text
+https://SEU-USUARIO.github.io/SEU-REPOSITORIO/fases/infancia.html
+```
+
+## Teste manual recomendado
+
+- Clique em **Infância** e confirme que a página interna é aberta.
+- Use o botão voltar do navegador e confira se retorna à seção de fases.
+- Teste todos os atalhos do início da página de infância.
+- Ative e desative o Modo foco usando o botão e a tecla `Esc`.
+- Altere tema e tamanho do texto; recarregue e confira se as preferências permanecem.
+- Teste o checklist e a versão de impressão.
+- Navegue usando somente `Tab`, `Shift + Tab`, `Enter` e `Esc`.
+- Teste em uma largura inferior a 620 px.
+
+## Estado editorial
+
+O conteúdo da página de infância foi fundamentado em fontes institucionais atuais, mas ainda está marcado como **revisão clínica externa pendente** antes de publicação oficial.
+
+## Limites atuais
+
+- somente a página de infância está desenvolvida;
+- adolescência, jovens adultos, vida adulta, meia-idade e envelhecimento permanecem em preparação;
+- não houve teste formal com usuários;
+- não houve auditoria completa com leitor de tela;
+- não há banco de dados, login ou sistema de publicação.

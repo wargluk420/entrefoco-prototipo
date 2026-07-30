@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-version="0.3">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,8 +25,7 @@
         <a href="#acolhimento">Acolhimento</a>
       </nav>
 
-      <button class="icon-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu">
-        <span class="sr-only">Abrir menu</span>
+      <button class="icon-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
         <span aria-hidden="true">☰</span>
       </button>
     </div>
@@ -39,12 +38,36 @@
     </nav>
   </header>
 
-  <aside class="reading-toolbar" aria-label="Ferramentas de leitura">
-    <button type="button" id="focusToggle" aria-pressed="false">Modo foco</button>
-    <button type="button" id="fontDecrease" aria-label="Diminuir texto">A−</button>
-    <button type="button" id="fontIncrease" aria-label="Aumentar texto">A+</button>
-    <button type="button" id="themeToggle" aria-pressed="false">Tema escuro</button>
-  </aside>
+  <div class="focus-status" id="focusStatus" role="status" hidden>
+    <span id="focusStatusText">Modo foco ativo: somente a estratégia atual está disponível.</span>
+    <button type="button" id="exitFocus">Sair do foco</button>
+  </div>
+
+  <div class="reading-tools">
+    <button class="reading-tools-toggle" type="button" id="readingToolsToggle" aria-expanded="false" aria-controls="readingToolsPanel">
+      <span aria-hidden="true">⚙</span>
+      <span>Leitura</span>
+    </button>
+
+    <aside class="reading-tools-panel" id="readingToolsPanel" aria-label="Ferramentas de leitura" hidden>
+      <div class="tools-heading">
+        <strong>Ferramentas de leitura</strong>
+        <button class="panel-close" type="button" id="closeReadingTools" aria-label="Fechar ferramentas de leitura">×</button>
+      </div>
+
+      <button type="button" id="focusToggle" aria-pressed="false" disabled>Modo foco</button>
+      <p class="tool-hint" id="focusHint">Abra uma estratégia para usar o Modo foco.</p>
+
+      <div class="tool-group" role="group" aria-label="Tamanho do texto">
+        <button type="button" id="fontDecrease" aria-label="Diminuir tamanho do texto">A−</button>
+        <output id="fontScaleStatus" aria-live="polite">100%</output>
+        <button type="button" id="fontIncrease" aria-label="Aumentar tamanho do texto">A+</button>
+      </div>
+
+      <button type="button" id="themeToggle" aria-pressed="false">Tema escuro</button>
+      <button type="button" id="resetReading">Restaurar padrão</button>
+    </aside>
+  </div>
 
   <main id="conteudo">
     <section class="hero section-shell" aria-labelledby="heroTitle">
@@ -58,21 +81,24 @@
 
           <div class="hero-actions" aria-label="Ações principais">
             <a class="button button-primary" href="#agora">Preciso de ajuda agora</a>
+            <a class="button button-secondary" href="#fases">Quero entender o TDAH</a>
             <a class="button button-secondary" href="#pesquisas">Quero acompanhar pesquisas</a>
           </div>
 
+          <a class="secondary-path" href="#acolhimento">Quero ajudar alguém com TDAH <span aria-hidden="true">→</span></a>
+
           <div class="reading-estimate" aria-label="Informação de leitura">
             <span aria-hidden="true">◷</span>
-            <span>Você entende esta página em cerca de 3 minutos.</span>
+            <span>Leitura estimada: cerca de 3 minutos.</span>
           </div>
         </div>
 
-        <div class="hero-panel" aria-label="Comece pelo que precisa">
-          <p class="panel-label">Escolha uma direção</p>
-          <a href="#agora"><strong>Resolver algo agora</strong><span>Estratégias simples e aplicáveis</span></a>
-          <a href="#fases"><strong>Entender uma fase da vida</strong><span>Infância ao envelhecimento</span></a>
-          <a href="#acolhimento"><strong>Ajudar alguém</strong><span>Compreensão sem julgamento</span></a>
-        </div>
+        <aside class="hero-panel" aria-label="Como o portal facilita a leitura">
+          <p class="panel-label">Pensado para atenção variável</p>
+          <div class="panel-item"><strong>Uma decisão por vez</strong><span>Menos caminhos competindo pela sua atenção.</span></div>
+          <div class="panel-item"><strong>Pare e retome</strong><span>Você não precisa concluir tudo de uma vez.</span></div>
+          <div class="panel-item"><strong>Controle a leitura</strong><span>Ajuste texto, tema e foco quando precisar.</span></div>
+        </aside>
       </div>
     </section>
 
@@ -86,49 +112,74 @@
           <p>Escolha uma situação. Você verá apenas o próximo passo, sem receber uma lista enorme.</p>
         </div>
 
-        <div class="challenge-grid" role="list">
-          <button class="challenge-card" type="button" data-challenge="start" role="listitem">
-            <span class="card-icon" aria-hidden="true">▶</span>
-            <strong>Não consigo começar</strong>
-            <span>A tarefa parece grande ou confusa.</span>
-          </button>
-          <button class="challenge-card" type="button" data-challenge="distraction" role="listitem">
-            <span class="card-icon" aria-hidden="true">◎</span>
-            <strong>Estou me distraindo</strong>
-            <span>Tudo compete pela minha atenção.</span>
-          </button>
-          <button class="challenge-card" type="button" data-challenge="impulse" role="listitem">
-            <span class="card-icon" aria-hidden="true">↯</span>
-            <strong>Estou agindo por impulso</strong>
-            <span>Preciso criar uma pequena pausa.</span>
-          </button>
-          <button class="challenge-card" type="button" data-challenge="overload" role="listitem">
-            <span class="card-icon" aria-hidden="true">≈</span>
-            <strong>Estou sobrecarregado</strong>
-            <span>Há pensamentos e demandas demais.</span>
-          </button>
-          <button class="challenge-card" type="button" data-challenge="forgot" role="listitem">
-            <span class="card-icon" aria-hidden="true">◇</span>
-            <strong>Esqueci algo importante</strong>
-            <span>Quero recuperar e registrar o contexto.</span>
-          </button>
-          <button class="challenge-card" type="button" data-challenge="plan" role="listitem">
-            <span class="card-icon" aria-hidden="true">☷</span>
-            <strong>Preciso organizar meu dia</strong>
-            <span>Quero escolher poucas prioridades.</span>
-          </button>
-        </div>
+        <ul class="challenge-grid" aria-label="Dificuldades atuais">
+          <li>
+            <button class="challenge-card" type="button" data-challenge="start" aria-controls="actionPanel" aria-expanded="false">
+              <span class="card-icon" aria-hidden="true">▶</span>
+              <strong>Não consigo começar</strong>
+              <span>A tarefa parece grande ou confusa.</span>
+            </button>
+          </li>
+          <li>
+            <button class="challenge-card" type="button" data-challenge="distraction" aria-controls="actionPanel" aria-expanded="false">
+              <span class="card-icon" aria-hidden="true">◎</span>
+              <strong>Estou me distraindo</strong>
+              <span>Tudo compete pela minha atenção.</span>
+            </button>
+          </li>
+          <li>
+            <button class="challenge-card" type="button" data-challenge="impulse" aria-controls="actionPanel" aria-expanded="false">
+              <span class="card-icon" aria-hidden="true">↯</span>
+              <strong>Estou agindo por impulso</strong>
+              <span>Preciso criar uma pequena pausa.</span>
+            </button>
+          </li>
+          <li>
+            <button class="challenge-card" type="button" data-challenge="overload" aria-controls="actionPanel" aria-expanded="false">
+              <span class="card-icon" aria-hidden="true">≈</span>
+              <strong>Estou sobrecarregado</strong>
+              <span>Há pensamentos e demandas demais.</span>
+            </button>
+          </li>
+          <li>
+            <button class="challenge-card" type="button" data-challenge="forgot" aria-controls="actionPanel" aria-expanded="false">
+              <span class="card-icon" aria-hidden="true">◇</span>
+              <strong>Esqueci algo importante</strong>
+              <span>Quero recuperar e registrar o contexto.</span>
+            </button>
+          </li>
+          <li>
+            <button class="challenge-card" type="button" data-challenge="plan" aria-controls="actionPanel" aria-expanded="false">
+              <span class="card-icon" aria-hidden="true">☷</span>
+              <strong>Preciso organizar meu dia</strong>
+              <span>Quero escolher poucas prioridades.</span>
+            </button>
+          </li>
+        </ul>
 
-        <article class="action-panel" id="actionPanel" tabindex="-1" hidden aria-live="polite">
+        <article class="action-panel" id="actionPanel" tabindex="-1" hidden aria-labelledby="actionTitle">
           <button class="close-button" type="button" id="closeAction" aria-label="Fechar estratégia">×</button>
           <p class="eyebrow">Próximo passo pequeno</p>
           <h3 id="actionTitle"></h3>
           <p id="actionText"></p>
-          <div class="micro-plan">
+
+          <div class="strategy-meta" aria-label="Informações da estratégia">
+            <span id="actionDifficulty"></span>
             <span id="actionTime"></span>
+            <span id="actionEffort"></span>
+          </div>
+
+          <details class="simplified-step">
+            <summary>Preciso de um passo ainda menor</summary>
+            <p id="actionSimplified"></p>
+          </details>
+
+          <p class="review-status" id="actionEvidence"></p>
+
+          <div class="micro-plan">
             <button class="button button-primary" type="button" id="completeAction">Marcar como feito</button>
           </div>
-          <p class="completion-message" id="completionMessage" hidden>Feito. Não precisa aproveitar o impulso para resolver tudo agora.</p>
+          <p class="completion-message" id="completionMessage" role="status" aria-live="polite" hidden>Feito. Não precisa aproveitar o impulso para resolver tudo agora.</p>
         </article>
       </div>
     </section>
@@ -143,14 +194,18 @@
           <p>As divisões são editoriais. Elas organizam o conteúdo, mas não funcionam como fronteiras clínicas rígidas.</p>
         </div>
 
-        <div class="life-stage-list">
-          <a href="#" aria-label="Conteúdo sobre TDAH na infância — em preparação"><span>01</span><strong>Infância</strong><small>Família, escola e desenvolvimento</small></a>
-          <a href="#" aria-label="Conteúdo sobre TDAH na adolescência — em preparação"><span>02</span><strong>Adolescência</strong><small>Autonomia, identidade e estudos</small></a>
-          <a href="#" aria-label="Conteúdo sobre TDAH em jovens adultos — em preparação"><span>03</span><strong>Jovens adultos</strong><small>Escolhas, trabalho e independência</small></a>
-          <a href="#" aria-label="Conteúdo sobre TDAH na vida adulta — em preparação"><span>04</span><strong>Vida adulta</strong><small>Rotina, relações e responsabilidades</small></a>
-          <a href="#" aria-label="Conteúdo sobre TDAH na meia-idade — em preparação"><span>05</span><strong>Meia-idade</strong><small>Mudanças, saúde e diagnóstico tardio</small></a>
-          <a href="#" aria-label="Conteúdo sobre TDAH no envelhecimento — em preparação"><span>06</span><strong>Envelhecimento</strong><small>Memória, autonomia e qualidade de vida</small></a>
-        </div>
+        <ul class="life-stage-list" aria-label="Conteúdos por fase da vida">
+          <li>
+            <a class="life-stage-card" href="fases/infancia.html" aria-label="Abrir conteúdo sobre TDAH na infância">
+              <span>01</span><strong>Infância</strong><small>Família, escola e desenvolvimento</small><em>Abrir etapa →</em>
+            </a>
+          </li>
+          <li><div class="life-stage-card is-disabled" aria-label="Adolescência — conteúdo em preparação"><span>02</span><strong>Adolescência</strong><small>Autonomia, identidade e estudos</small><em>Em preparação</em></div></li>
+          <li><div class="life-stage-card is-disabled" aria-label="Jovens adultos — conteúdo em preparação"><span>03</span><strong>Jovens adultos</strong><small>Escolhas, trabalho e independência</small><em>Em preparação</em></div></li>
+          <li><div class="life-stage-card is-disabled" aria-label="Vida adulta — conteúdo em preparação"><span>04</span><strong>Vida adulta</strong><small>Rotina, relações e responsabilidades</small><em>Em preparação</em></div></li>
+          <li><div class="life-stage-card is-disabled" aria-label="Meia-idade — conteúdo em preparação"><span>05</span><strong>Meia-idade</strong><small>Mudanças, saúde e diagnóstico tardio</small><em>Em preparação</em></div></li>
+          <li><div class="life-stage-card is-disabled" aria-label="Envelhecimento — conteúdo em preparação"><span>06</span><strong>Envelhecimento</strong><small>Memória, autonomia e qualidade de vida</small><em>Em preparação</em></div></li>
+        </ul>
       </div>
     </section>
 
@@ -210,7 +265,7 @@
     <div class="container footer-grid">
       <div>
         <strong>EntreFoco</strong>
-        <p>Protótipo inicial. Conteúdo educativo não substitui avaliação profissional.</p>
+        <p>Protótipo V0.3. Conteúdo educativo não substitui avaliação profissional.</p>
       </div>
       <a href="#topo">Voltar ao início ↑</a>
     </div>
